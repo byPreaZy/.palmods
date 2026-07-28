@@ -1,0 +1,24 @@
+{
+  "ModName": "PalInstantBreed",
+  "PackageName": "PalInstantBreed",
+  "Version": "2.5.6",
+  "Author": "Cascade",
+  "Description": "Reproduction / elevage instantane a la ferme de reproduction.",
+  "Dependencies": [
+    "UE4SS"
+  ],
+  "Tags": [
+    "UE4SS",
+    "QoL",
+    "Breeding",
+    "Farm"
+  ],
+  "InstallRule": [
+    {
+      "Type": "Lua",
+      "Targets": [
+        "./Scripts"
+      ]
+    }
+  ]
+}

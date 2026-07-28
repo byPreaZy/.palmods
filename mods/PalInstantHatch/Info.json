@@ -1,0 +1,24 @@
+{
+  "ModName": "PalInstantHatch",
+  "PackageName": "PalInstantHatch",
+  "Version": "2.5.6",
+  "Author": "Cascade",
+  "Description": "Eclosion instantanee des oeufs en incubateur.",
+  "Dependencies": [
+    "UE4SS"
+  ],
+  "Tags": [
+    "UE4SS",
+    "QoL",
+    "Breeding",
+    "Egg"
+  ],
+  "InstallRule": [
+    {
+      "Type": "Lua",
+      "Targets": [
+        "./Scripts"
+      ]
+    }
+  ]
+}

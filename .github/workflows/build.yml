@@ -1,0 +1,110 @@
+name: Build & Release PalTrainerUltra
+
+on:
+  push:
+    branches: [master, main]
+    tags: ['v*']
+    paths:
+      - 'PalTrainerUltra/**'
+      - '.github/workflows/build.yml'
+  pull_request:
+    branches: [master, main]
+    paths:
+      - 'PalTrainerUltra/**'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    defaults:
+      run:
+        working-directory: PalTrainerUltra
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup MSYS2
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: MINGW64
+          update: true
+          install: >-
+            mingw-w64-x86_64-gcc
+            make
+            zip
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: Install Pillow for texture generation
+        run: pip install Pillow
+
+      - name: Download map assets
+        shell: msys2 {0}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          GITHUB_REPO="byPreaZy/.palmods" bash scripts/download_assets.sh || true
+
+      - name: Build
+        shell: msys2 {0}
+        run: |
+          make all 2>&1 || { echo "Build failed"; exit 1; }
+
+      - name: Generate map textures
+        shell: bash
+        run: |
+          python -c "
+          from PIL import Image
+          import os
+          maps = [
+            ('web/assets/map/palworld-map.webp', 'assets/maps/map'),
+            ('web/assets/map/palworld-treemap.webp', 'assets/maps/map_tree'),
+          ]
+          sizes = [2048, 4096, 8192]
+          os.makedirs('assets/maps', exist_ok=True)
+          for src, dst in maps:
+            if not os.path.exists(src):
+              print(f'WARNING: {src} not found')
+              continue
+            img = Image.open(src).convert('RGBA')
+            for sz in sizes:
+              out = f'{dst}_{sz}.rgba'
+              resized = img.resize((sz, sz), Image.LANCZOS)
+              with open(out, 'wb') as f:
+                f.write(resized.tobytes())
+              print(f'Generated: {out} ({os.path.getsize(out)//1024//1024}MB)')
+          print('All textures generated!')
+          "
+
+      - name: Package
+        shell: msys2 {0}
+        run: |
+          bash scripts/package.sh 2>&1 || { echo "Package failed"; exit 1; }
+
+      - name: List dist contents
+        shell: bash
+        run: |
+          find dist/ -type f | sort
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v5
+        with:
+          name: PalTrainerUltra-build
+          path: PalTrainerUltra/dist/
+          retention-days: 30
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: |
+            PalTrainerUltra/PalTrainerUltra-*.zip
+          generate_release_notes: true
+          draft: false
+          prerelease: false

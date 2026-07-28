@@ -1,0 +1,67 @@
+# Fichiers generes par UE4SS ou Unreal Engine
+*.log
+*.tmp
+*.bak
+*.ucas
+*.utoc
+
+# Fichiers temporaires de developpement
+.tmp*
+tmp_*
+.tmp_test_*/
+
+# Builds et binaires
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+
+# Pak final (genere par build Unreal)
+*.pak
+
+# IDE
+.vscode/
+.idea/
+*.sln
+*.vcxproj*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Release staging
+release/
+
+# Secrets / env
+.env
+
+# Debug / marker files from sessions precedentes
+impl_*.txt
+imgui_err_search.txt
+ini_check.txt
+install-report.txt
+lua_overview.txt
+marker_test.txt
+patch_done.txt
+patch_fn_check.txt
+pcm_overview.txt
+pm_lines.txt
+read_install.txt
+revert_*.txt
+
+# UE4SS binary bundle (local download, not in git)
+UE4SS/
+
+# PalTrainerUltra build artifacts
+*.exe
+*.dll
+*.o
+*.res
+*.zip
+*.tar.gz
+PalTrainerUltra/dist/
+PalTrainerUltra/release/

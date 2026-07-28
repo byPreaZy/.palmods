@@ -1,0 +1,24 @@
+{
+  "ModName": "PalWeight",
+  "PackageName": "PalWeight",
+  "Version": "2.5.6",
+  "Author": "Cascade",
+  "Description": "Poids infini / sac augmente pour Palworld. Force la valeur MaxWeight du joueur a une tres haute valeur.",
+  "Dependencies": [
+    "UE4SS"
+  ],
+  "Tags": [
+    "UE4SS",
+    "QoL",
+    "Inventory",
+    "Weight"
+  ],
+  "InstallRule": [
+    {
+      "Type": "Lua",
+      "Targets": [
+        "./Scripts"
+      ]
+    }
+  ]
+}

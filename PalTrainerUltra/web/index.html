@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalTrainerUltra — Carte Palpagos & Trainer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="map"></div>
+
+    <aside id="trainer-panel" class="panel">
+        <h1>PalTrainerUltra</h1>
+
+        <section id="status">
+            <h2>Joueur</h2>
+            <div class="stat-grid">
+                <span>X</span><b id="pos-x">-</b>
+                <span>Y</span><b id="pos-y">-</b>
+                <span>Z</span><b id="pos-z">-</b>
+                <span>Niveau</span><b id="lvl">-</b>
+                <span>PV</span><b id="hp">-</b>
+                <span>PS</span><b id="sp">-</b>
+                <span>Poids</span><b id="weight">-</b>
+                <span>Vitesse</span><b id="speed">-</b>
+            </div>
+            <div class="ready" id="ready">En attente de la DLL…</div>
+        </section>
+
+        <section>
+            <h2>Activation</h2>
+            <label class="row"><input type="checkbox" id="godMode"> God Mode</label>
+            <label class="row"><input type="checkbox" id="infiniteHP"> PV infinis</label>
+            <label class="row"><input type="checkbox" id="infiniteSP"> PS infinis</label>
+            <label class="row"><input type="checkbox" id="infiniteWeight"> Poids infini</label>
+            <label class="row"><input type="checkbox" id="superSpeed"> Super vitesse</label>
+            <label class="row"><input type="checkbox" id="superJump"> Super saut</label>
+            <label class="row"><input type="checkbox" id="flyMode"> Mode vol</label>
+            <label class="row"><input type="checkbox" id="noClip"> No Clip / Gravité faible</label>
+        </section>
+
+        <section>
+            <h2>Valeurs</h2>
+            <label class="row">Vitesse <input type="number" id="speedValue" value="2000" step="100"></label>
+            <label class="row">Saut <input type="number" id="jumpValue" value="3000" step="100"></label>
+            <label class="row">Faux poids <input type="number" id="weightValue" value="0" step="0.1"></label>
+            <label class="row">Dist. téléport <input type="number" id="teleportDistance" value="5000" step="100"></label>
+        </section>
+
+        <section>
+            <h2>Actions</h2>
+            <button id="btn-teleport">Téléportation avant</button>
+            <button id="btn-weather">Dégager la météo</button>
+            <button id="btn-fasttravel">Déverr. voyages rapides</button>
+            <button id="btn-apply" class="primary">Appliquer les cheatcodes</button>
+        </section>
+
+        <section>
+            <h2>Filtres de carte</h2>
+            <label class="row"><input type="checkbox" id="show-fast" checked> Voyage rapide</label>
+            <label class="row"><input type="checkbox" id="show-tower" checked> Tours</label>
+            <label class="row"><input type="checkbox" id="show-dungeon" checked> Donjons</label>
+            <label class="row"><input type="checkbox" id="show-egg" checked> Œufs</label>
+            <label class="row"><input type="checkbox" id="show-treasure" checked> Trésors</label>
+            <label class="row"><input type="checkbox" id="show-enemy" checked> Ennemis forts</label>
+            <label class="row"><input type="checkbox" id="show-alpha" checked> Alpha Pals</label>
+            <label class="row"><input type="checkbox" id="show-predator" checked> Pals prédateurs</label>
+            <label class="row"><input type="checkbox" id="show-bounty" checked> Primes</label>
+            <label class="row"><input type="checkbox" id="show-camp" checked> Camps ennemis</label>
+            <label class="row"><input type="checkbox" id="show-oilrig" checked> Plateformes pétrolières</label>
+        </section>
+
+        <section id="advanced-cheats">
+            <h2>Cheats avancés</h2>
+        </section>
+
+        <section id="advanced-actions">
+            <h2>Actions avancées</h2>
+        </section>
+    </aside>
+
+    <script src="app.js"></script>
+</body>
+</html>

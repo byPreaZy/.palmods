@@ -1,0 +1,7242 @@
+[
+  {
+    "id": "FTPoint7",
+    "label": "Beach of Everlasting Summer",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -383183.16,
+      "Y": -210790.92,
+      "Z": 819.82
+    }
+  },
+  {
+    "id": "FTPoint113",
+    "label": "Thawtide Cape",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 69604.09,
+      "Y": 196989.27,
+      "Z": 20226.29
+    }
+  },
+  {
+    "id": "SkyIsland_E",
+    "label": "Farcry Marsh",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -771309.94,
+      "Y": 8647.21,
+      "Z": 43073.56
+    }
+  },
+  {
+    "id": "FTPoint71",
+    "label": "Scorched Ashland",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -503990.0,
+      "Y": -214380.0,
+      "Z": -1830.0
+    }
+  },
+  {
+    "id": "FTPoint41",
+    "label": "Cinnamoth Forest",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -248770.11,
+      "Y": 126205.84,
+      "Z": 5847.36
+    }
+  },
+  {
+    "id": "FTPoint91",
+    "label": "Isle of Murmurs Beach",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -131353.92,
+      "Y": 54481.74,
+      "Z": -2063.93
+    }
+  },
+  {
+    "id": "WorldTree_A",
+    "label": "The Verdant Rootpath",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 512111.75,
+      "Y": -510662.66,
+      "Z": 43480.0
+    }
+  },
+  {
+    "id": "FTPoint31",
+    "label": "Ancient Ritual Site",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -257951.39,
+      "Y": 151247.84,
+      "Z": 7.66
+    }
+  },
+  {
+    "id": "FTPoint68",
+    "label": "Cherry Blossom Crossroads",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -25915.37,
+      "Y": -78926.16,
+      "Z": 3126.56
+    }
+  },
+  {
+    "id": "FTPoint37",
+    "label": "Frostbound Mountains Summit",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -103434.98,
+      "Y": 234761.17,
+      "Z": 19438.46
+    }
+  },
+  {
+    "id": "FTPoint111",
+    "label": "Dry Dunes",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -415272.22,
+      "Y": -162408.61,
+      "Z": 14643.45
+    }
+  },
+  {
+    "id": "FTPoint114",
+    "label": "Garden Beneath the Astral Mountains",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 107940.74,
+      "Y": -28036.3,
+      "Z": 24447.9
+    }
+  },
+  {
+    "id": "FTPoint18",
+    "label": "Land of Absolute Zero",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 102159.82,
+      "Y": 48527.03,
+      "Z": 28428.29
+    }
+  },
+  {
+    "id": "FTPoint25",
+    "label": "Ascetic Falls",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -326403.84,
+      "Y": 55136.73,
+      "Z": 6871.98
+    }
+  },
+  {
+    "id": "FTPoint81",
+    "label": "Shield Dragon Tunnel",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -572461.56,
+      "Y": -287224.06,
+      "Z": 45.33
+    }
+  },
+  {
+    "id": "SkyIsland_D",
+    "label": "The Azure Tapestry",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -758105.0,
+      "Y": -61810.0,
+      "Z": 28905.0
+    }
+  },
+  {
+    "id": "FTPoint88",
+    "label": "Phantom Isle",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -209326.02,
+      "Y": -249227.56,
+      "Z": -2089.96
+    }
+  },
+  {
+    "id": "FTPoint32",
+    "label": "Mount Flopie Summit",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -167684.92,
+      "Y": 167519.23,
+      "Z": 9175.6
+    }
+  },
+  {
+    "id": "FTPoint106",
+    "label": "Seaward Passage",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 178736.56,
+      "Y": 305772.44,
+      "Z": -1604.74
+    }
+  },
+  {
+    "id": "FTPoint17",
+    "label": "Unthawable Lake",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 8000.53,
+      "Y": 111770.55,
+      "Z": 2554.38
+    }
+  },
+  {
+    "id": "FTPoint11",
+    "label": "Sand Dunes Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -50300.98,
+      "Y": 287392.38,
+      "Z": 295.79
+    }
+  },
+  {
+    "id": "FTPoint39",
+    "label": "Mossanda Forest",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -177770.0,
+      "Y": 265010.0,
+      "Z": 873.17
+    }
+  },
+  {
+    "id": "FTPoint4",
+    "label": "Ancient Civilization Ruins",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -414446.72,
+      "Y": -24603.32,
+      "Z": 3560.09
+    }
+  },
+  {
+    "id": "FTPoint86",
+    "label": "Isle of the Glacial Core",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 168489.0,
+      "Y": 221797.6,
+      "Z": -2020.14
+    }
+  },
+  {
+    "id": "FTPoint108",
+    "label": "Windwatch Outlook",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 12156.85,
+      "Y": 249201.39,
+      "Z": 2949.06
+    }
+  },
+  {
+    "id": "WorldTree_B",
+    "label": "Whimsical Wisteria Grove",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 524166.12,
+      "Y": -567334.4,
+      "Z": 25453.11
+    }
+  },
+  {
+    "id": "FTPoint116",
+    "label": "Sakurajima: West Coast",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -43926.75,
+      "Y": -173600.95,
+      "Z": 934.48
+    }
+  },
+  {
+    "id": "FTPoint12",
+    "label": "Duneshelter",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 35588.66,
+      "Y": 321331.25,
+      "Z": 623.05
+    }
+  },
+  {
+    "id": "FTPoint95",
+    "label": "Windscream Valley",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -311508.88,
+      "Y": 76832.29,
+      "Z": 7803.83
+    }
+  },
+  {
+    "id": "FTPoint44",
+    "label": "Sealed Realm of the Myriad Flames",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -195236.17,
+      "Y": 36718.49,
+      "Z": 8293.61
+    }
+  },
+  {
+    "id": "FTPoint80",
+    "label": "Emberstone Plateau",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -671901.25,
+      "Y": -172407.56,
+      "Z": -443.95
+    }
+  },
+  {
+    "id": "FTPoint53",
+    "label": "Sea Breeze Archipelago Church",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -376750.0,
+      "Y": 124630.0,
+      "Z": 2270.0
+    }
+  },
+  {
+    "id": "FTPoint28",
+    "label": "Fort Ruins",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -302825.0,
+      "Y": 241060.0,
+      "Z": -1089.69
+    }
+  },
+  {
+    "id": "FTPoint49",
+    "label": "Isle of Silence",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -137210.0,
+      "Y": -91340.0,
+      "Z": -2090.0
+    }
+  },
+  {
+    "id": "FTPoint126",
+    "label": "Silent Lake",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -810648.44,
+      "Y": -393963.72,
+      "Z": 5908.76
+    }
+  },
+  {
+    "id": "FTPoint97",
+    "label": "Dustview Coast",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -119900.85,
+      "Y": 351109.22,
+      "Z": -789.14
+    }
+  },
+  {
+    "id": "FTPoint13",
+    "label": "Deep Sand Dunes",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 117624.25,
+      "Y": 400134.78,
+      "Z": -1931.7
+    }
+  },
+  {
+    "id": "FTPoint67",
+    "label": "Moonflower Tower Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -25522.21,
+      "Y": -118365.34,
+      "Z": 6257.67
+    }
+  },
+  {
+    "id": "WorldTree_C_2",
+    "label": "Remnant Riverside",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 592964.0,
+      "Y": -625779.6,
+      "Z": 17596.23
+    }
+  },
+  {
+    "id": "FTPoint121",
+    "label": "Crimson Labyrinth",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -651722.9,
+      "Y": -373365.22,
+      "Z": 30373.21
+    }
+  },
+  {
+    "id": "FTPoint63",
+    "label": "Arena Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -117215.02,
+      "Y": 446689.97,
+      "Z": -1887.3
+    }
+  },
+  {
+    "id": "FTPoint36",
+    "label": "Snowy Mountain Crossroads",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -125290.0,
+      "Y": 201720.0,
+      "Z": 6920.0
+    }
+  },
+  {
+    "id": "FTPoint104",
+    "label": "Sandbar of Solitude",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -105662.5,
+      "Y": 400797.0,
+      "Z": 5159.21
+    }
+  },
+  {
+    "id": "FTPoint109",
+    "label": "Mount Obsidian - Second Ascent",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -259198.7,
+      "Y": -59353.41,
+      "Z": 10128.57
+    }
+  },
+  {
+    "id": "FTPoint56",
+    "label": "Marsh Island",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -282110.0,
+      "Y": 355570.0,
+      "Z": -1940.0
+    }
+  },
+  {
+    "id": "FTPoint89",
+    "label": "Isle of Decayed Treasures",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -197915.22,
+      "Y": 438001.44,
+      "Z": -2064.68
+    }
+  },
+  {
+    "id": "FTPoint87",
+    "label": "Frostbitten Isle",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -558410.44,
+      "Y": 121112.1,
+      "Z": -1587.23
+    }
+  },
+  {
+    "id": "FTPoint52",
+    "label": "Sea Breeze Archipelago - Castaway Beach",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -450320.0,
+      "Y": 112630.0,
+      "Z": -2090.0
+    }
+  },
+  {
+    "id": "FTPoint3",
+    "label": "Eternal Pyre Tower Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -367707.78,
+      "Y": -114950.9,
+      "Z": 61380.66
+    }
+  },
+  {
+    "id": "FTPoint118",
+    "label": "Hill Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -509887.22,
+      "Y": -299269.03,
+      "Z": 718.6
+    }
+  },
+  {
+    "id": "WorldTree_lab",
+    "label": "Abandoned Laboratory",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 621850.0,
+      "Y": -742575.0,
+      "Z": 23205.0
+    }
+  },
+  {
+    "id": "FTPoint5",
+    "label": "Fisherman's Point",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -465895.0,
+      "Y": -62137.75,
+      "Z": -1834.44
+    }
+  },
+  {
+    "id": "FTPoint45",
+    "label": "Rayne Syndicate Tower Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -317777.2,
+      "Y": 212103.31,
+      "Z": -762.55
+    }
+  },
+  {
+    "id": "FTPoint112",
+    "label": "Heatwave Gate",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -301681.94,
+      "Y": -5184.11,
+      "Z": 524.72
+    }
+  },
+  {
+    "id": "FTPoint57",
+    "label": "Eastern Wild Island",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -170718.69,
+      "Y": 409753.16,
+      "Z": 4049.16
+    }
+  },
+  {
+    "id": "FTPoint22",
+    "label": "Desolate Church",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -314840.0,
+      "Y": 186850.0,
+      "Z": 3270.0
+    }
+  },
+  {
+    "id": "WorldTree_M",
+    "label": "Lacrymal Shoal",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 477460.0,
+      "Y": -724635.0,
+      "Z": 19817.89
+    }
+  },
+  {
+    "id": "FTPoint9",
+    "label": "PIDF Tower Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 29780.53,
+      "Y": 406913.2,
+      "Z": 15662.84
+    }
+  },
+  {
+    "id": "FTPoint124",
+    "label": "Oilfield Overlook",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -714540.9,
+      "Y": -458346.56,
+      "Z": -2080.56
+    }
+  },
+  {
+    "id": "FTPoint79",
+    "label": "Deserted Ash Plateau",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -591120.0,
+      "Y": -484260.0,
+      "Z": 6808.79
+    }
+  },
+  {
+    "id": "FTPoint75",
+    "label": "The Oculus Gate, Tower in Sight",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -760285.44,
+      "Y": -354966.22,
+      "Z": 4300.47
+    }
+  },
+  {
+    "id": "FTPoint61",
+    "label": "Bridge of the Twin Knights",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -294830.0,
+      "Y": 152240.0,
+      "Z": 190.0
+    }
+  },
+  {
+    "id": "FTPoint23",
+    "label": "Hill of Beginnings",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -358785.0,
+      "Y": 267940.0,
+      "Z": 7910.0
+    }
+  },
+  {
+    "id": "WorldTree_I",
+    "label": "Boreal Summit",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 602911.06,
+      "Y": -680562.44,
+      "Z": 21863.08
+    }
+  },
+  {
+    "id": "SkyIsland_B",
+    "label": "Crystalline Archipelago",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -829095.7,
+      "Y": -19262.85,
+      "Z": 37892.62
+    }
+  },
+  {
+    "id": "FTPoint55",
+    "label": "Islandhopper Coast",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -265980.0,
+      "Y": 268690.0,
+      "Z": -1970.0
+    }
+  },
+  {
+    "id": "FTPoint15",
+    "label": "No Man's Trail",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -80506.16,
+      "Y": 141464.77,
+      "Z": 8140.14
+    }
+  },
+  {
+    "id": "FTPoint78",
+    "label": "Scorched Hill",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -699510.0,
+      "Y": -389030.0,
+      "Z": 32620.0
+    }
+  },
+  {
+    "id": "FTPoint62",
+    "label": "Ravine Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -319000.0,
+      "Y": 127170.0,
+      "Z": -2049.45
+    }
+  },
+  {
+    "id": "FTPoint48",
+    "label": "Pristine Snow Field",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 6.0,
+      "Y": -0.0,
+      "Z": 6588.96
+    }
+  },
+  {
+    "id": "FTPoint59",
+    "label": "Isle of Silence Church Ruins",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -130060.38,
+      "Y": -53406.69,
+      "Z": 1715.63
+    }
+  },
+  {
+    "id": "Boss_KingWhale",
+    "label": "Deserted Islet",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -108666.75,
+      "Y": 79119.87,
+      "Z": 395.51
+    }
+  },
+  {
+    "id": "FTPoint29",
+    "label": "Sealed Realm of the Swordmaster",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -283781.0,
+      "Y": 59352.68,
+      "Z": 5251.39
+    }
+  },
+  {
+    "id": "FTPoint125",
+    "label": "Shady Mushroom Cliffs",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -771223.4,
+      "Y": -441798.28,
+      "Z": -337.43
+    }
+  },
+  {
+    "id": "FTPoint103",
+    "label": "Desert Backbone",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -38212.0,
+      "Y": 406147.06,
+      "Z": 10096.22
+    }
+  },
+  {
+    "id": "FTPoint123",
+    "label": "Wildlands Floodgate",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -725188.75,
+      "Y": -238441.89,
+      "Z": 7291.7
+    }
+  },
+  {
+    "id": "FTPoint110",
+    "label": "Mount Obsidian Trail",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -287201.44,
+      "Y": -217568.95,
+      "Z": 2651.38
+    }
+  },
+  {
+    "id": "WorldTree_N",
+    "label": "Gilded City Ruins",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 518900.25,
+      "Y": -671976.2,
+      "Z": 27418.05
+    }
+  },
+  {
+    "id": "FTPoint60",
+    "label": "Marsh Island Church Ruins",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -250506.48,
+      "Y": 341109.6,
+      "Z": 2293.32
+    }
+  },
+  {
+    "id": "FTPoint122",
+    "label": "Crystallized Great Tree",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -644486.0,
+      "Y": -276536.5,
+      "Z": 11481.62
+    }
+  },
+  {
+    "id": "FTPoint54",
+    "label": "Small Cove",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -374180.0,
+      "Y": 63960.0,
+      "Z": -1920.0
+    }
+  },
+  {
+    "id": "FTPoint83",
+    "label": "Feybreak Shipwreck",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -798776.8,
+      "Y": -479574.8,
+      "Z": -2050.26
+    }
+  },
+  {
+    "id": "FTPoint72",
+    "label": "Stone Pillar Cave Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -588140.0,
+      "Y": -253780.0,
+      "Z": 720.0
+    }
+  },
+  {
+    "id": "FTPoint51",
+    "label": "Kelpsea Hill",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -170400.0,
+      "Y": -29240.0,
+      "Z": -1930.0
+    }
+  },
+  {
+    "id": "FTPoint34",
+    "label": "Hypocrite Hill",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -237610.0,
+      "Y": 190610.0,
+      "Z": 3987.78
+    }
+  },
+  {
+    "id": "FTPoint76",
+    "label": "Feybreak Tower Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -888080.0,
+      "Y": -433080.0,
+      "Z": 19030.0
+    }
+  },
+  {
+    "id": "FTPoint24",
+    "label": "Small Settlement",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -346617.56,
+      "Y": 191706.6,
+      "Z": -308.71
+    }
+  },
+  {
+    "id": "FTPoint27",
+    "label": "Sealed Realm of the Frozen Wings",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -278468.03,
+      "Y": 212679.42,
+      "Z": -910.32
+    }
+  },
+  {
+    "id": "WorldTree_D",
+    "label": "Corroded Hollow",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 600577.56,
+      "Y": -599143.06,
+      "Z": 29241.38
+    }
+  },
+  {
+    "id": "FTPoint64",
+    "label": "Sakurajima - Mushroom Wetlands",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -63520.73,
+      "Y": -55005.94,
+      "Z": -1711.81
+    }
+  },
+  {
+    "id": "FTPoint120",
+    "label": "Scarlet Outlook",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -603491.1,
+      "Y": -338965.25,
+      "Z": 16584.99
+    }
+  },
+  {
+    "id": "FTPoint26",
+    "label": "Foot of the Volcano",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -349535.5,
+      "Y": -4035.11,
+      "Z": 859.37
+    }
+  },
+  {
+    "id": "FTPoint38",
+    "label": "Sealed Realm of the Swift",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -115430.0,
+      "Y": 289090.0,
+      "Z": 3045.16
+    }
+  },
+  {
+    "id": "Boss_Forest",
+    "label": "Free Pal Alliance Tower Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -265220.0,
+      "Y": 173530.0,
+      "Z": 5810.0
+    }
+  },
+  {
+    "id": "WorldTree_LastBoss",
+    "label": "Within the Seal",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 501010.0,
+      "Y": -748555.0,
+      "Z": 41485.0
+    }
+  },
+  {
+    "id": "FTPoint35",
+    "label": "Sealed Realm of the Mystic",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -151783.97,
+      "Y": 213200.86,
+      "Z": 3277.12
+    }
+  },
+  {
+    "id": "SkyIsland_BOSS",
+    "label": "Azure Covenant Tower Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -777490.0,
+      "Y": -40589.0,
+      "Z": 60158.0
+    }
+  },
+  {
+    "id": "FTPoint1",
+    "label": "Mount Obsidian - Midpoint",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -327531.78,
+      "Y": -70410.55,
+      "Z": 18970.02
+    }
+  },
+  {
+    "id": "FTPoint30",
+    "label": "Investigator's Fork",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -218636.78,
+      "Y": 58528.14,
+      "Z": 3731.15
+    }
+  },
+  {
+    "id": "FTPoint93",
+    "label": "Whisperwind Cliffs",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -266957.53,
+      "Y": 93228.6,
+      "Z": 5259.84
+    }
+  },
+  {
+    "id": "FTPoint96",
+    "label": "Sea Breeze Coast",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -421434.34,
+      "Y": 29307.67,
+      "Z": 1858.37
+    }
+  },
+  {
+    "id": "SkyIsland_C",
+    "label": "Waterlily Gorge",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -811466.56,
+      "Y": -85874.31,
+      "Z": 46247.59
+    }
+  },
+  {
+    "id": "FTPoint43",
+    "label": "Deep Bamboo Thicket",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -215388.52,
+      "Y": 8854.22,
+      "Z": 13174.68
+    }
+  },
+  {
+    "id": "FTPoint129",
+    "label": "Exile's Cape",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -886234.25,
+      "Y": -483745.94,
+      "Z": -1122.67
+    }
+  },
+  {
+    "id": "FTPoint101",
+    "label": "Desiccated Coast",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 14388.18,
+      "Y": 476545.6,
+      "Z": -1918.26
+    }
+  },
+  {
+    "id": "FTPoint40",
+    "label": "Gobfin's Turf",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -219172.86,
+      "Y": 226394.84,
+      "Z": -1956.38
+    }
+  },
+  {
+    "id": "FTPoint107",
+    "label": "Frozen Dune Cape",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 125988.7,
+      "Y": 274597.84,
+      "Z": 752.67
+    }
+  },
+  {
+    "id": "SkyIsland_A",
+    "label": "Enchanted Firmament",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -818013.06,
+      "Y": 59827.72,
+      "Z": 46837.62
+    }
+  },
+  {
+    "id": "FTPoint69",
+    "label": "Sakurajima - Northern Rock Field",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 32787.1,
+      "Y": -81420.33,
+      "Z": -2019.84
+    }
+  },
+  {
+    "id": "FTPoint92",
+    "label": "Anubis Dunes",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -160345.17,
+      "Y": 98540.79,
+      "Z": 2792.8
+    }
+  },
+  {
+    "id": "WorldTree_L",
+    "label": "Spore Cloister",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 483205.0,
+      "Y": -672790.0,
+      "Z": 18210.0
+    }
+  },
+  {
+    "id": "FTPoint98",
+    "label": "Altar of the Windcaller",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -156482.23,
+      "Y": 317415.3,
+      "Z": -2033.77
+    }
+  },
+  {
+    "id": "FTPoint70",
+    "label": "Secluded Cemetery",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -2188.8,
+      "Y": -148545.86,
+      "Z": 2988.48
+    }
+  },
+  {
+    "id": "FTPoint105",
+    "label": "The Furthest Flats",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 191211.2,
+      "Y": 375334.7,
+      "Z": 964.79
+    }
+  },
+  {
+    "id": "FTPoint119",
+    "label": "Curved Redrock",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -506737.8,
+      "Y": -396063.44,
+      "Z": 2103.63
+    }
+  },
+  {
+    "id": "FTPoint8",
+    "label": "Ruined Fortress City",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -237086.58,
+      "Y": -100489.86,
+      "Z": 515.74
+    }
+  },
+  {
+    "id": "FTPoint85",
+    "label": "Oasis Isle",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -33882.15,
+      "Y": 564292.5,
+      "Z": -2102.58
+    }
+  },
+  {
+    "id": "WorldTree_C_1",
+    "label": "Dusty Ravine",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 570652.3,
+      "Y": -558439.5,
+      "Z": 22368.93
+    }
+  },
+  {
+    "id": "WorldTree_E",
+    "label": "Alluvion Lakefront",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 491660.0,
+      "Y": -593705.0,
+      "Z": 17375.0
+    }
+  },
+  {
+    "id": "FTPoint14",
+    "label": "Cold Shore",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -119037.29,
+      "Y": 138340.36,
+      "Z": -1220.29
+    }
+  },
+  {
+    "id": "FTPoint127",
+    "label": "Azure Cliffs",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -865524.3,
+      "Y": -352355.03,
+      "Z": -123.57
+    }
+  },
+  {
+    "id": "FTPoint115",
+    "label": "Garden Beneath the Cliffs",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -38097.32,
+      "Y": 53412.52,
+      "Z": 278.39
+    }
+  },
+  {
+    "id": "FTPoint21",
+    "label": "Grassy Behemoth Hills",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -342035.0,
+      "Y": 236885.0,
+      "Z": -1751.61
+    }
+  },
+  {
+    "id": "FTPoint73",
+    "label": "Loess Plains",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -792350.0,
+      "Y": -251110.0,
+      "Z": -540.0
+    }
+  },
+  {
+    "id": "FTPoint42",
+    "label": "Sealed Realm of the Ardent",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -338560.0,
+      "Y": 107660.0,
+      "Z": -1390.0
+    }
+  },
+  {
+    "id": "FTPoint20",
+    "label": "PAL Genetic Research Unit Tower Entrance",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": 89644.01,
+      "Y": 94542.2,
+      "Z": 67275.08
+    }
+  },
+  {
+    "id": "FTPoint84",
+    "label": "Sunlit Isle",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -335853.84,
+      "Y": 335361.28,
+      "Z": -2090.06
+    }
+  },
+  {
+    "id": "FTPoint102",
+    "label": "Thirst's End",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -71914.8,
+      "Y": 472172.2,
+      "Z": -2019.31
+    }
+  },
+  {
+    "id": "FTPoint100",
+    "label": "Verdant Stream",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -74928.58,
+      "Y": 212787.06,
+      "Z": 9490.94
+    }
+  },
+  {
+    "id": "FTPoint16",
+    "label": "Icy Weasel Hill",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -39402.43,
+      "Y": 159611.86,
+      "Z": 17025.17
+    }
+  },
+  {
+    "id": "FTPoint65",
+    "label": "Sakurajima - Southern Sandbar",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -86709.57,
+      "Y": -140441.75,
+      "Z": -2031.0
+    }
+  },
+  {
+    "id": "FTPoint74",
+    "label": "Hidden Passage to the Oculus Gate",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -698514.94,
+      "Y": -322880.4,
+      "Z": 15540.0
+    }
+  },
+  {
+    "id": "FTPoint99",
+    "label": "Mossanda Inner Coast",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -224958.11,
+      "Y": 285919.22,
+      "Z": -1124.72
+    }
+  },
+  {
+    "id": "FTPoint50",
+    "label": "Isle of Murmurs",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -88645.85,
+      "Y": -3922.88,
+      "Z": -876.45
+    }
+  },
+  {
+    "id": "FTPoint94",
+    "label": "Whisperwind Hill",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -236840.52,
+      "Y": 34772.58,
+      "Z": 13438.9
+    }
+  },
+  {
+    "id": "FTPoint90",
+    "label": "Sealed Realm of Terraria",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -488718.2,
+      "Y": -35724.94,
+      "Z": -2096.69
+    }
+  },
+  {
+    "id": "FTPoint58",
+    "label": "Natural Bridge",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -221399.27,
+      "Y": 330684.53,
+      "Z": -1744.81
+    }
+  },
+  {
+    "id": "FTPoint128",
+    "label": "Amethyst Outcrop",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -923275.1,
+      "Y": -385109.12,
+      "Z": -258.76
+    }
+  },
+  {
+    "id": "FTPoint33",
+    "label": "Lake Center",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -221230.0,
+      "Y": 165130.0,
+      "Z": -40.0
+    }
+  },
+  {
+    "id": "FTPoint6",
+    "label": "Mount Obsidian - Anubis Statue",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -416557.53,
+      "Y": -90012.16,
+      "Z": 23301.87
+    }
+  },
+  {
+    "id": "FTPoint117",
+    "label": "Crimson Cliffs",
+    "type": "fastTravelPoint",
+    "location": {
+      "X": -578061.0,
+      "Y": -158216.08,
+      "Z": 7648.47
+    }
+  },
+  {
+    "id": "obj_0",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 139611.05,
+      "Y": 324306.53,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_1",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -74916.76,
+      "Y": 372458.47,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_2",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 21557.57,
+      "Y": 309214.78,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_3",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 15729.53,
+      "Y": 267188.94,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_4",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -6205.63,
+      "Y": 255610.88,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_5",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 14688.69,
+      "Y": 384880.8,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_6",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 63496.1,
+      "Y": 333388.16,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_7",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -36843.14,
+      "Y": 454971.78,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_8",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 101675.28,
+      "Y": 373450.72,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_9",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -22520.58,
+      "Y": 313714.28,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_10",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 61320.0,
+      "Y": 418400.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_11",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -4513.04,
+      "Y": 424323.72,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_12",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -62924.05,
+      "Y": 412516.97,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_13",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -26780.0,
+      "Y": 354640.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_14",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 85201.23,
+      "Y": 312813.88,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_15",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -257638.36,
+      "Y": 141158.6,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_16",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -265204.06,
+      "Y": 131385.12,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_17",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -250341.31,
+      "Y": 183436.67,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_18",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -251818.6,
+      "Y": 164041.66,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_19",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -211384.67,
+      "Y": 182474.86,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_20",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -209589.38,
+      "Y": 163211.5,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_21",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -173408.44,
+      "Y": 166837.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_22",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -180769.03,
+      "Y": 163430.77,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_23",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -219424.83,
+      "Y": 165811.12,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_24",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -239159.88,
+      "Y": 205386.8,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_25",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -219180.0,
+      "Y": 139690.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_26",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -250000.34,
+      "Y": 120261.4,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_27",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -196751.97,
+      "Y": 176316.2,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_28",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -164661.72,
+      "Y": 153125.2,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_29",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -194214.64,
+      "Y": 239238.69,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_30",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -130866.33,
+      "Y": 230761.69,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_31",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -84794.05,
+      "Y": 286150.22,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_32",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -129471.89,
+      "Y": 253439.78,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_33",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -215213.8,
+      "Y": 265367.6,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_34",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -155066.94,
+      "Y": 296284.66,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_35",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -101785.07,
+      "Y": 205029.23,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_36",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -121016.87,
+      "Y": 212487.1,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_37",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -61859.88,
+      "Y": 204435.4,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_38",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -125215.91,
+      "Y": 174427.38,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_39",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -163447.64,
+      "Y": 229313.19,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_40",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -220790.0,
+      "Y": 234113.03,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_41",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -176948.36,
+      "Y": 200393.8,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_42",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -186504.7,
+      "Y": 268455.56,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_43",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -57776.31,
+      "Y": 228600.25,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_44",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -217124.6,
+      "Y": 138061.36,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_45",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -120225.01,
+      "Y": 25862.93,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_46",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -134629.19,
+      "Y": 6185.44,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_47",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -107243.01,
+      "Y": 24363.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_48",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -110032.66,
+      "Y": -71996.59,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_49",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -124929.0,
+      "Y": -79963.57,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_50",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -137086.11,
+      "Y": -50427.56,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_51",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -389335.2,
+      "Y": 108597.55,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_52",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -383502.84,
+      "Y": 99617.95,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_53",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -429603.38,
+      "Y": 94092.7,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_54",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -431538.06,
+      "Y": 82092.4,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_55",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -404448.4,
+      "Y": 64664.34,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_56",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -376218.16,
+      "Y": 48671.66,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_57",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -245011.25,
+      "Y": 335769.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_58",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -267882.53,
+      "Y": 327448.2,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_59",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -259060.98,
+      "Y": 280351.5,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_60",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -189599.53,
+      "Y": 372690.3,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_61",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -213940.0,
+      "Y": 398860.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_62",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -181432.97,
+      "Y": 350147.84,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_63",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -288304.3,
+      "Y": 227049.95,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_64",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -281167.4,
+      "Y": 88738.35,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_65",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -256755.73,
+      "Y": 26900.88,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_66",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -372024.53,
+      "Y": 278564.66,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_67",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -346468.22,
+      "Y": 214850.02,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_68",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -301121.12,
+      "Y": 179718.17,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_69",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -320588.1,
+      "Y": 113800.28,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_70",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -315807.78,
+      "Y": 107247.59,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_71",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -325692.12,
+      "Y": 83869.57,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_72",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -340404.62,
+      "Y": 58438.68,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_73",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -337808.62,
+      "Y": 30763.02,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_74",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -315044.72,
+      "Y": 54365.9,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_75",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -302529.38,
+      "Y": 52391.46,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_76",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -203748.6,
+      "Y": 90007.32,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_77",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -202257.86,
+      "Y": 31403.27,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_78",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -225251.94,
+      "Y": -13333.92,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_79",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -221494.6,
+      "Y": 27971.86,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_80",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -61090.59,
+      "Y": -5748.06,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_81",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -39021.6,
+      "Y": -39231.31,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_82",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -74146.06,
+      "Y": -63473.69,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_83",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -2514.63,
+      "Y": -106358.34,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_84",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 10312.33,
+      "Y": -115227.17,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_85",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 936.83,
+      "Y": -128792.5,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_86",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -37363.29,
+      "Y": -152096.67,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_87",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 9258.16,
+      "Y": -142072.25,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_88",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -17730.91,
+      "Y": -73667.05,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_89",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -42658.46,
+      "Y": -122726.34,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_90",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -32453.78,
+      "Y": -106978.17,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_91",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -13807.57,
+      "Y": -152802.98,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_92",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -15641.82,
+      "Y": -137406.38,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_93",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -24131.92,
+      "Y": -110237.73,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_94",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -57139.16,
+      "Y": -86089.53,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_95",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -837426.0,
+      "Y": -9351.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_96",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 135090.5,
+      "Y": 64370.32,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_97",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 136262.53,
+      "Y": 88305.4,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_98",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 2547.95,
+      "Y": 172474.5,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_99",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -58507.24,
+      "Y": 157466.9,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_100",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 20555.75,
+      "Y": 102617.6,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_101",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -3297.48,
+      "Y": 53484.94,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_102",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 101576.62,
+      "Y": 18990.65,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_103",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -36660.12,
+      "Y": 148978.95,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_104",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 41444.24,
+      "Y": 27335.72,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_105",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 47436.18,
+      "Y": -9661.42,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_106",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -25056.86,
+      "Y": 113597.3,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_107",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 26498.53,
+      "Y": 75921.09,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_108",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 42530.34,
+      "Y": 203883.6,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_109",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 80038.95,
+      "Y": 6386.82,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_110",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": 143019.12,
+      "Y": 9658.51,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_111",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -877132.9,
+      "Y": -430141.72,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_112",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -778536.75,
+      "Y": -381700.44,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_113",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -744310.0,
+      "Y": -372750.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_114",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -740400.0,
+      "Y": -345130.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_115",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -817170.0,
+      "Y": -461060.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_116",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -733449.0,
+      "Y": -320729.53,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_117",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -843324.4,
+      "Y": -404753.84,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_118",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -796816.5,
+      "Y": -365816.16,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_119",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -798439.8,
+      "Y": -331101.8,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_120",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -800228.8,
+      "Y": -286975.7,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_121",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -696510.0,
+      "Y": -309770.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_122",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -683335.7,
+      "Y": -279554.97,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_123",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -768983.8,
+      "Y": -257968.58,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_124",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -753200.0,
+      "Y": -274400.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_125",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -588020.0,
+      "Y": -254710.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_126",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -512833.9,
+      "Y": -284233.53,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_127",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -554303.94,
+      "Y": -314140.56,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_128",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -635848.56,
+      "Y": -271258.94,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_129",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -702808.5,
+      "Y": -335070.7,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_130",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -613348.6,
+      "Y": -320523.06,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_131",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -563204.8,
+      "Y": -229685.1,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_132",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -502169.7,
+      "Y": -346285.5,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_133",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -652504.44,
+      "Y": -439189.22,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_134",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -671787.0,
+      "Y": -192539.98,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_135",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -624781.9,
+      "Y": -247472.5,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_136",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -669586.3,
+      "Y": -394684.16,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_137",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -640033.75,
+      "Y": -344681.72,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_138",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -585393.8,
+      "Y": -338144.72,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_139",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -739658.9,
+      "Y": -310238.78,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_140",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -597250.44,
+      "Y": -301345.4,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_141",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -335586.6,
+      "Y": -104884.1,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_142",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -287925.97,
+      "Y": -191141.92,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_143",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -333902.78,
+      "Y": -205767.4,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_144",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -320921.66,
+      "Y": -100230.68,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_145",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -268094.03,
+      "Y": -53009.18,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_146",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -368225.28,
+      "Y": -74478.06,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_147",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -238650.75,
+      "Y": -121688.11,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_148",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -315091.6,
+      "Y": -52063.6,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_149",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -374132.75,
+      "Y": -89184.65,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_150",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -392681.62,
+      "Y": -208957.25,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_151",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -405155.94,
+      "Y": -176237.36,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_152",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -386508.1,
+      "Y": -12226.48,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_153",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -400575.6,
+      "Y": -35335.31,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_154",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -289138.2,
+      "Y": -209876.05,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_155",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -265755.38,
+      "Y": -164168.52,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_156",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -485315.12,
+      "Y": -34972.19,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_157",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -322793.12,
+      "Y": 185433.95,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_158",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -364797.3,
+      "Y": 181681.66,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_159",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -372111.75,
+      "Y": 161187.75,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_160",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -330139.03,
+      "Y": 200216.97,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_161",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -319255.0,
+      "Y": 213145.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_162",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -279321.47,
+      "Y": 101902.94,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_163",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -231307.81,
+      "Y": 73146.88,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_164",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -311425.0,
+      "Y": 151135.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_165",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -338708.5,
+      "Y": 161823.08,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_166",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -296998.28,
+      "Y": 212680.78,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_167",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -307418.28,
+      "Y": 225000.78,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_168",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -363251.12,
+      "Y": 167049.92,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_169",
+    "label": "Dungeon",
+    "type": "dungeon",
+    "location": {
+      "X": -339127.47,
+      "Y": 193425.61,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_170",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 173548.3,
+      "Y": 474295.44,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_171",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -544943.3,
+      "Y": -264111.88,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_172",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -1033347.94,
+      "Y": -358750.8,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_173",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -821552.1,
+      "Y": 46132.06,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_174",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 97716.31,
+      "Y": 307499.7,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_175",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -206970.0,
+      "Y": 363810.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_176",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -162910.0,
+      "Y": 318720.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_177",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 517450.0,
+      "Y": -626940.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_178",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -661871.9,
+      "Y": -284991.84,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_179",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -867560.9,
+      "Y": -441338.22,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_180",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 14681.05,
+      "Y": -132067.56,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_181",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 262730.0,
+      "Y": 75740.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_182",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -343155.0,
+      "Y": 244585.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_183",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -791868.2,
+      "Y": -337175.94,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_184",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -691248.6,
+      "Y": -309680.34,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_185",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -122060.0,
+      "Y": 15810.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_186",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -822007.0,
+      "Y": -66402.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_187",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -649837.06,
+      "Y": -235616.66,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_188",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -169138.25,
+      "Y": 575683.1,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_189",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -735438.4,
+      "Y": -95932.93,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_190",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 122760.0,
+      "Y": 318710.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_191",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -246100.0,
+      "Y": 77200.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_192",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 21745.54,
+      "Y": -109001.64,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_193",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -147370.0,
+      "Y": 364010.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_194",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -558869.94,
+      "Y": -619480.75,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_195",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -372950.0,
+      "Y": 104400.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_196",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -322819.97,
+      "Y": -93429.84,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_197",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -822824.0,
+      "Y": 16747.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_198",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -404768.2,
+      "Y": -444910.75,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_199",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 520440.0,
+      "Y": -727175.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_200",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 526910.2,
+      "Y": -581727.6,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_201",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 458095.0,
+      "Y": -694560.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_202",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -162481.34,
+      "Y": 233115.23,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_203",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 571870.0,
+      "Y": -733420.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_204",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -431050.44,
+      "Y": 56140.59,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_205",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -254060.0,
+      "Y": 178050.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_206",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -772213.2,
+      "Y": -273563.47,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_207",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -167230.0,
+      "Y": 96430.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_208",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -412259.28,
+      "Y": 106237.67,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_209",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -550552.06,
+      "Y": -166886.31,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_210",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -746847.06,
+      "Y": -10678.01,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_211",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -593253.1,
+      "Y": -294034.56,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_212",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -236727.1,
+      "Y": 321310.12,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_213",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -443860.8,
+      "Y": 183689.42,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_214",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -721639.0,
+      "Y": -432015.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_215",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 601096.75,
+      "Y": -572063.06,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_216",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -773027.4,
+      "Y": -368265.88,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_217",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -450359.53,
+      "Y": 356886.22,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_218",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 15843.52,
+      "Y": -130382.9,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_219",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -717565.94,
+      "Y": -251787.33,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_220",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -174578.95,
+      "Y": -158213.75,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_221",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -516157.0,
+      "Y": -393151.12,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_222",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -276069.47,
+      "Y": -180092.97,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_223",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -239436.58,
+      "Y": 345.75,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_224",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -802420.0,
+      "Y": -112610.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_225",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -335225.0,
+      "Y": 180735.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_226",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 39324.88,
+      "Y": -18772.69,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_227",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 50564.78,
+      "Y": 357757.47,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_228",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 187731.2,
+      "Y": 359897.25,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_229",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 90345.45,
+      "Y": 534007.8,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_230",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -333940.0,
+      "Y": 39610.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_231",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -155950.0,
+      "Y": 31260.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_232",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 109790.0,
+      "Y": -5880.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_233",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -723782.7,
+      "Y": -230996.66,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_234",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -238810.95,
+      "Y": -110487.63,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_235",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -889441.3,
+      "Y": -361294.3,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_236",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -772844.0,
+      "Y": -11173.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_237",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": 491580.78,
+      "Y": -725697.06,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_238",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -315583.53,
+      "Y": 237116.97,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_239",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -396003.12,
+      "Y": 53772.16,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_240",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -113197.67,
+      "Y": 201490.47,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_241",
+    "label": "Alpha_pal",
+    "type": "alpha_pal",
+    "location": {
+      "X": -46108.39,
+      "Y": 302547.8,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_242",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -249150.0,
+      "Y": 47780.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_243",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -260656.53,
+      "Y": 129341.76,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_244",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -283650.0,
+      "Y": 147100.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_245",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -329220.0,
+      "Y": -51630.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_246",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -318898.75,
+      "Y": 86800.91,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_247",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -377810.0,
+      "Y": 31720.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_248",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -464660.0,
+      "Y": -115480.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_249",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -21460.0,
+      "Y": -123580.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_250",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -11000.0,
+      "Y": 69160.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_251",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -46930.0,
+      "Y": -63680.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_252",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -26610.0,
+      "Y": 385860.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_253",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -47628.45,
+      "Y": 147755.06,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_254",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -63920.0,
+      "Y": 2010.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_255",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -59150.0,
+      "Y": 107330.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_256",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -80710.0,
+      "Y": 241410.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_257",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -107400.0,
+      "Y": 180590.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_258",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -139220.0,
+      "Y": 8790.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_259",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -147040.0,
+      "Y": 234240.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_260",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -172100.0,
+      "Y": 271020.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_261",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -155820.36,
+      "Y": 314737.6,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_262",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -198120.0,
+      "Y": 12210.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_263",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -181520.0,
+      "Y": 167290.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_264",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -227181.38,
+      "Y": -116672.16,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_265",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -205400.0,
+      "Y": 324230.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_266",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": -225550.0,
+      "Y": 161970.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_267",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": 20638.32,
+      "Y": 329931.44,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_268",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": 50780.0,
+      "Y": 23130.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_269",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": 42910.0,
+      "Y": 279290.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "obj_270",
+    "label": "Predator_pal",
+    "type": "predator_pal",
+    "location": {
+      "X": 94990.0,
+      "Y": 32590.0,
+      "Z": 0.0
+    }
+  },
+  {
+    "id": "boss_0",
+    "label": "Horus Water (Lv 66)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -867560.9,
+      "Y": -441338.22,
+      "Z": 18640.15
+    }
+  },
+  {
+    "id": "boss_1",
+    "label": "Grim Girl (Lv 65)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -791868.2,
+      "Y": -337175.94,
+      "Z": 35122.79
+    }
+  },
+  {
+    "id": "boss_2",
+    "label": "White Deer (Lv 65)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -661871.9,
+      "Y": -284991.84,
+      "Z": 1422.1
+    }
+  },
+  {
+    "id": "boss_3",
+    "label": "Female Soldier (Lv 19)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -177380.0,
+      "Y": 9850.0,
+      "Z": 6230.0
+    }
+  },
+  {
+    "id": "boss_4",
+    "label": "Female Soldier03 (Lv 39)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -231660.0,
+      "Y": -113810.0,
+      "Z": -1150.0
+    }
+  },
+  {
+    "id": "boss_5",
+    "label": "Female People02 (Lv 16)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -304539.22,
+      "Y": 35742.27,
+      "Z": 2271.28
+    }
+  },
+  {
+    "id": "boss_6",
+    "label": "Male Trader02 (Lv 57)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -907334.1,
+      "Y": -389724.44,
+      "Z": -1882.67
+    }
+  },
+  {
+    "id": "boss_7",
+    "label": "Male People2 (Lv 26)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -124753.86,
+      "Y": 318055.84,
+      "Z": -1920.75
+    }
+  },
+  {
+    "id": "boss_8",
+    "label": "Poseidon Orca (Lv 60)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 175142.77,
+      "Y": 221586.5,
+      "Z": -2024.66
+    }
+  },
+  {
+    "id": "boss_9",
+    "label": "Grass Rabbit Man (Lv 35)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -119314.52,
+      "Y": 288958.4,
+      "Z": 3096.73
+    }
+  },
+  {
+    "id": "boss_10",
+    "label": "Captain Penguin (Lv 15)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -285331.3,
+      "Y": 210162.69,
+      "Z": 766.81
+    }
+  },
+  {
+    "id": "boss_11",
+    "label": "Berry Goat Dark (Lv 23)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -426590.0,
+      "Y": 90670.0,
+      "Z": 110.0
+    }
+  },
+  {
+    "id": "boss_12",
+    "label": "Ghost Rabbit (Lv 60)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -589257.2,
+      "Y": -265874.4,
+      "Z": 19702.04
+    }
+  },
+  {
+    "id": "boss_13",
+    "label": "Bad Catgirl (Lv 60)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -544943.3,
+      "Y": -264111.88,
+      "Z": 2902.4
+    }
+  },
+  {
+    "id": "boss_14",
+    "label": "Black Puppy (Lv 60)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -797364.2,
+      "Y": -245386.88,
+      "Z": 183.87
+    }
+  },
+  {
+    "id": "boss_15",
+    "label": "Fox Mage (Lv 28)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -226362.23,
+      "Y": 231993.33,
+      "Z": -1897.7
+    }
+  },
+  {
+    "id": "boss_16",
+    "label": "Ice Fox (Lv 15)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -276240.0,
+      "Y": 268990.0,
+      "Z": -1300.0
+    }
+  },
+  {
+    "id": "boss_17",
+    "label": "Mutant (Lv 35)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -147025.53,
+      "Y": 217379.17,
+      "Z": 2767.2
+    }
+  },
+  {
+    "id": "boss_18",
+    "label": "White Moth (Lv 40)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -92059.77,
+      "Y": 273741.9,
+      "Z": 18877.03
+    }
+  },
+  {
+    "id": "boss_19",
+    "label": "Violet Fairy (Lv 27)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -245458.9,
+      "Y": 149122.0,
+      "Z": 822.98
+    }
+  },
+  {
+    "id": "boss_20",
+    "label": "Moon Child (Lv 66)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -773523.9,
+      "Y": 51495.86,
+      "Z": 45252.0
+    }
+  },
+  {
+    "id": "boss_21",
+    "label": "Ronin (Lv 25)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -282853.72,
+      "Y": 64952.2,
+      "Z": 5267.48
+    }
+  },
+  {
+    "id": "boss_22",
+    "label": "Cube Turtle Neutral (Lv 60)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -729794.06,
+      "Y": -338535.5,
+      "Z": 15500.14
+    }
+  },
+  {
+    "id": "boss_23",
+    "label": "Manticore (Lv 30)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -183818.9,
+      "Y": 40647.84,
+      "Z": 8457.06
+    }
+  },
+  {
+    "id": "boss_24",
+    "label": "White Shield Dragon (Lv 62)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -593253.1,
+      "Y": -294034.56,
+      "Z": 1152.6
+    }
+  },
+  {
+    "id": "boss_25",
+    "label": "Flame Buffalo (Lv 15)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -349072.88,
+      "Y": 104534.98,
+      "Z": -211.34
+    }
+  },
+  {
+    "id": "boss_26",
+    "label": "Blueberry Fairy (Lv 63)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -568029.2,
+      "Y": -464143.12,
+      "Z": -1848.0
+    }
+  },
+  {
+    "id": "boss_27",
+    "label": "Kitsunebi Ice (Lv 15)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -149050.0,
+      "Y": -30550.0,
+      "Z": -1380.0
+    }
+  },
+  {
+    "id": "boss_28",
+    "label": "Oilrig 3 (Lv 60)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -789847.9,
+      "Y": -636231.0,
+      "Z": -250.0
+    }
+  },
+  {
+    "id": "boss_29",
+    "label": "Oilrig 1 (Lv 55)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -321274.9,
+      "Y": 424944.06,
+      "Z": -2102.61
+    }
+  },
+  {
+    "id": "boss_30",
+    "label": "Oilrig 2 (Lv 30)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -250672.6,
+      "Y": 232290.08,
+      "Z": -2100.0
+    }
+  },
+  {
+    "id": "boss_31",
+    "label": "Female Soldier02 (Lv 56)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -712045.56,
+      "Y": -229952.92,
+      "Z": 8893.03
+    }
+  },
+  {
+    "id": "boss_32",
+    "label": "Male People03 (Lv 10)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -335675.2,
+      "Y": 148683.03,
+      "Z": 6384.37
+    }
+  },
+  {
+    "id": "boss_33",
+    "label": "Police Rifle (Lv 40)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 45909.48,
+      "Y": 304971.44,
+      "Z": -1015.37
+    }
+  },
+  {
+    "id": "boss_34",
+    "label": "Believer Cross Bow (Lv 23)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -164164.23,
+      "Y": 152549.42,
+      "Z": -1410.97
+    }
+  },
+  {
+    "id": "boss_35",
+    "label": "Fengyun Deeper Electric (Lv 60)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -649837.06,
+      "Y": -235616.66,
+      "Z": 17616.09
+    }
+  },
+  {
+    "id": "boss_36",
+    "label": "Ninja (Lv 28)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -124623.98,
+      "Y": 232502.7,
+      "Z": 7801.97
+    }
+  },
+  {
+    "id": "boss_37",
+    "label": "Dark Trader (Lv 59)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -666737.7,
+      "Y": -409956.38,
+      "Z": 25605.27
+    }
+  },
+  {
+    "id": "boss_38",
+    "label": "Male Trader03 (Lv 57)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -538826.5,
+      "Y": -337667.7,
+      "Z": -426.03
+    }
+  },
+  {
+    "id": "boss_39",
+    "label": "Believer Fat Giant Club (Lv 30)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -79599.09,
+      "Y": 192658.28,
+      "Z": 6188.34
+    }
+  },
+  {
+    "id": "boss_40",
+    "label": "Male Soldier03 (Lv 49)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 21850.12,
+      "Y": -8346.56,
+      "Z": 6712.46
+    }
+  },
+  {
+    "id": "boss_41",
+    "label": "Male Soldier04 (Lv 21)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -217110.73,
+      "Y": 127090.61,
+      "Z": 6141.97
+    }
+  },
+  {
+    "id": "boss_42",
+    "label": "Police Old (Lv 57)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -686537.5,
+      "Y": -380252.66,
+      "Z": 32747.38
+    }
+  },
+  {
+    "id": "boss_43",
+    "label": "Female People03 (Lv 15)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -300962.38,
+      "Y": 157210.73,
+      "Z": -164.24
+    }
+  },
+  {
+    "id": "boss_44",
+    "label": "Female Soldier04 (Lv 52)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -75788.09,
+      "Y": -82304.96,
+      "Z": -960.0
+    }
+  },
+  {
+    "id": "boss_45",
+    "label": "Male Trader01 (Lv 42)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -57544.38,
+      "Y": 116422.49,
+      "Z": 9060.12
+    }
+  },
+  {
+    "id": "boss_46",
+    "label": "Werewolf Ice (Lv 66)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -773027.4,
+      "Y": -368265.88,
+      "Z": 4287.22
+    }
+  },
+  {
+    "id": "boss_47",
+    "label": "Male Desert People (Lv 36)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -62624.9,
+      "Y": 402438.94,
+      "Z": 12180.67
+    }
+  },
+  {
+    "id": "boss_48",
+    "label": "Female Desert People (Lv 37)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 147119.08,
+      "Y": 347473.56,
+      "Z": -856.4
+    }
+  },
+  {
+    "id": "boss_49",
+    "label": "Fire Cult Flame Thrower (Lv 41)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -331690.16,
+      "Y": -40407.43,
+      "Z": 15982.14
+    }
+  },
+  {
+    "id": "boss_50",
+    "label": "Male Ninja Elite (Lv 53)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -18160.0,
+      "Y": -151400.0,
+      "Z": 2360.0
+    }
+  },
+  {
+    "id": "boss_51",
+    "label": "Hunter Rifle (Lv 12)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -359201.56,
+      "Y": 181724.28,
+      "Z": 5179.1
+    }
+  },
+  {
+    "id": "boss_52",
+    "label": "Male People (Lv 26)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -126584.23,
+      "Y": 318232.75,
+      "Z": -1519.07
+    }
+  },
+  {
+    "id": "boss_53",
+    "label": "Male Soldier02 (Lv 23)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -224118.3,
+      "Y": 277672.06,
+      "Z": -864.36
+    }
+  },
+  {
+    "id": "boss_54",
+    "label": "Male People02 (Lv 43)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 97107.99,
+      "Y": 68422.43,
+      "Z": 42381.05
+    }
+  },
+  {
+    "id": "boss_55",
+    "label": "Male Soldier (Lv 15)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -409430.0,
+      "Y": 24820.0,
+      "Z": 1880.0
+    }
+  },
+  {
+    "id": "boss_56",
+    "label": "Female People (Lv 38)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -470651.97,
+      "Y": -80708.37,
+      "Z": -2009.12
+    }
+  },
+  {
+    "id": "boss_57",
+    "label": "Grass Golem (Lv 75)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 517450.0,
+      "Y": -626940.0,
+      "Z": 10980.0
+    }
+  },
+  {
+    "id": "boss_58",
+    "label": "Female Soldier03 (Lv 39)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -231660.0,
+      "Y": -113810.0,
+      "Z": -1150.0
+    }
+  },
+  {
+    "id": "boss_59",
+    "label": "Female People02 (Lv 16)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -304539.22,
+      "Y": 35742.27,
+      "Z": 2271.28
+    }
+  },
+  {
+    "id": "boss_60",
+    "label": "Male Trader02 (Lv 57)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -907334.1,
+      "Y": -389724.44,
+      "Z": -1882.67
+    }
+  },
+  {
+    "id": "boss_61",
+    "label": "Male People2 (Lv 26)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -124753.86,
+      "Y": 318055.84,
+      "Z": -1920.75
+    }
+  },
+  {
+    "id": "boss_62",
+    "label": "Viking (Lv 57)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -584187.7,
+      "Y": -181661.73,
+      "Z": 978.43
+    }
+  },
+  {
+    "id": "boss_63",
+    "label": "Hunter Fat Gatling Gun (Lv 20)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -242340.0,
+      "Y": 36220.0,
+      "Z": 13020.0
+    }
+  },
+  {
+    "id": "boss_64",
+    "label": "Viking Elite (Lv 58)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -805295.06,
+      "Y": -478475.2,
+      "Z": -815.01
+    }
+  },
+  {
+    "id": "boss_65",
+    "label": "Scientist Laser Rifle (Lv 45)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 10215.88,
+      "Y": 153782.08,
+      "Z": 3150.0
+    }
+  },
+  {
+    "id": "boss_66",
+    "label": "Female Soldier (Lv 19)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -177380.0,
+      "Y": 9850.0,
+      "Z": 6230.0
+    }
+  },
+  {
+    "id": "boss_67",
+    "label": "White Deer Dark (Lv 79)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 520440.0,
+      "Y": -727175.0,
+      "Z": 41054.54
+    }
+  },
+  {
+    "id": "boss_68",
+    "label": "Ice Narwhal Fire (Lv 74)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 526910.2,
+      "Y": -581727.6,
+      "Z": 18204.21
+    }
+  },
+  {
+    "id": "boss_69",
+    "label": "Mushroom Lady (Lv 78)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 458095.0,
+      "Y": -694560.0,
+      "Z": 19325.0
+    }
+  },
+  {
+    "id": "boss_70",
+    "label": "Volcano Dragon Ice (Lv 78)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 571870.0,
+      "Y": -733420.0,
+      "Z": 18000.0
+    }
+  },
+  {
+    "id": "boss_71",
+    "label": "Hercules Beetle Ground (Lv 64)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -691248.6,
+      "Y": -309680.34,
+      "Z": 16072.18
+    }
+  },
+  {
+    "id": "boss_72",
+    "label": "Kabuki Man (Lv 78)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 601096.75,
+      "Y": -572063.06,
+      "Z": 30180.0
+    }
+  },
+  {
+    "id": "boss_73",
+    "label": "Dome Armor Dragon (Lv 79)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 491580.78,
+      "Y": -725697.06,
+      "Z": 12042.81
+    }
+  },
+  {
+    "id": "boss_74",
+    "label": "Flower Dinosaur Electric (Lv 47)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -46108.39,
+      "Y": 302547.8,
+      "Z": -1928.49
+    }
+  },
+  {
+    "id": "boss_75",
+    "label": "Suzaku (Lv 45)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 97716.31,
+      "Y": 307499.7,
+      "Z": 17330.4
+    }
+  },
+  {
+    "id": "boss_76",
+    "label": "Dark Scorpion (Lv 44)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 122760.0,
+      "Y": 318710.0,
+      "Z": 320.0
+    }
+  },
+  {
+    "id": "boss_77",
+    "label": "Cube Turtle (Lv 55)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 50564.78,
+      "Y": 357757.47,
+      "Z": 29.71
+    }
+  },
+  {
+    "id": "boss_78",
+    "label": "Saint Centaur (Lv 60)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 187731.2,
+      "Y": 359897.25,
+      "Z": 2647.32
+    }
+  },
+  {
+    "id": "boss_79",
+    "label": "Volcano Dragon (Lv 70)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -1033347.94,
+      "Y": -358750.8,
+      "Z": 7958.07
+    }
+  },
+  {
+    "id": "boss_80",
+    "label": "Rock Beast (Lv 50)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 90345.45,
+      "Y": 534007.8,
+      "Z": 3685.11
+    }
+  },
+  {
+    "id": "boss_81",
+    "label": "Cactus Doll (Lv 40)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -450359.53,
+      "Y": 356886.22,
+      "Z": 3561.44
+    }
+  },
+  {
+    "id": "boss_82",
+    "label": "Golden Horse (Lv 63)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -772213.2,
+      "Y": -273563.47,
+      "Z": 5318.77
+    }
+  },
+  {
+    "id": "boss_83",
+    "label": "Scorpion Man Electric (Lv 70)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -404768.2,
+      "Y": -444910.75,
+      "Z": -695.88
+    }
+  },
+  {
+    "id": "boss_84",
+    "label": "Grass Golem Dark (Lv 70)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -558869.94,
+      "Y": -619480.75,
+      "Z": -1819.68
+    }
+  },
+  {
+    "id": "boss_85",
+    "label": "Grass Golem (Lv 55)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -169138.25,
+      "Y": 575683.1,
+      "Z": -1814.14
+    }
+  },
+  {
+    "id": "boss_86",
+    "label": "King Alpaca Ice (Lv 46)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 39324.88,
+      "Y": -18772.69,
+      "Z": 6701.49
+    }
+  },
+  {
+    "id": "boss_87",
+    "label": "Ice Narwhal (Lv 55)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 262730.0,
+      "Y": 75740.0,
+      "Z": -3183.0
+    }
+  },
+  {
+    "id": "boss_88",
+    "label": "Ice Horse (Lv 60)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 109790.0,
+      "Y": -5880.0,
+      "Z": 22180.0
+    }
+  },
+  {
+    "id": "boss_89",
+    "label": "Lily Queen (Lv 58)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 14681.05,
+      "Y": -132067.56,
+      "Z": 2994.49
+    }
+  },
+  {
+    "id": "boss_90",
+    "label": "Dark Scorpion Ground (Lv 55)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 21745.54,
+      "Y": -109001.64,
+      "Z": -1343.32
+    }
+  },
+  {
+    "id": "boss_91",
+    "label": "Lily Queen Dark (Lv 58)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 15843.52,
+      "Y": -130382.9,
+      "Z": 3160.84
+    }
+  },
+  {
+    "id": "boss_92",
+    "label": "Fox Exorcist (Lv 68)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -821552.1,
+      "Y": 46132.06,
+      "Z": 51332.96
+    }
+  },
+  {
+    "id": "boss_93",
+    "label": "Mystery Mask (Lv 60)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -550552.06,
+      "Y": -166886.31,
+      "Z": -476.08
+    }
+  },
+  {
+    "id": "boss_94",
+    "label": "Ghost Dragon (Lv 69)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -822007.0,
+      "Y": -66402.0,
+      "Z": 40122.79
+    }
+  },
+  {
+    "id": "boss_95",
+    "label": "Jet Dragon (Lv 70)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -735438.4,
+      "Y": -95932.93,
+      "Z": 47396.84
+    }
+  },
+  {
+    "id": "boss_96",
+    "label": "Thunder Fluffy Bird (Lv 67)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -822824.0,
+      "Y": 16747.0,
+      "Z": 45679.0
+    }
+  },
+  {
+    "id": "boss_97",
+    "label": "Elec Lizard (Lv 66)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -746847.06,
+      "Y": -10678.01,
+      "Z": 41413.11
+    }
+  },
+  {
+    "id": "boss_98",
+    "label": "Lotus Dragon (Lv 69)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -802420.0,
+      "Y": -112610.0,
+      "Z": 51608.09
+    }
+  },
+  {
+    "id": "boss_99",
+    "label": "Elec Snail (Lv 65)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -772844.0,
+      "Y": -11173.0,
+      "Z": 39727.0
+    }
+  },
+  {
+    "id": "boss_100",
+    "label": "Boss Anubis (Lv 55)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -167230.0,
+      "Y": 96430.0,
+      "Z": -1737.13
+    }
+  },
+  {
+    "id": "boss_101",
+    "label": "Grass Mammoth (Lv 38)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -343155.0,
+      "Y": 244585.0,
+      "Z": -95.0
+    }
+  },
+  {
+    "id": "boss_102",
+    "label": "Weasel Dragon (Lv 11)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -315583.53,
+      "Y": 237116.97,
+      "Z": 2448.41
+    }
+  },
+  {
+    "id": "boss_103",
+    "label": "Fengyun Deeper (Lv 25)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -333940.0,
+      "Y": 39610.0,
+      "Z": 1600.0
+    }
+  },
+  {
+    "id": "boss_104",
+    "label": "White Tiger Ground (Lv 62)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -721639.0,
+      "Y": -432015.0,
+      "Z": 10210.87
+    }
+  },
+  {
+    "id": "boss_105",
+    "label": "Kirin (Lv 31)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -372950.0,
+      "Y": 104400.0,
+      "Z": -770.0
+    }
+  },
+  {
+    "id": "boss_106",
+    "label": "Thunder Bird (Lv 37)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -113197.67,
+      "Y": 201490.47,
+      "Z": 2063.39
+    }
+  },
+  {
+    "id": "boss_107",
+    "label": "Blue Dragon (Lv 40)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -246100.0,
+      "Y": 77200.0,
+      "Z": -1460.0
+    }
+  },
+  {
+    "id": "boss_108",
+    "label": "Naughty Cat (Lv 17)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -236727.1,
+      "Y": 321310.12,
+      "Z": -1909.38
+    }
+  },
+  {
+    "id": "boss_109",
+    "label": "King Alpaca (Lv 23)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -335225.0,
+      "Y": 180735.0,
+      "Z": 475.0
+    }
+  },
+  {
+    "id": "boss_110",
+    "label": "Sakura Saurus (Lv 23)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -431050.44,
+      "Y": 56140.59,
+      "Z": -1864.76
+    }
+  },
+  {
+    "id": "boss_111",
+    "label": "Umihebi (Lv 55)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -162910.0,
+      "Y": 318720.0,
+      "Z": -2382.35
+    }
+  },
+  {
+    "id": "boss_112",
+    "label": "Fairy Dragon (Lv 30)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -254060.0,
+      "Y": 178050.0,
+      "Z": 4000.0
+    }
+  },
+  {
+    "id": "boss_113",
+    "label": "Lazy Catfish (Lv 14)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -122060.0,
+      "Y": 15810.0,
+      "Z": -1460.0
+    }
+  },
+  {
+    "id": "boss_114",
+    "label": "Hawk Bird (Lv 18)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -155950.0,
+      "Y": 31260.0,
+      "Z": -1960.0
+    }
+  },
+  {
+    "id": "boss_115",
+    "label": "Night Blue Horse (Lv 63)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -717565.94,
+      "Y": -251787.33,
+      "Z": 175.2
+    }
+  },
+  {
+    "id": "boss_116",
+    "label": "Purple Spider (Lv 35)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -239436.58,
+      "Y": 345.75,
+      "Z": 7166.69
+    }
+  },
+  {
+    "id": "boss_117",
+    "label": "Plant Slime (Lv 11)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -412259.28,
+      "Y": 106237.67,
+      "Z": -2035.61
+    }
+  },
+  {
+    "id": "boss_118",
+    "label": "Mop King (Lv 11)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -396003.12,
+      "Y": 53772.16,
+      "Z": -1575.8
+    }
+  },
+  {
+    "id": "boss_119",
+    "label": "Grass Panda Electric (Lv 31)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -206970.0,
+      "Y": 363810.0,
+      "Z": 1140.0
+    }
+  },
+  {
+    "id": "boss_120",
+    "label": "Yeti Grass (Lv 38)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -147370.0,
+      "Y": 364010.0,
+      "Z": -1940.0
+    }
+  },
+  {
+    "id": "boss_121",
+    "label": "Queen Bee (Lv 39)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -162481.34,
+      "Y": 233115.23,
+      "Z": 5175.21
+    }
+  },
+  {
+    "id": "boss_122",
+    "label": "Wing Golem (Lv 55)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -238810.95,
+      "Y": -110487.63,
+      "Z": -205.31
+    }
+  },
+  {
+    "id": "boss_123",
+    "label": "Volcanic Monster (Lv 50)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -322819.97,
+      "Y": -93429.84,
+      "Z": 18739.18
+    }
+  },
+  {
+    "id": "boss_124",
+    "label": "King Bahamut (Lv 52)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -276069.47,
+      "Y": -180092.97,
+      "Z": 8181.59
+    }
+  },
+  {
+    "id": "boss_125",
+    "label": "Black Metal Dragon (Lv 55)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -174578.95,
+      "Y": -158213.75,
+      "Z": -1710.3
+    }
+  },
+  {
+    "id": "boss_126",
+    "label": "Raijin Daughter Water (Lv 60)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -516157.0,
+      "Y": -393151.12,
+      "Z": -721.87
+    }
+  },
+  {
+    "id": "boss_127",
+    "label": "Elec Panda (Lv 30)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -443860.8,
+      "Y": 183689.42,
+      "Z": -1496.65
+    }
+  },
+  {
+    "id": "boss_128",
+    "label": "Ice Horse Dark (Lv 65)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 173548.3,
+      "Y": 474295.44,
+      "Z": 192.48
+    }
+  },
+  {
+    "id": "boss_129",
+    "label": "Female Soldier02 (Lv 56)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -712045.56,
+      "Y": -229952.92,
+      "Z": 8893.03
+    }
+  },
+  {
+    "id": "boss_130",
+    "label": "Male People03 (Lv 10)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -335675.2,
+      "Y": 148683.03,
+      "Z": 6384.37
+    }
+  },
+  {
+    "id": "boss_131",
+    "label": "Viking (Lv 57)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -584187.7,
+      "Y": -181661.73,
+      "Z": 978.43
+    }
+  },
+  {
+    "id": "boss_132",
+    "label": "Police Rifle (Lv 40)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 45909.48,
+      "Y": 304971.44,
+      "Z": -1015.37
+    }
+  },
+  {
+    "id": "boss_133",
+    "label": "Believer Cross Bow (Lv 23)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -164164.23,
+      "Y": 152549.42,
+      "Z": -1410.97
+    }
+  },
+  {
+    "id": "boss_134",
+    "label": "Hunter Fat Gatling Gun (Lv 20)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -242340.0,
+      "Y": 36220.0,
+      "Z": 13020.0
+    }
+  },
+  {
+    "id": "boss_135",
+    "label": "Ninja (Lv 28)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -124623.98,
+      "Y": 232502.7,
+      "Z": 7801.97
+    }
+  },
+  {
+    "id": "boss_136",
+    "label": "Viking Elite (Lv 58)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -805295.06,
+      "Y": -478475.2,
+      "Z": -815.01
+    }
+  },
+  {
+    "id": "boss_137",
+    "label": "Amaterasu Wolf Dark (Lv 65)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -723782.7,
+      "Y": -230996.66,
+      "Z": 7282.11
+    }
+  },
+  {
+    "id": "boss_138",
+    "label": "Dark Trader (Lv 59)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -666737.7,
+      "Y": -409956.38,
+      "Z": 25605.27
+    }
+  },
+  {
+    "id": "boss_139",
+    "label": "Male Trader03 (Lv 57)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -538826.5,
+      "Y": -337667.7,
+      "Z": -426.03
+    }
+  },
+  {
+    "id": "boss_140",
+    "label": "Believer Fat Giant Club (Lv 30)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -79599.09,
+      "Y": 192658.28,
+      "Z": 6188.34
+    }
+  },
+  {
+    "id": "boss_141",
+    "label": "Male Soldier03 (Lv 49)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 21850.12,
+      "Y": -8346.56,
+      "Z": 6712.46
+    }
+  },
+  {
+    "id": "boss_142",
+    "label": "Male Soldier04 (Lv 21)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -217110.73,
+      "Y": 127090.61,
+      "Z": 6141.97
+    }
+  },
+  {
+    "id": "boss_143",
+    "label": "Scientist Laser Rifle (Lv 45)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 10215.88,
+      "Y": 153782.08,
+      "Z": 3150.0
+    }
+  },
+  {
+    "id": "boss_144",
+    "label": "Police Old (Lv 57)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -686537.5,
+      "Y": -380252.66,
+      "Z": 32747.38
+    }
+  },
+  {
+    "id": "boss_145",
+    "label": "Female People03 (Lv 15)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -300962.38,
+      "Y": 157210.73,
+      "Z": -164.24
+    }
+  },
+  {
+    "id": "boss_146",
+    "label": "Female Soldier04 (Lv 52)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -75788.09,
+      "Y": -82304.96,
+      "Z": -960.0
+    }
+  },
+  {
+    "id": "boss_147",
+    "label": "Male Trader01 (Lv 42)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -57544.38,
+      "Y": 116422.49,
+      "Z": 9060.12
+    }
+  },
+  {
+    "id": "boss_148",
+    "label": "Blue Thunder Horse (Lv 66)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -889441.3,
+      "Y": -361294.3,
+      "Z": -1930.76
+    }
+  },
+  {
+    "id": "boss_149",
+    "label": "Male Desert People (Lv 36)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -62624.9,
+      "Y": 402438.94,
+      "Z": 12180.67
+    }
+  },
+  {
+    "id": "boss_150",
+    "label": "Female Desert People (Lv 37)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 147119.08,
+      "Y": 347473.56,
+      "Z": -856.4
+    }
+  },
+  {
+    "id": "boss_151",
+    "label": "Fire Cult Flame Thrower (Lv 41)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -331690.16,
+      "Y": -40407.43,
+      "Z": 15982.14
+    }
+  },
+  {
+    "id": "boss_152",
+    "label": "Male Ninja Elite (Lv 53)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -18160.0,
+      "Y": -151400.0,
+      "Z": 2360.0
+    }
+  },
+  {
+    "id": "boss_153",
+    "label": "Hunter Rifle (Lv 12)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -359201.56,
+      "Y": 181724.28,
+      "Z": 5179.1
+    }
+  },
+  {
+    "id": "boss_154",
+    "label": "Male People (Lv 26)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -126584.23,
+      "Y": 318232.75,
+      "Z": -1519.07
+    }
+  },
+  {
+    "id": "boss_155",
+    "label": "Male Soldier02 (Lv 23)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -224118.3,
+      "Y": 277672.06,
+      "Z": -864.36
+    }
+  },
+  {
+    "id": "boss_156",
+    "label": "Male People02 (Lv 43)",
+    "type": "strongEnemy",
+    "location": {
+      "X": 97107.99,
+      "Y": 68422.43,
+      "Z": 42381.05
+    }
+  },
+  {
+    "id": "boss_157",
+    "label": "Male Soldier (Lv 15)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -409430.0,
+      "Y": 24820.0,
+      "Z": 1880.0
+    }
+  },
+  {
+    "id": "boss_158",
+    "label": "Female People (Lv 38)",
+    "type": "strongEnemy",
+    "location": {
+      "X": -470651.97,
+      "Y": -80708.37,
+      "Z": -2009.12
+    }
+  },
+  {
+    "id": "relic_007757BA",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 513620.0,
+      "Y": -692960.0,
+      "Z": 31540.0
+    }
+  },
+  {
+    "id": "relic_013FF2FC",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -311347.9,
+      "Y": 30955.1,
+      "Z": 6853.1
+    }
+  },
+  {
+    "id": "relic_04FE4737",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -122963.32,
+      "Y": 241358.67,
+      "Z": 10543.11
+    }
+  },
+  {
+    "id": "relic_0547DB42",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -393209.9,
+      "Y": -206295.75,
+      "Z": 186.75
+    }
+  },
+  {
+    "id": "relic_05C3B408",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 161910.0,
+      "Y": 380520.0,
+      "Z": 2380.0
+    }
+  },
+  {
+    "id": "relic_07919A9F",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 24000.05,
+      "Y": -90318.12,
+      "Z": -988.06
+    }
+  },
+  {
+    "id": "relic_0D0BF38A",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -339168.3,
+      "Y": 184004.11,
+      "Z": 804.94
+    }
+  },
+  {
+    "id": "relic_0D135F00",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -251193.53,
+      "Y": 51458.06,
+      "Z": -1452.04
+    }
+  },
+  {
+    "id": "relic_0F1F4A08",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -267271.56,
+      "Y": 5157.44,
+      "Z": -1113.24
+    }
+  },
+  {
+    "id": "relic_144D469D",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -335209.72,
+      "Y": 155303.55,
+      "Z": -150.86
+    }
+  },
+  {
+    "id": "relic_1549A6CC",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -805820.0,
+      "Y": -102910.0,
+      "Z": 48720.0
+    }
+  },
+  {
+    "id": "relic_167BD4A6",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 472460.0,
+      "Y": -651270.0,
+      "Z": 19980.0
+    }
+  },
+  {
+    "id": "relic_19A53056",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -729332.1,
+      "Y": -357029.22,
+      "Z": 12863.82
+    }
+  },
+  {
+    "id": "relic_1BAA3643",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -30873.05,
+      "Y": -63353.16,
+      "Z": -723.4
+    }
+  },
+  {
+    "id": "relic_1BABD4DE",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 476170.0,
+      "Y": -724450.0,
+      "Z": 19870.0
+    }
+  },
+  {
+    "id": "relic_1D22696E",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -441338.44,
+      "Y": -35181.28,
+      "Z": -1947.45
+    }
+  },
+  {
+    "id": "relic_1E15689D",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -270319.34,
+      "Y": 66094.72,
+      "Z": 418.05
+    }
+  },
+  {
+    "id": "relic_1F4B6F62",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -398954.66,
+      "Y": -88981.43,
+      "Z": 31367.57
+    }
+  },
+  {
+    "id": "relic_236E7DD4",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -608479.4,
+      "Y": -126420.77,
+      "Z": -2094.95
+    }
+  },
+  {
+    "id": "relic_24AC69DD",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -592896.4,
+      "Y": -169670.72,
+      "Z": -459.62
+    }
+  },
+  {
+    "id": "relic_259191A0",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 571080.0,
+      "Y": -559860.0,
+      "Z": 28330.0
+    }
+  },
+  {
+    "id": "relic_263D2E92",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 487040.0,
+      "Y": -582320.0,
+      "Z": 17530.0
+    }
+  },
+  {
+    "id": "relic_28CB901F",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -345872.16,
+      "Y": 143002.52,
+      "Z": 1216.9
+    }
+  },
+  {
+    "id": "relic_29F4B89E",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -35890.0,
+      "Y": 550570.0,
+      "Z": -2076.95
+    }
+  },
+  {
+    "id": "relic_2D875799",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -793330.0,
+      "Y": 4170.0,
+      "Z": 39950.0
+    }
+  },
+  {
+    "id": "relic_2E0FBCA1",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 495450.0,
+      "Y": -710690.0,
+      "Z": 37190.0
+    }
+  },
+  {
+    "id": "relic_33829598",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -57183.66,
+      "Y": -174532.38,
+      "Z": 73.56
+    }
+  },
+  {
+    "id": "relic_3756EA4E",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -225371.64,
+      "Y": -103211.82,
+      "Z": -1156.05
+    }
+  },
+  {
+    "id": "relic_3847D9C8",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -123372.08,
+      "Y": 254804.31,
+      "Z": 6407.23
+    }
+  },
+  {
+    "id": "relic_3A860F06",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -176707.25,
+      "Y": 165453.42,
+      "Z": 5995.3
+    }
+  },
+  {
+    "id": "relic_3B7064E0",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -99829.62,
+      "Y": 122773.38,
+      "Z": -103.39
+    }
+  },
+  {
+    "id": "relic_3BEAD93C",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 20805.26,
+      "Y": 296330.5,
+      "Z": 7776.55
+    }
+  },
+  {
+    "id": "relic_3C9CCBEB",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -31411.73,
+      "Y": -28139.62,
+      "Z": -2097.8
+    }
+  },
+  {
+    "id": "relic_3F321947",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -244672.3,
+      "Y": 114650.34,
+      "Z": 4147.71
+    }
+  },
+  {
+    "id": "relic_416E0473",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 75319.81,
+      "Y": 464887.22,
+      "Z": -2012.43
+    }
+  },
+  {
+    "id": "relic_41F03E9D",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -301715.5,
+      "Y": 89024.09,
+      "Z": -1998.28
+    }
+  },
+  {
+    "id": "relic_42DC77FB",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -472013.25,
+      "Y": -81182.28,
+      "Z": -2071.42
+    }
+  },
+  {
+    "id": "relic_496E36EF",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -751550.0,
+      "Y": -87070.0,
+      "Z": 54380.0
+    }
+  },
+  {
+    "id": "relic_4985D956",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -26300.37,
+      "Y": -88939.81,
+      "Z": 3713.23
+    }
+  },
+  {
+    "id": "relic_4A67B459",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -170706.95,
+      "Y": 50483.02,
+      "Z": 191.04
+    }
+  },
+  {
+    "id": "relic_4B599D17",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -820520.0,
+      "Y": -13650.0,
+      "Z": 36760.0
+    }
+  },
+  {
+    "id": "relic_4D1D2D06",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -114369.9,
+      "Y": 377329.84,
+      "Z": -1035.36
+    }
+  },
+  {
+    "id": "relic_4DBA1441",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -451761.8,
+      "Y": -71656.48,
+      "Z": 2071.06
+    }
+  },
+  {
+    "id": "relic_4F923967",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -221216.3,
+      "Y": -185877.44,
+      "Z": -1905.27
+    }
+  },
+  {
+    "id": "relic_515F64F0",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 5974.93,
+      "Y": 362868.44,
+      "Z": -1240.33
+    }
+  },
+  {
+    "id": "relic_5BFE9FAC",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -167820.19,
+      "Y": 244594.11,
+      "Z": -1719.71
+    }
+  },
+  {
+    "id": "relic_5D3FAB0C",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -666777.75,
+      "Y": -296914.56,
+      "Z": 1621.19
+    }
+  },
+  {
+    "id": "relic_5EF65965",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 13358.7,
+      "Y": 36095.48,
+      "Z": 17528.4
+    }
+  },
+  {
+    "id": "relic_5FA638D6",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -15718.59,
+      "Y": -123831.95,
+      "Z": 6008.73
+    }
+  },
+  {
+    "id": "relic_5FBF958B",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -743640.0,
+      "Y": -15540.0,
+      "Z": 42760.0
+    }
+  },
+  {
+    "id": "relic_6052C864",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 497090.0,
+      "Y": -647840.0,
+      "Z": 16250.0
+    }
+  },
+  {
+    "id": "relic_61A7FF73",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -323221.72,
+      "Y": 92608.07,
+      "Z": -1866.45
+    }
+  },
+  {
+    "id": "relic_631A5BCF",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 87402.38,
+      "Y": 62371.13,
+      "Z": 43502.52
+    }
+  },
+  {
+    "id": "relic_63DFCAE9",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -2724.12,
+      "Y": -101344.16,
+      "Z": 877.27
+    }
+  },
+  {
+    "id": "relic_6638945F",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -623477.56,
+      "Y": -228131.78,
+      "Z": 4738.51
+    }
+  },
+  {
+    "id": "relic_66D7AD80",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -638559.25,
+      "Y": -346189.44,
+      "Z": 12257.61
+    }
+  },
+  {
+    "id": "relic_6A4E8926",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -168085.8,
+      "Y": 251818.27,
+      "Z": 17497.85
+    }
+  },
+  {
+    "id": "relic_6B126A9B",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -247190.0,
+      "Y": -123170.0,
+      "Z": 8420.0
+    }
+  },
+  {
+    "id": "relic_6C8680F3",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -571482.8,
+      "Y": -289720.78,
+      "Z": 447.9
+    }
+  },
+  {
+    "id": "relic_6C95343C",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -272316.8,
+      "Y": 326450.25,
+      "Z": -1882.31
+    }
+  },
+  {
+    "id": "relic_6CA64B00",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -294814.9,
+      "Y": 212861.92,
+      "Z": -663.2
+    }
+  },
+  {
+    "id": "relic_6D668C84",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -266489.38,
+      "Y": 53997.2,
+      "Z": 6497.21
+    }
+  },
+  {
+    "id": "relic_6DF59123",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -379832.34,
+      "Y": 269566.94,
+      "Z": -2115.68
+    }
+  },
+  {
+    "id": "relic_6E97A409",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -230035.34,
+      "Y": 282109.0,
+      "Z": 15626.43
+    }
+  },
+  {
+    "id": "relic_7083643D",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -308236.6,
+      "Y": 151805.16,
+      "Z": -596.64
+    }
+  },
+  {
+    "id": "relic_7196345E",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -257769.03,
+      "Y": -204290.3,
+      "Z": 3802.64
+    }
+  },
+  {
+    "id": "relic_75F2D9CE",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 63373.85,
+      "Y": 34058.39,
+      "Z": 15500.03
+    }
+  },
+  {
+    "id": "relic_778AC97F",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -836733.9,
+      "Y": -436815.38,
+      "Z": 10938.07
+    }
+  },
+  {
+    "id": "relic_79479C39",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 172923.05,
+      "Y": 260092.39,
+      "Z": -1898.45
+    }
+  },
+  {
+    "id": "relic_7B3AA6BD",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -212417.38,
+      "Y": 115026.09,
+      "Z": -1714.92
+    }
+  },
+  {
+    "id": "relic_7C2629AB",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -37470.0,
+      "Y": 442920.0,
+      "Z": 10548.36
+    }
+  },
+  {
+    "id": "relic_81118C50",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -53225.36,
+      "Y": 390773.53,
+      "Z": 5039.89
+    }
+  },
+  {
+    "id": "relic_81E32E24",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -211442.88,
+      "Y": -11077.08,
+      "Z": 5300.46
+    }
+  },
+  {
+    "id": "relic_826B7404",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -279662.22,
+      "Y": 165160.98,
+      "Z": -1440.45
+    }
+  },
+  {
+    "id": "relic_82C7859D",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -141739.11,
+      "Y": 253601.6,
+      "Z": -1937.23
+    }
+  },
+  {
+    "id": "relic_84F2663B",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 534460.0,
+      "Y": -731820.0,
+      "Z": 20410.0
+    }
+  },
+  {
+    "id": "relic_86C32CA1",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -64421.47,
+      "Y": 95773.88,
+      "Z": -1268.06
+    }
+  },
+  {
+    "id": "relic_8AB69DBE",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -450064.38,
+      "Y": -107654.67,
+      "Z": 3674.53
+    }
+  },
+  {
+    "id": "relic_8BCDE365",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -311674.97,
+      "Y": 188520.72,
+      "Z": 3268.61
+    }
+  },
+  {
+    "id": "relic_8E26D917",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -36635.74,
+      "Y": -154496.88,
+      "Z": 2569.94
+    }
+  },
+  {
+    "id": "relic_8F51CB8F",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -1194.59,
+      "Y": 166765.62,
+      "Z": 5712.19
+    }
+  },
+  {
+    "id": "relic_9187FE9C",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -775140.0,
+      "Y": -65190.0,
+      "Z": 27030.0
+    }
+  },
+  {
+    "id": "relic_94F35AC9",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 84690.0,
+      "Y": 259530.0,
+      "Z": -1387.9
+    }
+  },
+  {
+    "id": "relic_97436FF6",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 512130.0,
+      "Y": -525350.0,
+      "Z": 34150.0
+    }
+  },
+  {
+    "id": "relic_9A225348",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 84166.0,
+      "Y": 71646.0,
+      "Z": 52031.42
+    }
+  },
+  {
+    "id": "relic_9C354F5C",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -134415.73,
+      "Y": 298847.34,
+      "Z": 7184.13
+    }
+  },
+  {
+    "id": "relic_9E6E13AD",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 32445.77,
+      "Y": 114013.63,
+      "Z": 6206.59
+    }
+  },
+  {
+    "id": "relic_A0565AD5",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -829440.0,
+      "Y": 52170.0,
+      "Z": 50200.0
+    }
+  },
+  {
+    "id": "relic_A0E2AB76",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -312657.4,
+      "Y": 63055.14,
+      "Z": 4052.01
+    }
+  },
+  {
+    "id": "relic_A360858E",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -337495.0,
+      "Y": 229740.0,
+      "Z": -1856.3
+    }
+  },
+  {
+    "id": "relic_A3901924",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -223491.4,
+      "Y": -51539.64,
+      "Z": 1245.16
+    }
+  },
+  {
+    "id": "relic_A39AEA08",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -822996.2,
+      "Y": -455299.3,
+      "Z": 2472.04
+    }
+  },
+  {
+    "id": "relic_A48EDF92",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 103584.43,
+      "Y": -39480.15,
+      "Z": 27130.6
+    }
+  },
+  {
+    "id": "relic_A52ABF46",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -22468.65,
+      "Y": -131751.64,
+      "Z": 5774.23
+    }
+  },
+  {
+    "id": "relic_A6623D2C",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -832250.0,
+      "Y": -80950.0,
+      "Z": 44570.0
+    }
+  },
+  {
+    "id": "relic_A9589829",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -363806.78,
+      "Y": 273023.88,
+      "Z": 15330.0
+    }
+  },
+  {
+    "id": "relic_A968F468",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -251718.06,
+      "Y": 103839.81,
+      "Z": -839.95
+    }
+  },
+  {
+    "id": "relic_AD08F00A",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 596763.3,
+      "Y": -729617.1,
+      "Z": 21618.41
+    }
+  },
+  {
+    "id": "relic_AD5B95FD",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -21300.0,
+      "Y": 208570.0,
+      "Z": -2008.12
+    }
+  },
+  {
+    "id": "relic_AE48D0D4",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 79798.17,
+      "Y": -28012.62,
+      "Z": 19396.44
+    }
+  },
+  {
+    "id": "relic_AEC6234A",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -330213.25,
+      "Y": -78304.17,
+      "Z": 18992.21
+    }
+  },
+  {
+    "id": "relic_AEF1BB4C",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 7327.3,
+      "Y": -148580.77,
+      "Z": 2492.39
+    }
+  },
+  {
+    "id": "relic_AF1E8488",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -771490.0,
+      "Y": -28050.0,
+      "Z": 31000.0
+    }
+  },
+  {
+    "id": "relic_AF9415FF",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -253480.95,
+      "Y": 127130.92,
+      "Z": 4604.55
+    }
+  },
+  {
+    "id": "relic_B077AFD4",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -262533.38,
+      "Y": 137185.0,
+      "Z": -673.81
+    }
+  },
+  {
+    "id": "relic_B0BC175A",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -35090.0,
+      "Y": 126840.0,
+      "Z": 10050.0
+    }
+  },
+  {
+    "id": "relic_B4283FC8",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -219204.39,
+      "Y": 131607.97,
+      "Z": 6546.47
+    }
+  },
+  {
+    "id": "relic_B4DD7795",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -806370.0,
+      "Y": -70850.0,
+      "Z": 39320.0
+    }
+  },
+  {
+    "id": "relic_B73A17B9",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -841200.0,
+      "Y": -34110.0,
+      "Z": 41020.0
+    }
+  },
+  {
+    "id": "relic_B8372AD5",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -777090.0,
+      "Y": 57250.0,
+      "Z": 41710.0
+    }
+  },
+  {
+    "id": "relic_B8C66EBC",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -288426.22,
+      "Y": 141552.4,
+      "Z": -1218.98
+    }
+  },
+  {
+    "id": "relic_BB132005",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 93630.24,
+      "Y": 7813.88,
+      "Z": 24636.51
+    }
+  },
+  {
+    "id": "relic_BC2F6167",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 442000.0,
+      "Y": -692300.0,
+      "Z": 19300.0
+    }
+  },
+  {
+    "id": "relic_C171A0FB",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -174405.39,
+      "Y": 171382.86,
+      "Z": 3415.49
+    }
+  },
+  {
+    "id": "relic_C1AFE622",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -346038.66,
+      "Y": 280366.38,
+      "Z": -1104.35
+    }
+  },
+  {
+    "id": "relic_C28B5DEE",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -795815.56,
+      "Y": -490104.88,
+      "Z": -2087.76
+    }
+  },
+  {
+    "id": "relic_C3583F4E",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 610150.0,
+      "Y": -626490.0,
+      "Z": 23840.0
+    }
+  },
+  {
+    "id": "relic_C57C4CB2",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -349638.6,
+      "Y": -7258.2,
+      "Z": 3458.43
+    }
+  },
+  {
+    "id": "relic_C8C21B01",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -117922.18,
+      "Y": 234327.5,
+      "Z": 14357.3
+    }
+  },
+  {
+    "id": "relic_C984C2AF",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -368181.75,
+      "Y": -129752.98,
+      "Z": 56241.13
+    }
+  },
+  {
+    "id": "relic_CAB5ABEC",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -2533.35,
+      "Y": -128554.23,
+      "Z": 3889.92
+    }
+  },
+  {
+    "id": "relic_CC66A8AA",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -798490.0,
+      "Y": 27550.0,
+      "Z": 53230.0
+    }
+  },
+  {
+    "id": "relic_CD0005DC",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -927026.2,
+      "Y": -403247.66,
+      "Z": -2096.46
+    }
+  },
+  {
+    "id": "relic_CE18F94A",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -125688.01,
+      "Y": 265536.03,
+      "Z": 4191.68
+    }
+  },
+  {
+    "id": "relic_D1C4E369",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -39432.48,
+      "Y": -146954.39,
+      "Z": 845.31
+    }
+  },
+  {
+    "id": "relic_D2506521",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -464655.66,
+      "Y": -55120.86,
+      "Z": -1958.54
+    }
+  },
+  {
+    "id": "relic_D48FB206",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -764070.0,
+      "Y": -116230.0,
+      "Z": 53790.0
+    }
+  },
+  {
+    "id": "relic_D5A743E3",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 201322.67,
+      "Y": 300351.3,
+      "Z": -1234.98
+    }
+  },
+  {
+    "id": "relic_D8E69F7C",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -704669.2,
+      "Y": -386894.9,
+      "Z": 34831.25
+    }
+  },
+  {
+    "id": "relic_D8F3653E",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -31603.01,
+      "Y": -174971.92,
+      "Z": -1727.41
+    }
+  },
+  {
+    "id": "relic_DA193881",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -316086.1,
+      "Y": 169211.53,
+      "Z": -1919.75
+    }
+  },
+  {
+    "id": "relic_DD1050D9",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 407710.0,
+      "Y": -742460.0,
+      "Z": 19040.0
+    }
+  },
+  {
+    "id": "relic_DD7E16D2",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 149874.27,
+      "Y": 79632.49,
+      "Z": 43860.91
+    }
+  },
+  {
+    "id": "relic_DE0C2D9F",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -89166.8,
+      "Y": 375571.2,
+      "Z": 2909.01
+    }
+  },
+  {
+    "id": "relic_E1BA3511",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -763477.8,
+      "Y": 35179.83,
+      "Z": 42028.72
+    }
+  },
+  {
+    "id": "relic_E4286D16",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -313237.38,
+      "Y": 215705.83,
+      "Z": 1841.32
+    }
+  },
+  {
+    "id": "relic_E4BFE478",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 98100.0,
+      "Y": 77360.0,
+      "Z": 49537.39
+    }
+  },
+  {
+    "id": "relic_E4CCA316",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -116367.92,
+      "Y": 236065.12,
+      "Z": 16003.05
+    }
+  },
+  {
+    "id": "relic_E6FA06E2",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -43289.69,
+      "Y": 222904.34,
+      "Z": 2910.0
+    }
+  },
+  {
+    "id": "relic_EC201405",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -361760.56,
+      "Y": 181721.6,
+      "Z": 2366.44
+    }
+  },
+  {
+    "id": "relic_EC86B1A7",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 28540.93,
+      "Y": 78688.37,
+      "Z": 25258.16
+    }
+  },
+  {
+    "id": "relic_ED393E69",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -639045.0,
+      "Y": -221154.42,
+      "Z": 24480.62
+    }
+  },
+  {
+    "id": "relic_EE565075",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -229410.61,
+      "Y": 74031.38,
+      "Z": -1345.88
+    }
+  },
+  {
+    "id": "relic_EFCF4A3E",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -131854.39,
+      "Y": -123072.77,
+      "Z": -1703.93
+    }
+  },
+  {
+    "id": "relic_F11F522A",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 583720.0,
+      "Y": -599440.0,
+      "Z": 23000.0
+    }
+  },
+  {
+    "id": "relic_F1F8A8B7",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 203189.7,
+      "Y": 368586.12,
+      "Z": -757.69
+    }
+  },
+  {
+    "id": "relic_F3B4F272",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 96670.0,
+      "Y": 294990.0,
+      "Z": 12270.08
+    }
+  },
+  {
+    "id": "relic_F5F7532A",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -397320.12,
+      "Y": 235532.6,
+      "Z": -2088.56
+    }
+  },
+  {
+    "id": "relic_F664E5D3",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -46171.17,
+      "Y": -145089.39,
+      "Z": 1037.38
+    }
+  },
+  {
+    "id": "relic_F8C92855",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -284318.72,
+      "Y": 235440.81,
+      "Z": -1865.11
+    }
+  },
+  {
+    "id": "relic_FC2BAE13",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": 504520.0,
+      "Y": -560010.0,
+      "Z": 33150.0
+    }
+  },
+  {
+    "id": "relic_FC884FFA",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -655858.56,
+      "Y": -463511.1,
+      "Z": 226.6
+    }
+  },
+  {
+    "id": "relic_FF20D9AF",
+    "label": "Relic",
+    "type": "treasure",
+    "location": {
+      "X": -762176.4,
+      "Y": -339917.84,
+      "Z": 36308.08
+    }
+  }
+]

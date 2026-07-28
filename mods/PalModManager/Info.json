@@ -1,0 +1,24 @@
+{
+  "ModName": "PalModManager",
+  "PackageName": "PalModManager",
+  "Version": "2.5.6",
+  "Author": "Cascade",
+  "Description": "Fenetre de configuration unifiee pour tous les mods Palworld ULTRA MAX (ImGui en jeu + export config.lua).",
+  "Dependencies": [
+    "UE4SS"
+  ],
+  "Tags": [
+    "UE4SS",
+    "Config",
+    "UI",
+    "Manager"
+  ],
+  "InstallRule": [
+    {
+      "Type": "Lua",
+      "Targets": [
+        "./Scripts"
+      ]
+    }
+  ]
+}
