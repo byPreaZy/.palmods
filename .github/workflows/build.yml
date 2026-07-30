@@ -5,21 +5,22 @@ on:
     branches: [master, main]
     tags: ['v*']
     paths:
-      - 'PalTrainerUltra/**'
+      - 'src/**'
+      - 'scripts/**'
+      - 'Makefile'
       - '.github/workflows/build.yml'
   pull_request:
     branches: [master, main]
     paths:
-      - 'PalTrainerUltra/**'
+      - 'src/**'
+      - 'scripts/**'
+      - 'Makefile'
 
 jobs:
   build:
     runs-on: windows-latest
     permissions:
       contents: write
-    defaults:
-      run:
-        working-directory: PalTrainerUltra
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -47,7 +48,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          GITHUB_REPO="byPreaZy/.palmods" bash scripts/download_assets.sh || true
+          GITHUB_REPO="byPreaZy/PalTrainerUltra" bash scripts/download_assets.sh || true
 
       - name: Build
         shell: msys2 {0}
@@ -94,7 +95,7 @@ jobs:
         uses: actions/upload-artifact@v5
         with:
           name: PalTrainerUltra-build
-          path: PalTrainerUltra/dist/
+          path: dist/
           retention-days: 30
 
       - name: Create GitHub Release
@@ -104,7 +105,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: |
-            PalTrainerUltra/PalTrainerUltra-*.zip
+            PalTrainerUltra-*.zip
           generate_release_notes: true
           draft: false
           prerelease: false

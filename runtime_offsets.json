@@ -1,0 +1,12 @@
+{
+  "imageBase": "0x140000000",
+  "engineVersion": "UE4",
+  "timestamp": 1785390643,
+  "path": "E:\SteamLibrary\steamapps\common\Palworld\Pal\Binaries\Win64\Palworld-Win64-Shipping.exe",
+  "GWorldRva": "0x965EEE0",
+  "GObjectRva": "0x94F0590",
+  "FNameRva": "0x9161278",
+  "ProcessEventRva": "0x36476C0",
+  "AppendStringRva": "0x0",
+  "TickRva": "0x2C88700"
+}

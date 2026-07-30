@@ -1,207 +1,263 @@
-<div align="center">
+# PalTrainerUltra
 
-# 🎮 Palworld Mods & Trainer — ULTRA MAX Edition
+> Trainer, mod manager et outils pour Palworld 1.0 (Steam) — injection DLL, overlay ImGui, minimap, carte interactive, gestionnaire de mods UE4SS.
 
-**Mods Lua UE4SS + Trainer C++ ImGui pour Palworld 1.0 (Steam)**
-
-[![CI/CD](https://github.com/byPreaZy/.palmods/actions/workflows/build.yml/badge.svg)](https://github.com/byPreaZy/.palmods/actions/workflows/build.yml)
-[![Release](https://img.shields.io/github/v/release/byPreaZy/.palmods?label=Release&color=blue)](https://github.com/byPreaZy/.palmods/releases)
+[![CI/CD](https://github.com/byPreaZy/PalTrainerUltra/actions/workflows/build.yml/badge.svg)](https://github.com/byPreaZy/PalTrainerUltra/actions/workflows/build.yml)
+[![Release](https://img.shields.io/github/v/release/byPreaZy/PalTrainerUltra?label=Release&color=blue)](https://github.com/byPreaZy/PalTrainerUltra/releases)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Palworld](https://img.shields.io/badge/Palworld-1.0%20Steam-orange)](https://store.steampowered.com/app/1623730/Palworld/)
-[![Platform](https://img.shields.io/badge/Platform-Windows-blue)](https://github.com/byPreaZy/.palmods)
-[![Lua](https://img.shields.io/badge/Lua-UE4SS-purple)](https://github.com/UE4SS-RE/RE-UE4SS)
+[![Platform](https://img.shields.io/badge/Platform-Windows-blue)](https://github.com/byPreaZy/PalTrainerUltra)
 [![C++](https://img.shields.io/badge/C%2B%2B-17-red)](https://isocpp.org/)
+[![Lua](https://img.shields.io/badge/Lua-UE4SS-purple)](https://github.com/UE4SS-RE/RE-UE4SS)
 
-</div>
+## Quickstart
 
----
+1. **Télécharger** la dernière release depuis [Releases](https://github.com/byPreaZy/PalTrainerUltra/releases) (`PalTrainerUltra-*.zip`)
+2. **Extraire** l'archive dans un dossier (ex: `C:\PalTrainerUltra\`)
+3. **Lancer `Launch.bat`** (ou `PalTrainerUltra.exe`) en tant qu'administrateur
+4. **Onglet "Mods UE4SS"** → cliquer "Installer UE4SS" puis installer les mods désirés
+5. **Onglet "Trainer"** → cliquer "JOUER" quand Palworld est détecté
+6. **Touche INS** en jeu pour l'overlay de cheats
 
-## 🇫🇷 Français
+## ⚠️ Windows Defender / Antivirus
 
-Deux projets indépendants dans un seul dépôt pour **Palworld 1.0 (Steam)**.
+PalTrainerUltra utilise des techniques d'injection DLL (`CreateRemoteThread`, `WriteProcessMemory`) qui sont détectées comme suspectes par les antivirus. **C'est un faux positif** — l'outil est open source et n'est pas un malware.
 
-### 📋 Projets
+### Solution automatique
+Lancer `Launch.bat` ajoute automatiquement le dossier aux exclusions de Windows Defender.
 
-#### 1. Mods Lua UE4SS (`mods/`)
+### Solution manuelle
+Si Windows Defender bloque l'exécution :
+1. Ouvrir **Sécurité Windows** → **Protection contre les virus et menaces**
+2. **Gérer les paramètres** → **Ajouter ou supprimer des exclusions**
+3. **Ajouter une exclusion** → **Dossier** → sélectionner le dossier `PalTrainerUltra`
+4. Relancer `Launch.bat`
 
-Mods utilisant **RE-UE4SS** (injection Lua). Aucun `.pak` ou Unreal Engine requis.
-
-| Mod | Description | Touche |
-|-----|-------------|--------|
-| **PalCheatMenu** | Menu ImGui avec 35+ cheats (God Mode, vol, no clip, capture 100%, spawn d'items, etc.) | `F1` |
-| **PalMiniMap** | Super minimap avec rendu terrain, POIs, sélection des Pals, multijoueur | `M` |
-| **PalModManager** | Gestionnaire unifié pour activer/configurer tous les mods | `F10` |
-| **PalWeight** | Poids d'inventaire augmenté | — |
-| **PalAutoLoot** | Ramasse automatique des objets | — |
-| **PalCaptureCounter** | Compteur de captures | — |
-| **PalInspectPal** | Infos détaillées des Pals | — |
-| **PalQuickDrop / PalQuickStack** | Raccourcis inventaire | — |
-| **PalInstantFish / Hatch / Breed** | Actions instantanées | — |
-
-**Installation**: `install.bat` (Windows) ou `./install.sh` (WSL/Linux) — détecte Palworld automatiquement, installe RE-UE4SS si nécessaire.
-
-📖 [Guide d'installation détaillé](INSTALL.md)
-
-#### 2. PalTrainerUltra (`PalTrainerUltra/`)
-
-Trainer overlay **WeMod-like** en C++ — injection DLL, overlay ImGui, minimap interactive, carte web.
-
-| Composant | Description |
-|-----------|-------------|
-| **PalTrainerLauncher.exe** | Launcher centralisé: détection Palworld, scan offsets, injection DLL, lancement des outils |
-| **PalTrainerCore.dll** | DLL injectée: 50+ cheats en temps réel (God Mode, vitesse, vol, téléport, etc.) |
-| **PalTrainerOverlay.exe** | Overlay ImGui complet avec minimap, ESP, spawns, favoris |
-| **PalTrainerMiniMap.exe** | Minimap autonome (lecture mémoire seule, sans injection) |
-| **PalOffsetScanner.exe** | Scanner d'offsets automatique |
-| **Carte web** | Interface web interactive (`server/server.py` + `web/`) |
-
-**Téléchargement**: [Releases](../../releases) — extraire le zip, lancer `Launch.bat` en admin.
-
-📖 [Documentation PalTrainerUltra](PalTrainerUltra/README.md)
-
-### 🚀 Installation rapide
-
-<details>
-<summary><b>Mods Lua</b></summary>
-
-1. Télécharger et décompresser le zip
-2. **Windows**: double-clic sur `install.bat`
-3. **WSL/Linux**: `./install.sh`
-4. Lancer Palworld — `F1` pour le menu, `M` pour la minimap
-</details>
-
-<details>
-<summary><b>PalTrainerUltra</b></summary>
-
-1. Télécharger la dernière [Release](../../releases) (`PalTrainerUltra-*.zip`)
-2. Extraire dans un dossier
-3. Lancer `Launch.bat` en administrateur
-4. Lancer Palworld — le launcher détecte le jeu
-5. Cliquer **JOUER** — injection + overlay automatique
-</details>
-
-### 🗂️ Structure du dépôt
-
-```
-.palmods/
-├── mods/                    Mods Lua UE4SS
-├── PalTrainerUltra/         Trainer C++ (DLL, overlay, minimap, launcher)
-├── install.bat / .py / .sh  Installateurs mods
-├── uninstall.bat / .py / .sh  Désinstallateurs
-├── config_manager.py        Configurateur externe (Python/Tkinter)
-├── test_install.py          Test d'installation
-├── INSTALL.md               Guide d'installation détaillé (mods)
-└── NEXUS_PUBLISH.md         Texte prêt pour Nexus Mods
+Ou en PowerShell (admin) :
+```powershell
+Add-MpPreference -ExclusionPath "C:\PalTrainerUltra"
 ```
 
-### 🔧 CI/CD
+## Composants
 
-Le workflow `.github/workflows/build.yml` compile PalTrainerUltra sur `windows-latest` (MinGW-w64) et crée une Release GitHub automatique sur tag `v*`.
+| Fichier | Rôle | Comment lancer |
+|---------|------|----------------|
+| **PalTrainerUltra.exe** | Application unifiée — launcher, overlay, minimap (modes runtime) | `Launch.bat` ou double-clic (admin) |
+| **Launch.bat** | Script de lancement rapide | Clic droit → Exécuter en tant qu'admin |
+| **PalTrainerCore.dll** | DLL injectée dans Palworld — exécute les cheats en temps réel | Injectée via le launcher |
+| **PalOffsetScanner.exe** | Scanner d'offsets automatique (GWorld, GObjects, ProcessEvent) | Lancer si offsets manquants/obsolètes |
+| **start_map.bat** | Démarre le serveur web de carte interactive | Double-clic, ouvre `http://localhost:8765` |
+| **server/server.py** | Serveur web local (carte, POIs, spawns, téléport) | `python server/server.py` |
+| **web/** | Interface web interactive (HTML/JS) | Servie par `server.py` |
+| **data/pal_spawns.json** | Données de spawn des Pals (positions, niveaux, jour/nuit) | Chargé automatiquement |
+| **data/pal_database.json** | Base de données des Pals (types, breeding power, travaux) | Utilisé par le breeding calculator |
+| **scripts/breeding_calculator.py** | Calculateur de reproduction (child = moyenne breeding power) | `python scripts/breeding_calculator.py parent1 parent2` |
+| **scripts/save_editor.py** | Éditeur de sauvegarde (niveau, argent, points tech) | `python scripts/save_editor.py --info` |
+| **runtime_offsets.json** | Offsets dynamiques générés par le scanner | Généré automatiquement |
 
-### ⚠️ Avertissements
+### Modes de lancement
 
-- Usage en **solo** ou sur serveur dont vous êtes administrateur
-- Ne pas utiliser sur serveurs publics avec anti-cheat
-- Projet éducatif et de divertissement personnel
-- Les sauvegardes ne sont **jamais** touchées par les désinstallateurs
+| Argument | Mode | Description |
+|----------|------|-------------|
+| *(aucun)* | Launcher | Interface de lancement avec détection Palworld, injection, et boutons modules |
+| `--minimap` | Minimap | Mini-carte autonome (lecture mémoire seule, pas de cheats) |
+| `--overlay` | Overlay | Trainer ImGui complet (cheats, minimap, téléport, ESP) |
 
----
+## Cheats disponibles
 
-## 🇬🇧 English
+### Cheats de base (toggle)
+- **Santé infinie** — PV du joueur verrouillés au max
+- **Endurance infinie** — Stamina illimitée
+- **Faim illimitée** — Satiété verrouillée
+- **Santé mentale max** — SAN verrouillée
+- **Pas de crime** — Désactive le système de wanted
+- **Santé Pals infinie** — PV de tous les Pals au max
+- **Capture 100%** — Toutes les captures réussissent
+- **Matériaux de craft illimités** — Pas de consommation
+- **Matériaux de construction illimités** — Pas de consommation
+- **Santé base illimitée** — PV de la base verrouillés
+- **Argent illimité** — Ajoute automatiquement de l'argent
+- **Effigies illimitées** — Ajoute des effigies Lifmunk
 
-Two independent projects in a single repository for **Palworld 1.0 (Steam)**.
+### Cheats avancés (parité FLiNG + WeMod)
+- **Bouclier infini** — Maintient le bouclier au maximum
+- **Mode furtif** — Réduit la détection des ennemis
+- **Taux de drop 100%** — Force le taux de drop au maximum
+- **Nourriture non périssable** — Empêche la décomposition
+- **XP infini** — Ajoute automatiquement de l'XP
+- **One Hit Kill** — Met les PV des ennemis à 1
+- **Cooldown compétences instant** — Supprime les cooldowns des Pals
+- **Stats de base illimitées** — Max talents, support, vitesse de craft
+- **Fusil sans surchauffe** — Zéro la chaleur du fusil
+- **Torche illimitée** — Durabilité de la torche verrouillée
+- **Travail instantané** — Progression de travail instantanée
+- **Accélération instantanée** — Accélération de mouvement maximale
+- **Pêche instantanée** — Capture de poisson immédiate
+- **Vitesse de pêche** — Multiplicateur de vitesse de pêche
+- **Multiplicateur de butin** — Augmente le taux de drop
+- **Multiplicateur d'XP** — Augmente le gain d'XP
+- **Randomizer de Pals** — Randomise les passifs des Pals
+- **Niveau de Pal aléatoire** — Définit le niveau des Pals sauvages
 
-### 📋 Projects
+### Cheats Palworld 1.0
+- **Débloquer World Tree** — Débloque le contenu World Tree
+- **Débloquer Awakening** — Débloque le donjon Awakening
+- **Débloquer tours (boss)** — Débloque tous les rematchs de boss de tour
 
-#### 1. Lua UE4SS Mods (`mods/`)
+### Valeurs configurables
+- **Multiplicateur de dégâts** — 1x à 99999x
+- **Taux de régénération PV** — Vitesse de heal
+- **Taux de satiété** — Vitesse de faim
+- **Points de technologie** — Définir une valeur exacte
+- **Points de technologie antique** — Définir une valeur exacte
+- **Points de stats** — Points à distribuer
+- **Niveau du joueur** — Définir le niveau
+- **XP du joueur** — Définir l'XP
+- **Rang du joueur** — Définir le rang
+- **Montant d'effigies** — Nombre d'effigies Lifmunk
+- **Montant d'objets** — Taille des stacks d'objets
+- **Heure du monde** — Définir l'heure (0-23)
+- **Vitesse du temps** — Multiplicateur (1x = normal)
+- **Vitesse de déplacement** — Multiplicateur de vitesse
+- **Hauteur de saut** — Multiplicateur de saut
+- **Probabilité de Pal rare** — Taux d'apparition de Pals rares
+- **Poids d'inventaire** — Capacité de transport
+- **Vitesse de travail** — Multiplicateur de vitesse de craft
+- **Multiplicateur de capture** — Force de capture
 
-Mods using **RE-UE4SS** (Lua injection). No `.pak` or Unreal Engine required.
+### Actions ponctuelles
+- **Téléporter** — Clic droit sur la minimap (via commands.json → DLL → SetComponentLocation)
+- **Déverrouiller voyages rapides** — Active tous les fast travel
+- **Dégager la météo** — Nettoie la météo
 
-| Mod | Description | Key |
-|-----|-------------|-----|
-| **PalCheatMenu** | ImGui menu with 35+ cheats (God Mode, fly, no clip, 100% capture, item spawn, etc.) | `F1` |
-| **PalMiniMap** | Super minimap with terrain rendering, POIs, Pal selection, multiplayer | `M` |
-| **PalModManager** | Unified manager to enable/configure all mods | `F10` |
-| **PalWeight** | Increased inventory weight | — |
-| **PalAutoLoot** | Auto loot pickup | — |
-| **PalCaptureCounter** | Capture counter | — |
-| **PalInspectPal** | Detailed Pal info | — |
-| **PalQuickDrop / QuickStack** | Inventory shortcuts | — |
-| **PalInstantFish / Hatch / Breed** | Instant actions | — |
+## Minimap
 
-**Install**: `install.bat` (Windows) or `./install.sh` (WSL/Linux) — auto-detects Palworld, installs RE-UE4SS if needed.
+### Fonctionnalités
+- Carte interactive avec zoom et pan
+- Position du joueur en temps réel (ReadProcessMemory)
+- POIs (voyages rapides, tours, donjons, camps, etc.)
+- Spawns de Pals (jour/nuit, alpha, niveau)
+- Détection temps réel des Pals proches
+- Détection temps réel des entités (coffres, oeufs, effigies, fruits de compétence)
+- ESP avancé (tableau triable, lignes, noms, code couleur par distance)
+- Favoris avec téléport
+- Téléportation par clic droit
 
-📖 [Detailed install guide](INSTALL.md)
+### Raccourcis clavier
+- **Insert** — Afficher/cacher la minimap
+- **F1** — Suivre le joueur
+- **F2/F3** — Zoom +/-
+- **F4** — Toujours au-dessus
+- **F5** — Afficher les Pals
+- **Clic droit** — Téléporter à la position cliquée
+- **Shift+Clic droit** — Téléporter vers un POI/Pal
 
-#### 2. PalTrainerUltra (`PalTrainerUltra/`)
+## Mod Manager UE4SS
 
-**WeMod-like** C++ trainer overlay — DLL injection, ImGui overlay, interactive minimap, web map.
+Le launcher intègre un gestionnaire de mods UE4SS (tab "Mods UE4SS") :
 
-| Component | Description |
-|-----------|-------------|
-| **PalTrainerLauncher.exe** | Centralized launcher: Palworld detection, offset scan, DLL injection, tool launcher |
-| **PalTrainerCore.dll** | Injected DLL: 50+ real-time cheats (God Mode, speed, fly, teleport, etc.) |
-| **PalTrainerOverlay.exe** | Full ImGui overlay with minimap, ESP, spawns, favorites |
-| **PalTrainerMiniMap.exe** | Standalone minimap (memory read-only, no injection) |
-| **PalOffsetScanner.exe** | Automatic offset scanner |
-| **Web map** | Interactive web interface (`server/server.py` + `web/`) |
+- **Détection automatique** du dossier Palworld (via process ou registry Steam)
+- **Installation UE4SS** depuis le bundle offline (`UE4SS/` dans le dossier)
+- **Scan automatique** des mods disponibles dans `mods/`
+- **Installer / Désinstaller** chaque mod d'un clic
+- **Tout installer / Tout désinstaller** en un clic
+- **Activer / Désactiver** sans réinstallation (via `enabled.txt` + `mods.txt`)
+- **Statut en temps réel** : `[ACTIF]`, `[INSTALLE]`, `[--]`
 
-**Download**: [Releases](../../releases) — extract the zip, run `Launch.bat` as admin.
+Les mods sont copiés vers `<Palworld>/Pal/Binaries/Win64/ue4ss/Mods/<ModName>/`.
 
-📖 [PalTrainerUltra documentation](PalTrainerUltra/README.md)
+## Compilation
 
-### 🚀 Quick Start
+### Prérequis
+- **MinGW-w64** (g++ 13+)
+- **windres** (inclus avec MinGW)
+- **make** (mingw32-make ou make)
+- **Python 3** (pour les scripts et le serveur web)
+- **ffmpeg** (pour la conversion d'icônes, optionnel)
 
-<details>
-<summary><b>Lua Mods</b></summary>
+### Build
+```bash
+make all
+```
 
-1. Download and extract the zip
-2. **Windows**: double-click `install.bat`
-3. **WSL/Linux**: `./install.sh`
-4. Launch Palworld — `F1` for cheat menu, `M` for minimap
-</details>
+### Targets individuelles
+```bash
+make PalTrainerUltra.exe       # Application unifiée (launcher + overlay + minimap)
+make PalTrainerCore.dll        # DLL du trainer
+make PalOffsetScanner.exe      # Scanner d'offsets
+```
 
-<details>
-<summary><b>PalTrainerUltra</b></summary>
+### Packaging
+```bash
+bash scripts/package.sh       # Crée dist/ + archive zip (nécessite `make all` au préalable)
+```
 
-1. Download the latest [Release](../../releases) (`PalTrainerUltra-*.zip`)
-2. Extract to a folder
-3. Run `Launch.bat` as administrator
-4. Launch Palworld — the launcher detects the game
-5. Click **PLAY** — auto injection + overlay
-</details>
-
-### 🗂️ Repository Structure
+## Structure du projet
 
 ```
-.palmods/
-├── mods/                    Lua UE4SS mods
-├── PalTrainerUltra/         C++ trainer (DLL, overlay, minimap, launcher)
-├── install.bat / .py / .sh  Mod installers
-├── uninstall.bat / .py / .sh  Uninstallers
-├── config_manager.py        External configurator (Python/Tkinter)
-├── test_install.py          Installation test
-├── INSTALL.md               Detailed install guide (mods)
-└── NEXUS_PUBLISH.md         Ready-to-paste Nexus Mods text
+src/trainer/        DLL du trainer (core, cheat, engine)
+src/overlay/        Application unifiée ImGui + D3D11 (overlay.cpp, overlay_minimap.inl, imgui/)
+src/tools/          Offset scanner
+scripts/            Scripts utilitaires (packaging, conversion, breeding, save editor)
+web/                Interface web interactive
+server/             Serveur web local
+data/               Données de jeu (pal_spawns.json, pal_database.json)
+assets/             Icônes BMP + textures de carte (.rgba)
+docs/               Documentation (ARCHITECTURE.md, CHEATS.md, MINIMAP.md)
+mods/               Mods Lua UE4SS (inclus dans dist/ par package.sh)
+UE4SS/              Bundle UE4SS offline (inclus dans dist/ par package.sh)
 ```
 
-### 🔧 CI/CD
+## Documentation
 
-The `.github/workflows/build.yml` workflow builds PalTrainerUltra on `windows-latest` (MinGW-w64) and creates a GitHub Release automatically on `v*` tags.
+- [Architecture](docs/ARCHITECTURE.md) — Flux de données, structure du code
+- [Cheats](docs/CHEATS.md) — Liste complète des cheats et hotkeys
+- [Minimap](docs/MINIMAP.md) — Hotkeys, téléport, spawns, pals, filtres, ESP
 
-### ⚠️ Disclaimer
+## CI/CD
 
-- Use in **single-player** or on a server you administer
-- Do not use on public servers with anti-cheat
-- Educational and personal entertainment project
-- Save files are **never** touched by uninstallers
+Le workflow GitHub Actions (`.github/workflows/build.yml`):
+1. **Build** — Compile tous les composants sur `windows-latest` avec MinGW-w64
+2. **Package** — Crée `dist/` avec exécutables, données, assets, docs
+3. **Upload** — Publie les artifacts de build
+4. **Release** — Crée une release GitHub automatique sur tag `v*`
 
----
+### Déclencher une release
+```bash
+git tag v1.0
+git push origin v1.0
+```
+La CI build tous les composants, crée l'archive `PalTrainerUltra-*.zip` et publie la Release GitHub automatiquement avec les assets de carte.
 
-<div align="center">
+## Scripts utilitaires
 
-**🎮 Made with ❤️ for the Palworld community**
+### Breeding calculator
+```bash
+# Calculer le child de deux parents
+python scripts/breeding_calculator.py Lamball Cattiva
 
-[Report a bug](../../issues) · [Request a feature](../../issues) · [Contributing](CONTRIBUTING.md) · [Latest release](../../releases)
+# Trouver les parents d'un Pal
+python scripts/breeding_calculator.py --reverse Anubis
 
-</div>
+# Lister tous les Pals
+python scripts/breeding_calculator.py --list
+```
+
+### Save editor
+```bash
+# Info sur la sauvegarde
+python scripts/save_editor.py --info
+
+# Modifier le niveau
+python scripts/save_editor.py --set-level 50
+
+# Modifier l'argent
+python scripts/save_editor.py --set-money 999999
+
+# Backup
+python scripts/save_editor.py --backup
+```
+
+## Disclaimer
+
+Outil éducatif pour usage en single-player et serveurs privés. Ne pas utiliser sur des serveurs publics avec anti-cheat.
