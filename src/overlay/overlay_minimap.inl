@@ -1010,6 +1010,7 @@ static bool StartWebServer() {
         PROCESS_INFORMATION pi = {};
         DWORD flags = CREATE_NO_WINDOW | CREATE_NEW_PROCESS_GROUP | DETACHED_PROCESS;
         if (CreateProcessW(nullptr, &cmd[0], nullptr, nullptr, FALSE, flags, nullptr, nullptr, &si, &pi)) {
+            g_childPids.push_back(pi.dwProcessId);
             CloseHandle(pi.hProcess);
             CloseHandle(pi.hThread);
             g_webServerStarted = true;

@@ -786,6 +786,24 @@ static void ReloadMapTextures() {
     g_mapTreeWidth = 2048; g_mapTreeHeight = 2048;
 }
 
+// ----------------------------------------------------------------------------
+// Process tracking — declared early so overlay_minimap.inl can use them
+// ----------------------------------------------------------------------------
+static std::atomic<bool> g_appRunning{true};
+static std::vector<DWORD> g_childPids;
+
+static void KillChildProcesses() {
+    for (DWORD pid : g_childPids) {
+        if (pid == 0 || pid == GetCurrentProcessId()) continue;
+        HANDLE h = OpenProcess(PROCESS_TERMINATE, FALSE, pid);
+        if (h) {
+            TerminateProcess(h, 0);
+            CloseHandle(h);
+        }
+    }
+    g_childPids.clear();
+}
+
 #include "overlay_minimap.inl"
 
 // ----------------------------------------------------------------------------
@@ -1048,6 +1066,7 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
 
     switch (msg) {
         case WM_CLOSE:
+            g_appRunning = false;
             ::PostQuitMessage(0);
             return 0;
         case WM_SIZE:
@@ -1065,6 +1084,7 @@ LRESULT WINAPI WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
             }
             return 0;
         case WM_DESTROY:
+            g_appRunning = false;
             ::PostQuitMessage(0);
             return 0;
     }
@@ -1422,7 +1442,6 @@ static void InitModManager() {
 // ----------------------------------------------------------------------------
 // App launcher mode
 // ----------------------------------------------------------------------------
-static std::atomic<bool> g_appRunning{true};
 static std::thread g_pollThread;
 static std::atomic<bool> g_autoInject{false};
 static std::atomic<bool> g_gameFound{false};
@@ -1437,6 +1456,7 @@ static bool LaunchSelf(const std::wstring& args) {
                         StringToWString(g_dataDir).c_str(), &si, &pi)) {
         return false;
     }
+    g_childPids.push_back(pi.dwProcessId);
     CloseHandle(pi.hProcess);
     CloseHandle(pi.hThread);
     return true;
@@ -1450,6 +1470,7 @@ static bool LaunchExeFromDir(const std::string& exeName) {
     std::wstring args = L"\"" + path + L"\"";
     if (!CreateProcessW(path.c_str(), &args[0], nullptr, nullptr, FALSE, 0, nullptr,
                         StringToWString(g_dataDir).c_str(), &si, &pi)) return false;
+    g_childPids.push_back(pi.dwProcessId);
     CloseHandle(pi.hProcess);
     CloseHandle(pi.hThread);
     return true;
@@ -2082,6 +2103,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR lpCmdLine, int nCmdSh
 
     // Nettoyage
     g_appRunning = false;
+    KillChildProcesses();
     if (g_pollThread.joinable()) g_pollThread.join();
     if (g_attachThread.joinable()) g_attachThread.join();
     if (g_memProcessHandle) { CloseHandle(g_memProcessHandle); g_memProcessHandle = nullptr; }
