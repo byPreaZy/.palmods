@@ -97,6 +97,9 @@ static int g_currentMapArea = 0; // 0=MainMap, 1=Tree
 static int g_mapQuality = 0; // 0=SD(2048), 1=HD(4096), 2=UHD(8192)
 static bool g_mapQualityChanged = false;
 static bool g_alwaysOnTop = false;
+static ID3D11ShaderResourceView* g_appIconTexture = nullptr;
+static int g_appIconWidth = 0;
+static int g_appIconHeight = 0;
 
 // Runtime mode — no more #ifdef, single compilation unit
 enum class AppMode { Launcher, Minimap, Overlay };
@@ -700,6 +703,199 @@ static void MapUVToWorldArea(float u, float v, int area, float& worldX, float& w
 }
 
 // ----------------------------------------------------------------------------
+// Chargement de l'icône palmods.ico (format ICO -> RGBA via WIC)
+// ----------------------------------------------------------------------------
+#define INITGUID
+#include <wincodec.h>
+#undef INITGUID
+
+static bool LoadAppIcon(const char* path) {
+    // Read the ICO file manually and extract the largest PNG entry,
+    // then decode it with WIC as a PNG stream.
+    std::ifstream f(path, std::ios::binary);
+    if (!f) { Log("LoadAppIcon: cannot open %s", path); return false; }
+
+    // Parse ICO header
+    uint16_t icoReserved, icoType, icoCount;
+    f.read((char*)&icoReserved, 2);
+    f.read((char*)&icoType, 2);
+    f.read((char*)&icoCount, 2);
+    if (icoType != 1 || icoCount == 0) { Log("LoadAppIcon: invalid ICO header"); return false; }
+
+    struct IcoEntry { uint8_t w, h, colors, reserved; uint16_t planes, bpp; uint32_t size, offset; };
+    std::vector<IcoEntry> entries(icoCount);
+    for (int i = 0; i < icoCount; i++) {
+        f.read((char*)&entries[i], sizeof(IcoEntry));
+    }
+
+    // Find largest entry
+    int bestIdx = 0; int bestSize = 0;
+    for (int i = 0; i < icoCount; i++) {
+        int sz = entries[i].w == 0 ? 256 : entries[i].w;
+        if (sz > bestSize) { bestSize = sz; bestIdx = i; }
+    }
+
+    auto& entry = entries[bestIdx];
+    int iconW = entry.w == 0 ? 256 : entry.w;
+    int iconH = entry.h == 0 ? 256 : entry.h;
+    Log("LoadAppIcon: best entry %d: %dx%d bpp=%d size=%d offset=%d",
+        bestIdx, iconW, iconH, entry.bpp, entry.size, entry.offset);
+
+    // Read the raw image data at the entry offset
+    f.seekg(entry.offset, std::ios::beg);
+    std::vector<uint8_t> imgData(entry.size);
+    f.read((char*)imgData.data(), entry.size);
+    f.close();
+
+    // Check if PNG (starts with 0x89 0x50 0x4E 0x47)
+    bool isPng = (imgData.size() >= 4 && imgData[0] == 0x89 && imgData[1] == 0x50 &&
+                  imgData[2] == 0x4E && imgData[3] == 0x47);
+
+    // Use WIC to decode the image data (PNG or BMP)
+    IWICImagingFactory* factory = nullptr;
+    HRESULT hr = CoCreateInstance(CLSID_WICImagingFactory, nullptr, CLSCTX_INPROC_SERVER,
+                                  IID_PPV_ARGS(&factory));
+    if (FAILED(hr) || !factory) { Log("LoadAppIcon: CoCreateInstance failed hr=0x%08X", (unsigned)hr); return false; }
+
+    // Create a stream from the raw image data
+    IWICStream* stream = nullptr;
+    hr = factory->CreateStream(&stream);
+    if (FAILED(hr) || !stream) { Log("LoadAppIcon: CreateStream failed hr=0x%08X", (unsigned)hr); factory->Release(); return false; }
+
+    // For BMP entries in ICO, we need to prepend a BMP file header
+    std::vector<uint8_t> bmpWithHeader;
+    const uint8_t* dataPtr = imgData.data();
+    DWORD dataSize = (DWORD)imgData.size();
+
+    if (!isPng) {
+        // It's a BMP DIB — prepend a BITMAPFILEHEADER
+        BITMAPFILEHEADER bfh = {};
+        bfh.bfType = 0x4D42; // "BM"
+        bfh.bfOffBits = sizeof(BITMAPFILEHEADER) + 40; // assuming 40-byte info header
+        // Read the actual info header size to calculate correct offset
+        if (imgData.size() >= 4) {
+            uint32_t infoSize = *(uint32_t*)imgData.data();
+            bfh.bfOffBits = sizeof(BITMAPFILEHEADER) + infoSize;
+        }
+        bfh.bfSize = sizeof(BITMAPFILEHEADER) + (DWORD)imgData.size();
+        bmpWithHeader.resize(sizeof(BITMAPFILEHEADER) + imgData.size());
+        memcpy(bmpWithHeader.data(), &bfh, sizeof(BITMAPFILEHEADER));
+        memcpy(bmpWithHeader.data() + sizeof(BITMAPFILEHEADER), imgData.data(), imgData.size());
+        dataPtr = bmpWithHeader.data();
+        dataSize = (DWORD)bmpWithHeader.size();
+    }
+
+    // Create a HGLOBAL stream from memory
+    HGLOBAL hMem = GlobalAlloc(GMEM_MOVEABLE, dataSize);
+    if (!hMem) { Log("LoadAppIcon: GlobalAlloc failed"); stream->Release(); factory->Release(); return false; }
+    void* memPtr = GlobalLock(hMem);
+    memcpy(memPtr, dataPtr, dataSize);
+    GlobalUnlock(hMem);
+
+    hr = stream->InitializeFromMemory((BYTE*)GlobalLock(hMem), dataSize);
+    GlobalUnlock(hMem);
+    if (FAILED(hr)) { Log("LoadAppIcon: InitializeFromMemory failed hr=0x%08X", (unsigned)hr); GlobalFree(hMem); stream->Release(); factory->Release(); return false; }
+
+    // Decode as PNG or BMP
+    IWICBitmapDecoder* decoder = nullptr;
+    GUID containerFormat = isPng ? GUID_ContainerFormatPng : GUID_ContainerFormatBmp;
+    hr = factory->CreateDecoder(containerFormat, nullptr, &decoder);
+    if (FAILED(hr) || !decoder) {
+        // Try generic decoder
+        hr = factory->CreateDecoder(GUID_ContainerFormatIco, nullptr, &decoder);
+    }
+    if (FAILED(hr) || !decoder) { Log("LoadAppIcon: CreateDecoder failed hr=0x%08X (png=%d)", (unsigned)hr, isPng); GlobalFree(hMem); stream->Release(); factory->Release(); return false; }
+
+    hr = decoder->Initialize(stream, WICDecodeMetadataCacheOnLoad);
+    if (FAILED(hr)) { Log("LoadAppIcon: decoder->Initialize failed hr=0x%08X", (unsigned)hr); decoder->Release(); stream->Release(); factory->Release(); GlobalFree(hMem); return false; }
+
+    UINT frameCount = 0;
+    decoder->GetFrameCount(&frameCount);
+    Log("LoadAppIcon: decoded %u frames (png=%d)", frameCount, isPng);
+    if (frameCount == 0) { decoder->Release(); stream->Release(); factory->Release(); GlobalFree(hMem); return false; }
+
+    // Find the largest frame
+    UINT bestFrame = 0;
+    UINT bestW = 0, bestH = 0;
+    for (UINT i = 0; i < frameCount; i++) {
+        IWICBitmapFrameDecode* frame = nullptr;
+        decoder->GetFrame(i, &frame);
+        if (!frame) continue;
+        UINT w, h;
+        frame->GetSize(&w, &h);
+        if (w > bestW) { bestW = w; bestH = h; bestFrame = i; }
+        frame->Release();
+    }
+
+    IWICBitmapFrameDecode* bestFrameDecode = nullptr;
+    decoder->GetFrame(bestFrame, &bestFrameDecode);
+    if (!bestFrameDecode) { decoder->Release(); stream->Release(); factory->Release(); GlobalFree(hMem); return false; }
+
+    // Use actual decoded size (may differ from ICO entry size for PNG)
+    iconW = (int)bestW;
+    iconH = (int)bestH;
+    Log("LoadAppIcon: decoded frame %ux%u", bestW, bestH);
+
+    // Convert to 32bpp RGBA
+    IWICFormatConverter* converter = nullptr;
+    hr = factory->CreateFormatConverter(&converter);
+    if (FAILED(hr) || !converter) { bestFrameDecode->Release(); decoder->Release(); stream->Release(); factory->Release(); GlobalFree(hMem); return false; }
+
+    hr = converter->Initialize(bestFrameDecode, GUID_WICPixelFormat32bppRGBA,
+                                WICBitmapDitherTypeNone, nullptr, 0.0, WICBitmapPaletteTypeCustom);
+    if (FAILED(hr)) { Log("LoadAppIcon: converter->Initialize failed hr=0x%08X", (unsigned)hr); converter->Release(); bestFrameDecode->Release(); decoder->Release(); stream->Release(); factory->Release(); GlobalFree(hMem); return false; }
+
+    std::vector<uint8_t> rgba((size_t)iconW * iconH * 4);
+    hr = converter->CopyPixels(nullptr, iconW * 4, (UINT)rgba.size(), rgba.data());
+
+    converter->Release();
+    bestFrameDecode->Release();
+    decoder->Release();
+    stream->Release();
+    factory->Release();
+    GlobalFree(hMem);
+
+    if (FAILED(hr)) { Log("LoadAppIcon: CopyPixels failed hr=0x%08X", (unsigned)hr); return false; }
+
+    // Create D3D11 texture
+    D3D11_TEXTURE2D_DESC desc = {};
+    desc.Width = iconW;
+    desc.Height = iconH;
+    desc.MipLevels = 1;
+    desc.ArraySize = 1;
+    desc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+    desc.SampleDesc.Count = 1;
+    desc.Usage = D3D11_USAGE_IMMUTABLE;
+    desc.BindFlags = D3D11_BIND_SHADER_RESOURCE;
+
+    D3D11_SUBRESOURCE_DATA sub = {};
+    sub.pSysMem = rgba.data();
+    sub.SysMemPitch = iconW * 4;
+
+    ID3D11Texture2D* tex = nullptr;
+    if (FAILED(g_pd3dDevice->CreateTexture2D(&desc, &sub, &tex))) {
+        Log("LoadAppIcon: CreateTexture2D failed (%dx%d)", iconW, iconH);
+        return false;
+    }
+
+    D3D11_SHADER_RESOURCE_VIEW_DESC srvDesc = {};
+    srvDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
+    srvDesc.ViewDimension = D3D11_SRV_DIMENSION_TEXTURE2D;
+    srvDesc.Texture2D.MipLevels = 1;
+
+    HRESULT hr2 = g_pd3dDevice->CreateShaderResourceView(tex, &srvDesc, &g_appIconTexture);
+    tex->Release();
+    if (SUCCEEDED(hr2)) {
+        g_appIconWidth = iconW;
+        g_appIconHeight = iconH;
+        Log("LoadAppIcon: SUCCESS %dx%d texture=%p", iconW, iconH, (void*)g_appIconTexture);
+        return true;
+    }
+    Log("LoadAppIcon: CreateShaderResourceView failed hr=0x%08X", (unsigned)hr2);
+    return false;
+}
+
+// ----------------------------------------------------------------------------
 // Chargement des textures
 // ----------------------------------------------------------------------------
 static bool LoadMapTexture(const char* path, int width, int height, ID3D11ShaderResourceView** out_srv) {
@@ -860,9 +1056,17 @@ void CleanupRenderTarget() {
 
 static void RenderLauncher() {
     ImGui::SetNextWindowPos(ImVec2(40, 40), ImGuiCond_FirstUseEver);
-    ImGui::SetNextWindowSize(ImVec2(400, 180), ImGuiCond_FirstUseEver);
+    ImGui::SetNextWindowSize(ImVec2(400, 200), ImGuiCond_FirstUseEver);
     ImGui::Begin("PalTrainerUltra v1.0", nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse);
-    ImGui::Text("État :");
+    if (g_appIconTexture) {
+        ImGui::Image((ImTextureID)g_appIconTexture, ImVec2(32, 32));
+        ImGui::SameLine();
+        ImGui::BeginGroup();
+        ImGui::TextColored(ImVec4(0.31f, 0.76f, 0.98f, 1.0f), "PalTrainerUltra");
+        ImGui::EndGroup();
+        ImGui::Separator();
+    }
+    ImGui::Text("Etat :");
     ImGui::TextWrapped("%s", GetStatus().c_str());
     ImGui::Separator();
     if (g_attachInProgress) {
@@ -889,6 +1093,12 @@ static void RenderTrainer() {
     {
         bool changed = false;
         ImGui::Begin("Trainer", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
+        if (g_appIconTexture) {
+            ImGui::Image((ImTextureID)g_appIconTexture, ImVec2(28, 28));
+            ImGui::SameLine();
+            ImGui::TextColored(ImVec4(0.31f, 0.76f, 0.98f, 1.0f), "PalTrainerUltra");
+            ImGui::Separator();
+        }
         changed |= ImGui::Checkbox("Mode Dieu", &g_cheats.godMode);
         changed |= ImGui::Checkbox("PV infinis", &g_cheats.infiniteHP);
         changed |= ImGui::Checkbox("PS infinis", &g_cheats.infiniteSP);
@@ -931,6 +1141,12 @@ static void RenderTrainer() {
         ImGui::SetNextWindowPos(ImVec2(370, 40), ImGuiCond_FirstUseEver);
         ImGui::SetNextWindowSize(ImVec2(360, 580), ImGuiCond_FirstUseEver);
         ImGui::Begin("Avancé", nullptr, ImGuiWindowFlags_AlwaysVerticalScrollbar);
+        if (g_appIconTexture) {
+            ImGui::Image((ImTextureID)g_appIconTexture, ImVec2(24, 24));
+            ImGui::SameLine();
+            ImGui::TextColored(ImVec4(1.0f, 0.55f, 0.0f, 1.0f), "Cheats avances");
+            ImGui::Separator();
+        }
 
         // Helper lambda for toggles
         auto Toggle = [&](const char* key) {
@@ -1491,59 +1707,79 @@ static void PollWorker() {
     }
 }
 
-static void StyleDarkLauncher() {
+static void StylePalworld() {
     ImGuiStyle& s = ImGui::GetStyle();
-    s.WindowRounding = 10.0f;
-    s.FrameRounding = 6.0f;
-    s.GrabRounding = 4.0f;
-    s.ChildRounding = 8.0f;
-    s.PopupRounding = 8.0f;
+    s.WindowRounding = 12.0f;
+    s.FrameRounding = 8.0f;
+    s.GrabRounding = 6.0f;
+    s.ChildRounding = 10.0f;
+    s.PopupRounding = 10.0f;
+    s.ScrollbarRounding = 10.0f;
+    s.TabRounding = 8.0f;
     s.WindowPadding = ImVec2(20, 20);
     s.FramePadding = ImVec2(12, 8);
     s.ItemSpacing = ImVec2(10, 10);
     s.ItemInnerSpacing = ImVec2(8, 6);
-    s.WindowBorderSize = 0.0f;
+    s.WindowBorderSize = 1.0f;
     s.FrameBorderSize = 0.0f;
+    s.ScrollbarSize = 12.0f;
+    s.GrabMinSize = 10.0f;
+
     ImVec4* c = s.Colors;
-    // Deep dark with blue accents
-    c[ImGuiCol_WindowBg]       = ImVec4(0.04f, 0.04f, 0.06f, 1.0f);
-    c[ImGuiCol_ChildBg]        = ImVec4(0.06f, 0.06f, 0.09f, 1.0f);
-    c[ImGuiCol_Border]         = ImVec4(0.12f, 0.12f, 0.16f, 0.5f);
-    c[ImGuiCol_FrameBg]        = ImVec4(0.10f, 0.10f, 0.14f, 1.0f);
-    c[ImGuiCol_FrameBgHovered] = ImVec4(0.16f, 0.16f, 0.22f, 1.0f);
-    c[ImGuiCol_FrameBgActive]  = ImVec4(0.20f, 0.20f, 0.28f, 1.0f);
-    c[ImGuiCol_Button]         = ImVec4(0.14f, 0.16f, 0.24f, 1.0f);
-    c[ImGuiCol_ButtonHovered]  = ImVec4(0.22f, 0.26f, 0.40f, 1.0f);
-    c[ImGuiCol_ButtonActive]   = ImVec4(0.30f, 0.34f, 0.52f, 1.0f);
-    c[ImGuiCol_Text]           = ImVec4(0.92f, 0.92f, 0.96f, 1.0f);
-    c[ImGuiCol_TextDisabled]   = ImVec4(0.42f, 0.42f, 0.48f, 1.0f);
-    c[ImGuiCol_CheckMark]      = ImVec4(0.35f, 0.65f, 1.0f, 1.0f);
-    c[ImGuiCol_Separator]      = ImVec4(0.12f, 0.12f, 0.16f, 0.8f);
-    c[ImGuiCol_Header]         = ImVec4(0.10f, 0.10f, 0.14f, 1.0f);
-    c[ImGuiCol_HeaderHovered]  = ImVec4(0.16f, 0.16f, 0.22f, 1.0f);
-    c[ImGuiCol_HeaderActive]   = ImVec4(0.20f, 0.20f, 0.28f, 1.0f);
+    // Palworld palette: deep ocean blue, sky blue, nature green, Pal orange
+    c[ImGuiCol_WindowBg]        = ImVec4(0.05f, 0.12f, 0.20f, 1.0f);   // deep ocean
+    c[ImGuiCol_ChildBg]         = ImVec4(0.07f, 0.15f, 0.25f, 1.0f);   // slightly lighter
+    c[ImGuiCol_PopupBg]         = ImVec4(0.06f, 0.14f, 0.22f, 0.98f);
+    c[ImGuiCol_Border]          = ImVec4(0.15f, 0.35f, 0.55f, 0.60f);  // blue border
+    c[ImGuiCol_BorderShadow]    = ImVec4(0.0f, 0.0f, 0.0f, 0.0f);
+    c[ImGuiCol_Text]            = ImVec4(0.95f, 0.95f, 0.98f, 1.0f);   // near-white
+    c[ImGuiCol_TextDisabled]    = ImVec4(0.45f, 0.55f, 0.65f, 1.0f);
+    c[ImGuiCol_FrameBg]         = ImVec4(0.08f, 0.18f, 0.30f, 1.0f);   // dark blue input
+    c[ImGuiCol_FrameBgHovered]  = ImVec4(0.12f, 0.25f, 0.40f, 1.0f);
+    c[ImGuiCol_FrameBgActive]   = ImVec4(0.15f, 0.30f, 0.48f, 1.0f);
+    c[ImGuiCol_Button]          = ImVec4(0.13f, 0.55f, 0.95f, 1.0f);   // sky blue
+    c[ImGuiCol_ButtonHovered]   = ImVec4(0.20f, 0.65f, 1.0f, 1.0f);    // brighter sky blue
+    c[ImGuiCol_ButtonActive]    = ImVec4(0.10f, 0.45f, 0.85f, 1.0f);
+    c[ImGuiCol_CheckMark]       = ImVec4(0.40f, 0.80f, 0.45f, 1.0f);   // nature green
+    c[ImGuiCol_SliderGrab]      = ImVec4(0.13f, 0.55f, 0.95f, 1.0f);   // sky blue
+    c[ImGuiCol_SliderGrabActive]= ImVec4(0.20f, 0.65f, 1.0f, 1.0f);
+    c[ImGuiCol_Header]          = ImVec4(0.08f, 0.18f, 0.30f, 1.0f);
+    c[ImGuiCol_HeaderHovered]   = ImVec4(0.12f, 0.25f, 0.40f, 1.0f);
+    c[ImGuiCol_HeaderActive]    = ImVec4(0.15f, 0.30f, 0.48f, 1.0f);
+    c[ImGuiCol_Separator]       = ImVec4(0.15f, 0.35f, 0.55f, 0.50f);
+    c[ImGuiCol_SeparatorHovered]= ImVec4(0.20f, 0.50f, 0.75f, 0.80f);
+    c[ImGuiCol_SeparatorActive] = ImVec4(0.25f, 0.60f, 0.90f, 1.0f);
+    c[ImGuiCol_ScrollbarBg]     = ImVec4(0.04f, 0.10f, 0.16f, 0.5f);
+    c[ImGuiCol_ScrollbarGrab]   = ImVec4(0.15f, 0.35f, 0.55f, 1.0f);
+    c[ImGuiCol_ScrollbarGrabHovered] = ImVec4(0.20f, 0.45f, 0.70f, 1.0f);
+    c[ImGuiCol_ScrollbarGrabActive]  = ImVec4(0.25f, 0.55f, 0.85f, 1.0f);
+    c[ImGuiCol_Tab]             = ImVec4(0.06f, 0.14f, 0.22f, 1.0f);   // inactive tab
+    c[ImGuiCol_TabHovered]      = ImVec4(1.0f, 0.60f, 0.0f, 0.80f);    // orange hover
+    c[ImGuiCol_TabActive]       = ImVec4(1.0f, 0.55f, 0.0f, 1.0f);     // Pal orange active
+    c[ImGuiCol_TableHeaderBg]   = ImVec4(0.06f, 0.14f, 0.22f, 1.0f);
+    c[ImGuiCol_TableBorderStrong] = ImVec4(0.15f, 0.35f, 0.55f, 0.60f);
+    c[ImGuiCol_TableBorderLight]  = ImVec4(0.10f, 0.25f, 0.40f, 0.40f);
 }
 
 static void DrawStatusBanner(float width) {
-    // Color-coded status banner
     ImVec4 bannerColor;
     const char* bannerText;
     const char* bannerIcon;
 
     if (g_attachInProgress) {
-        bannerColor = ImVec4(0.15f, 0.25f, 0.50f, 1.0f);
+        bannerColor = ImVec4(0.13f, 0.55f, 0.95f, 1.0f);   // sky blue
         bannerText = GetStatus().c_str();
         bannerIcon = "[...]";
     } else if (g_injected) {
-        bannerColor = ImVec4(0.10f, 0.30f, 0.12f, 1.0f);
+        bannerColor = ImVec4(0.20f, 0.60f, 0.25f, 1.0f);   // nature green
         bannerText = "Connecte — Trainer actif";
         bannerIcon = "[OK]";
     } else if (g_gameFound) {
-        bannerColor = ImVec4(0.10f, 0.30f, 0.12f, 1.0f);
+        bannerColor = ImVec4(1.0f, 0.55f, 0.0f, 1.0f);     // Pal orange
         bannerText = "Palworld detecte ! Cliquez sur JOUER.";
         bannerIcon = "[*]";
     } else {
-        bannerColor = ImVec4(0.25f, 0.18f, 0.05f, 1.0f);
+        bannerColor = ImVec4(0.10f, 0.25f, 0.45f, 1.0f);   // dark blue
         bannerText = "En attente de Palworld...";
         bannerIcon = "[!]";
     }
@@ -1560,20 +1796,44 @@ static void DrawStatusBanner(float width) {
 
 static void RenderAppLauncher() {
     ImGui::SetNextWindowPos(ImVec2(0, 0));
-    ImGui::SetNextWindowSize(ImVec2(640, 560));
-    ImGui::Begin("##appLauncher", nullptr, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove |
+    ImGui::SetNextWindowSize(ImVec2((float)g_winWidth, (float)g_winHeight));
+    ImGui::Begin("##appLauncher", nullptr, ImGuiWindowFlags_NoMove |
                  ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoBringToFrontOnFocus);
 
     float winW = ImGui::GetWindowWidth();
+    float winH = ImGui::GetWindowHeight();
+    float padX = ImGui::GetStyle().WindowPadding.x;
 
-    // --- Header ---
-    ImGui::Dummy(ImVec2(0, 6));
-    ImGui::SetWindowFontScale(1.8f);
-    ImGui::TextColored(ImVec4(0.35f, 0.60f, 1.0f, 1.0f), "PalTrainerUltra");
-    ImGui::SetWindowFontScale(1.0f);
-    ImGui::SameLine();
-    ImGui::TextDisabled("  v1.0 — Palworld 1.0.2");
-    ImGui::Dummy(ImVec2(0, 2));
+    // --- Header with icon ---
+    ImGui::Dummy(ImVec2(0, 4));
+    if (g_appIconTexture) {
+        ImGui::Image((ImTextureID)g_appIconTexture, ImVec2(42, 42));
+        ImGui::SameLine();
+        ImGui::BeginGroup();
+        ImGui::SetWindowFontScale(1.6f);
+        ImGui::TextColored(ImVec4(0.31f, 0.76f, 0.98f, 1.0f), "PalTrainerUltra");
+        ImGui::SetWindowFontScale(1.0f);
+        ImGui::TextDisabled("  v1.0 — Palworld 1.0.2");
+        ImGui::EndGroup();
+    } else {
+        ImGui::SetWindowFontScale(1.6f);
+        ImGui::TextColored(ImVec4(0.31f, 0.76f, 0.98f, 1.0f), "PalTrainerUltra");
+        ImGui::SetWindowFontScale(1.0f);
+        ImGui::SameLine();
+        ImGui::TextDisabled("  v1.0 — Palworld 1.0.2");
+    }
+    ImGui::Dummy(ImVec2(0, 1));
+
+    // Gradient separator: blue -> orange
+    {
+        ImVec2 sepPos = ImGui::GetCursorScreenPos();
+        ImDrawList* dl = ImGui::GetWindowDrawList();
+        float sepW = winW - padX * 2;
+        ImU32 colLeft = IM_COL32(31, 122, 196, 255);   // sky blue
+        ImU32 colRight = IM_COL32(255, 140, 0, 255);    // Pal orange
+        dl->AddRectFilledMultiColor(sepPos, ImVec2(sepPos.x + sepW, sepPos.y + 3), colLeft, colRight, colRight, colLeft);
+        ImGui::Dummy(ImVec2(0, 6));
+    }
 
     // --- Tabs ---
     if (ImGui::BeginTabBar("##mainTabs", ImGuiTabBarFlags_None)) {
@@ -1583,38 +1843,39 @@ static void RenderAppLauncher() {
     ImGui::Spacing();
 
     // --- Status banner ---
-    DrawStatusBanner(winW - 40);
+    float contentW = ImGui::GetContentRegionAvail().x;
+    DrawStatusBanner(contentW);
     ImGui::Spacing();
 
     // --- PLAY button ---
-    float btnW = winW - 40;
+    float btnW = contentW;
     if (g_attachInProgress) {
         ImGui::BeginDisabled();
-        ImGui::Button("TRAITEMENT...", ImVec2(btnW, 56));
+        ImGui::Button("TRAITEMENT...", ImVec2(btnW, 48));
         ImGui::EndDisabled();
     } else if (g_injected) {
-        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.12f, 0.30f, 0.12f, 1.0f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.16f, 0.38f, 0.16f, 1.0f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.20f, 0.45f, 0.20f, 1.0f));
-        if (ImGui::Button("CONNECTE — Lancer Minimap", ImVec2(btnW, 56))) {
+        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.20f, 0.60f, 0.25f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.25f, 0.72f, 0.30f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.15f, 0.50f, 0.20f, 1.0f));
+        if (ImGui::Button("CONNECTE — Lancer Minimap", ImVec2(btnW, 48))) {
             LaunchSelf(L"--minimap");
             g_appRunning = false;
             ::PostQuitMessage(0);
         }
         ImGui::PopStyleColor(3);
     } else if (g_gameFound) {
-        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.12f, 0.38f, 0.12f, 1.0f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.16f, 0.48f, 0.16f, 1.0f));
-        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.20f, 0.58f, 0.20f, 1.0f));
-        ImGui::SetWindowFontScale(1.4f);
-        if (ImGui::Button("JOUER", ImVec2(btnW, 56))) {
+        ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.20f, 0.60f, 0.25f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.25f, 0.72f, 0.30f, 1.0f));
+        ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.15f, 0.50f, 0.20f, 1.0f));
+        ImGui::SetWindowFontScale(1.3f);
+        if (ImGui::Button("JOUER", ImVec2(btnW, 48))) {
             StartAttach();
         }
         ImGui::SetWindowFontScale(1.0f);
         ImGui::PopStyleColor(3);
     } else {
         ImGui::BeginDisabled();
-        ImGui::Button("EN ATTENTE DE PALWORLD...", ImVec2(btnW, 56));
+        ImGui::Button("EN ATTENTE DE PALWORLD...", ImVec2(btnW, 48));
         ImGui::EndDisabled();
     }
 
@@ -1634,10 +1895,14 @@ static void RenderAppLauncher() {
     ImGui::TextDisabled("MODULES");
     ImGui::Spacing();
 
-    float cardW = (winW - 40 - 10) * 0.5f;
-    float cardH = 52.0f;
+    float availW = ImGui::GetContentRegionAvail().x;
+    float cardW = (availW - ImGui::GetStyle().ItemSpacing.x) * 0.5f;
+    float cardH = 48.0f;
 
-    // Row 1: Minimap + Overlay
+    // Row 1: Minimap + Overlay — Palworld sky blue cards
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.08f, 0.20f, 0.35f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.13f, 0.40f, 0.65f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.15f, 0.50f, 0.80f, 1.0f));
     if (ImGui::Button("Mini-carte\nCarte temps reel", ImVec2(cardW, cardH))) {
         LaunchSelf(L"--minimap");
     }
@@ -1645,8 +1910,12 @@ static void RenderAppLauncher() {
     if (ImGui::Button("Overlay Trainer\nCheat menu in-game", ImVec2(cardW, cardH))) {
         LaunchSelf(L"--overlay");
     }
+    ImGui::PopStyleColor(3);
 
-    // Row 2: Scanner + Web Map
+    // Row 2: Scanner + Web Map — Palworld orange cards
+    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.20f, 0.12f, 0.05f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.45f, 0.28f, 0.08f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_ButtonActive, ImVec4(0.60f, 0.38f, 0.10f, 1.0f));
     if (ImGui::Button("Scanner d'Offsets\nMise a jour des offsets", ImVec2(cardW, cardH))) {
         LaunchExeFromDir("PalOffsetScanner.exe");
     }
@@ -1656,6 +1925,7 @@ static void RenderAppLauncher() {
         ShellExecuteW(g_hwnd, L"open", batPath.c_str(), nullptr,
                       StringToWString(g_dataDir).c_str(), SW_SHOWNORMAL);
     }
+    ImGui::PopStyleColor(3);
 
     ImGui::EndTabItem();
     }
@@ -1667,9 +1937,9 @@ static void RenderAppLauncher() {
     // UE4SS status
     bool ue4ssOk = IsUE4SSInstalled();
     if (ue4ssOk) {
-        ImGui::TextColored(ImVec4(0.3f, 0.8f, 0.3f, 1.0f), "[OK] UE4SS installe");
+        ImGui::TextColored(ImVec4(0.30f, 0.80f, 0.35f, 1.0f), "[OK] UE4SS installe");
     } else {
-        ImGui::TextColored(ImVec4(0.8f, 0.3f, 0.3f, 1.0f), "[!] UE4SS non installe");
+        ImGui::TextColored(ImVec4(1.0f, 0.55f, 0.0f, 1.0f), "[!] UE4SS non installe");
     }
     ImGui::SameLine();
     if (!g_palworldPath.empty()) {
@@ -1722,45 +1992,64 @@ static void RenderAppLauncher() {
         }
         ImGui::Spacing();
 
-        // Scrollable mod list
-        ImGui::BeginChild("##modList", ImVec2(winW - 40, 320), true);
+        // Scrollable mod list — height = remaining space minus footer
+        float footerH = ImGui::GetFrameHeight() + ImGui::GetStyle().ItemSpacing.y * 2 + ImGui::GetStyle().WindowPadding.y;
+        float listH = ImGui::GetContentRegionAvail().y - footerH;
+        if (listH < 80.0f) listH = 80.0f;
+        ImGui::BeginChild("##modList", ImVec2(-1, listH), true);
+        float listW = ImGui::GetContentRegionAvail().x;
+        float actionBtnW = 90.0f;
         for (size_t i = 0; i < g_mods.size(); i++) {
             auto& mod = g_mods[i];
             ImGui::PushID((int)i);
 
-            // Status badge
+            // Row layout: [badge] [name + desc] .... [action buttons]
+            // Badge
             if (mod.installed && mod.enabled) {
-                ImGui::TextColored(ImVec4(0.3f, 0.8f, 0.3f, 1.0f), "[ACTIF]");
+                ImGui::TextColored(ImVec4(0.30f, 0.80f, 0.35f, 1.0f), "[ACTIF]");
             } else if (mod.installed) {
-                ImGui::TextColored(ImVec4(0.8f, 0.7f, 0.2f, 1.0f), "[INSTALLE]");
+                ImGui::TextColored(ImVec4(1.0f, 0.55f, 0.0f, 1.0f), "[INSTALLE]");
             } else {
                 ImGui::TextDisabled("[--]");
             }
             ImGui::SameLine();
+
+            // Name + version (truncated if too long)
             ImGui::Text("%s v%s", mod.name.c_str(), mod.version.c_str());
+
+            // Description on second line (indented, smaller)
             if (!mod.description.empty()) {
                 ImGui::Indent();
-                ImGui::TextDisabled("%s", mod.description.c_str());
+                ImGui::PushStyleColor(ImGuiCol_Text, ImGui::GetStyle().Colors[ImGuiCol_TextDisabled]);
+                ImGui::TextWrapped("%s", mod.description.c_str());
+                ImGui::PopStyleColor();
                 ImGui::Unindent();
             }
 
-            // Action buttons
-            float btnWidth = 90.0f;
+            // Action buttons — right-aligned
+            int numBtns = 0;
             if (!mod.installed) {
-                if (ImGui::Button("Installer", ImVec2(btnWidth, 26))) {
+                numBtns = 1;
+            } else {
+                numBtns = mod.enabled ? 2 : 2;
+            }
+            float btnsW = numBtns * actionBtnW + (numBtns - 1) * ImGui::GetStyle().ItemSpacing.x;
+            ImGui::SetCursorPosX(listW - btnsW);
+            if (!mod.installed) {
+                if (ImGui::Button("Installer", ImVec2(actionBtnW, 0))) {
                     InstallMod(mod);
                 }
             } else {
-                if (ImGui::Button("Desinstaller", ImVec2(btnWidth, 26))) {
+                if (ImGui::Button("Desinstaller", ImVec2(actionBtnW, 0))) {
                     UninstallMod(mod);
                 }
                 ImGui::SameLine();
                 if (mod.enabled) {
-                    if (ImGui::Button("Desactiver", ImVec2(btnWidth, 26))) {
+                    if (ImGui::Button("Desactiver", ImVec2(actionBtnW, 0))) {
                         ToggleMod(mod, false);
                     }
                 } else {
-                    if (ImGui::Button("Activer", ImVec2(btnWidth, 26))) {
+                    if (ImGui::Button("Activer", ImVec2(actionBtnW, 0))) {
                         ToggleMod(mod, true);
                     }
                 }
@@ -1778,13 +2067,18 @@ static void RenderAppLauncher() {
     ImGui::EndTabBar();
     }
 
-    // --- Footer ---
-    ImGui::Spacing();
+    // --- Footer pinned to bottom ---
+    float footerH = ImGui::GetFrameHeight() + ImGui::GetStyle().ItemSpacing.y;
+    float footerY = winH - footerH - ImGui::GetStyle().WindowPadding.y;
+    if (footerY > ImGui::GetCursorPosY()) {
+        ImGui::SetCursorPosY(footerY);
+    }
     ImGui::Separator();
     ImGui::Spacing();
     ImGui::TextDisabled("Dossier: %s", g_dataDir.c_str());
-    ImGui::SameLine(winW - 120);
-    if (ImGui::Button("Quitter", ImVec2(90, 28))) {
+    float quitW = 90.0f;
+    ImGui::SameLine(winW - quitW - padX);
+    if (ImGui::Button("Quitter", ImVec2(quitW, 0))) {
         g_appRunning = false;
         ::PostQuitMessage(0);
     }
@@ -1796,6 +2090,9 @@ static void RenderAppLauncher() {
 // Principal
 // ----------------------------------------------------------------------------
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR lpCmdLine, int nCmdShow) {
+    // Initialize COM for WIC (icon loading)
+    CoInitializeEx(nullptr, COINIT_APARTMENTTHREADED);
+
     // Répertoire de données : le même que l'EXE par défaut, ou --data <dir>
     wchar_t exePath[MAX_PATH];
     GetModuleFileNameW(hInstance, exePath, MAX_PATH);
@@ -1857,9 +2154,9 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR lpCmdLine, int nCmdSh
     } else if (g_appMode == AppMode::Launcher) {
         windowClass = L"PalTrainerUltra";
         windowTitle = L"PalTrainerUltra";
-        winW = 640; winH = 560;
+        winW = 680; winH = 640;
         exFlags = WS_EX_TOPMOST | WS_EX_LAYERED;
-        winFlags = WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX;
+        winFlags = WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX | WS_THICKFRAME;
         posX = CW_USEDEFAULT; posY = CW_USEDEFAULT;
     } else { // Overlay
         windowClass = L"PalTrainerOverlay";
@@ -1911,67 +2208,34 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR lpCmdLine, int nCmdSh
     if (IsMinimap())
         io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;
 
-    ImGui::StyleColorsDark();
+    // Load Segoe UI font from Windows (available on all Win10/11)
+    {
+        NONCLIENTMETRICSA ncm = {};
+        ncm.cbSize = sizeof(ncm);
+        if (SystemParametersInfoA(SPI_GETNONCLIENTMETRICS, sizeof(ncm), &ncm, 0)) {
+            // ncm.lfMessageFont.lfFaceName contains the system UI font (usually "Segoe UI")
+            char fontPath[MAX_PATH];
+            GetWindowsDirectoryA(fontPath, MAX_PATH);
+            std::string segoePath = std::string(fontPath) + "\\Fonts\\segoeui.ttf";
+            std::string segoeBoldPath = std::string(fontPath) + "\\Fonts\\segoeuib.ttf";
+            ImFont* font = io.Fonts->AddFontFromFileTTF(segoePath.c_str(), 18.0f, nullptr, io.Fonts->GetGlyphRangesCyrillic());
+            if (!font) {
+                // Fallback: try msyh.ttf (Microsoft YaHei) or default
+                std::string msyhPath = std::string(fontPath) + "\\Fonts\\msyh.ttf";
+                font = io.Fonts->AddFontFromFileTTF(msyhPath.c_str(), 18.0f, nullptr, io.Fonts->GetGlyphRangesCyrillic());
+            }
+            // Load bold variant
+            ImFont* boldFont = io.Fonts->AddFontFromFileTTF(segoeBoldPath.c_str(), 18.0f, nullptr, io.Fonts->GetGlyphRangesCyrillic());
+            (void)boldFont;
+        }
+    }
+
+    // Apply Palworld theme for all modes
+    StylePalworld();
     if (IsMinimap())
     {
-        ImGuiStyle& st = ImGui::GetStyle();
-        st.WindowRounding = 10.0f;
-        st.FrameRounding = 6.0f;
-        st.GrabRounding = 5.0f;
-        st.ChildRounding = 8.0f;
-        st.PopupRounding = 8.0f;
-        st.ScrollbarRounding = 8.0f;
-        st.TabRounding = 6.0f;
-        st.WindowBorderSize = 0.0f;
-        st.FrameBorderSize = 0.0f;
-        st.WindowPadding = ImVec2(8, 8);
-        // When viewports are enabled, tweak platform windows style
         ImGuiStyle& style = ImGui::GetStyle();
-        style.WindowRounding = 8.0f;
         style.Colors[ImGuiCol_WindowBg].w = 1.0f;
-        st.FramePadding = ImVec2(6, 3);
-        st.ItemSpacing = ImVec2(6, 5);
-        st.ItemInnerSpacing = ImVec2(4, 4);
-        st.ScrollbarSize = 10.0f;
-        st.GrabMinSize = 8.0f;
-
-        ImVec4* c = st.Colors;
-        // Dark theme with golden accents — professional look
-        c[ImGuiCol_WindowBg]        = ImVec4(0.03f, 0.03f, 0.04f, 0.92f);
-        c[ImGuiCol_ChildBg]         = ImVec4(0.05f, 0.05f, 0.06f, 0.95f);
-        c[ImGuiCol_PopupBg]         = ImVec4(0.06f, 0.06f, 0.07f, 0.98f);
-        c[ImGuiCol_Border]          = ImVec4(0.20f, 0.18f, 0.12f, 0.60f);
-        c[ImGuiCol_BorderShadow]    = ImVec4(0.0f, 0.0f, 0.0f, 0.0f);
-        c[ImGuiCol_Text]            = ImVec4(0.92f, 0.90f, 0.85f, 1.0f);
-        c[ImGuiCol_TextDisabled]    = ImVec4(0.50f, 0.48f, 0.42f, 1.0f);
-        c[ImGuiCol_Button]          = ImVec4(0.14f, 0.14f, 0.16f, 1.0f);
-        c[ImGuiCol_ButtonHovered]   = ImVec4(0.22f, 0.20f, 0.14f, 1.0f);
-        c[ImGuiCol_ButtonActive]    = ImVec4(0.30f, 0.26f, 0.12f, 1.0f);
-        c[ImGuiCol_Header]          = ImVec4(0.12f, 0.12f, 0.14f, 1.0f);
-        c[ImGuiCol_HeaderHovered]   = ImVec4(0.20f, 0.18f, 0.12f, 1.0f);
-        c[ImGuiCol_HeaderActive]    = ImVec4(0.28f, 0.24f, 0.12f, 1.0f);
-        c[ImGuiCol_FrameBg]         = ImVec4(0.08f, 0.08f, 0.10f, 1.0f);
-        c[ImGuiCol_FrameBgHovered]  = ImVec4(0.14f, 0.14f, 0.16f, 1.0f);
-        c[ImGuiCol_FrameBgActive]   = ImVec4(0.18f, 0.18f, 0.20f, 1.0f);
-        c[ImGuiCol_CheckMark]       = ImVec4(0.85f, 0.72f, 0.30f, 1.0f);
-        c[ImGuiCol_SliderGrab]      = ImVec4(0.50f, 0.42f, 0.18f, 1.0f);
-        c[ImGuiCol_SliderGrabActive]= ImVec4(0.85f, 0.72f, 0.30f, 1.0f);
-        c[ImGuiCol_ScrollbarBg]     = ImVec4(0.04f, 0.04f, 0.05f, 0.5f);
-        c[ImGuiCol_ScrollbarGrab]   = ImVec4(0.18f, 0.18f, 0.20f, 1.0f);
-        c[ImGuiCol_ScrollbarGrabHovered] = ImVec4(0.28f, 0.26f, 0.18f, 1.0f);
-        c[ImGuiCol_ScrollbarGrabActive]  = ImVec4(0.38f, 0.34f, 0.20f, 1.0f);
-        c[ImGuiCol_Separator]       = ImVec4(0.18f, 0.16f, 0.10f, 0.50f);
-        c[ImGuiCol_SeparatorHovered]= ImVec4(0.30f, 0.26f, 0.14f, 0.80f);
-        c[ImGuiCol_SeparatorActive] = ImVec4(0.50f, 0.42f, 0.18f, 1.0f);
-        c[ImGuiCol_Tab]             = ImVec4(0.10f, 0.10f, 0.12f, 1.0f);
-        c[ImGuiCol_TabHovered]      = ImVec4(0.22f, 0.20f, 0.14f, 1.0f);
-        c[ImGuiCol_TabActive]       = ImVec4(0.18f, 0.16f, 0.10f, 1.0f);
-        c[ImGuiCol_TableHeaderBg]   = ImVec4(0.08f, 0.08f, 0.10f, 1.0f);
-        c[ImGuiCol_TableBorderStrong] = ImVec4(0.20f, 0.18f, 0.12f, 0.60f);
-        c[ImGuiCol_TableBorderLight]  = ImVec4(0.14f, 0.12f, 0.08f, 0.40f);
-    }
-    if (g_appMode == AppMode::Launcher) {
-        StyleDarkLauncher();
     }
     ImGui_ImplWin32_Init(hwnd);
     ImGui_ImplDX11_Init(g_pd3dDevice, g_pd3dDeviceContext);
@@ -1983,6 +2247,19 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, LPWSTR lpCmdLine, int nCmdSh
         LoadIconTextures();
         LoadFavorites();
         StartWebServer();
+    }
+
+    // Charger l'icône de l'application (tous les modes)
+    {
+        std::string iconPath = g_dataDir + "/palmods.ico";
+        Log("Loading app icon from: %s", iconPath.c_str());
+        if (!LoadAppIcon(iconPath.c_str())) {
+            Log("LoadAppIcon failed for %s, trying fallback...", iconPath.c_str());
+            // Try from src/overlay/ relative to working dir
+            iconPath = g_dataDir + "/overlay_assets/palmods.ico";
+            LoadAppIcon(iconPath.c_str());
+        }
+        Log("App icon loaded: %s (texture=%p)", g_appIconTexture ? "YES" : "NO", (void*)g_appIconTexture);
     }
 
     if (g_appMode == AppMode::Launcher) {

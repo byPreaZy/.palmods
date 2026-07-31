@@ -7,7 +7,7 @@ CXXFLAGS = -std=c++17 -O2 -Wall -m64 -DWIN32_LEAN_AND_MEAN -DUNICODE -D_UNICODE
 CXXFLAGS_OVERLAY = -std=c++17 -O0 -Wall -m64 -DWIN32_LEAN_AND_MEAN -DUNICODE -D_UNICODE -Isrc/overlay/imgui -Isrc/overlay/imgui/backends
 LDFLAGS_DLL = -shared -static -static-libgcc -static-libstdc++ -lwinpthread -Wl,--subsystem,windows
 LDFLAGS_SCANNER = -static -static-libgcc -static-libstdc++ -lwinpthread
-LDFLAGS_OVERLAY = -static -static-libgcc -static-libstdc++ -lwinpthread -ld3d11 -ldxgi -ld3dcompiler -luser32 -lgdi32 -lshell32 -ldwmapi -lpsapi -mwindows -municode
+LDFLAGS_OVERLAY = -static -static-libgcc -static-libstdc++ -lwinpthread -ld3d11 -ldxgi -ld3dcompiler -luser32 -lgdi32 -lshell32 -ldwmapi -lpsapi -lwindowscodecs -lole32 -loleaut32 -mwindows -municode
 
 TRAINER_SRC = src/trainer
 OVERLAY_SRC = src/overlay

@@ -1185,6 +1185,24 @@ static void LoadPrefs() {
     if (g_alwaysOnTop && g_hwnd) {
         SetWindowPos(g_hwnd, HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
     }
+
+    // Clamp window positions to visible screen area
+    int screenW = GetSystemMetrics(SM_CXSCREEN);
+    int screenH = GetSystemMetrics(SM_CYSCREEN);
+    auto clampPos = [screenW, screenH](ImVec2& pos, ImVec2 sz) {
+        if (pos.x + sz.x < 50) pos.x = 30;
+        if (pos.y + sz.y < 50) pos.y = 30;
+        if (pos.x > screenW - 50) pos.x = screenW - sz.x - 30;
+        if (pos.y > screenH - 50) pos.y = screenH - sz.y - 30;
+    };
+    clampPos(g_menuWindowPos, g_menuWindowSize);
+    clampPos(g_mapWindowPos, g_mapWindowSize);
+    clampPos(g_cartelWinPos, g_cartelWinSize);
+    clampPos(g_palsWinPos, g_palsWinSize);
+    clampPos(g_spawnsWinPos, g_spawnsWinSize);
+    clampPos(g_filtersWinPos, g_filtersWinSize);
+    clampPos(g_favorisWinPos, g_favorisWinSize);
+    clampPos(g_cheatsWinPos, g_cheatsWinSize);
 }
 
 static void RenderMiniMap() {
@@ -1226,14 +1244,24 @@ static void RenderMiniMap() {
         // Titre
         {
             float winW = ImGui::GetWindowWidth();
+            if (g_appIconTexture) {
+                ImGui::Image((ImTextureID)g_appIconTexture, ImVec2(28, 28));
+                ImGui::SameLine();
+                ImGui::BeginGroup();
+            }
             const char* title = (g_currentMapArea == 1) ? "Arbre Monde" : "Palpagos";
             float tw = ImGui::CalcTextSize(title).x;
-            ImGui::SetCursorPosX((winW - tw) * 0.5f);
-            ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.85f, 0.72f, 0.30f, 1.0f));
+            if (g_appIconTexture) {
+                ImGui::SetCursorPosX(ImGui::GetCursorPosX() + (winW - tw - 28) * 0.5f - 14);
+            } else {
+                ImGui::SetCursorPosX((winW - tw) * 0.5f);
+            }
+            ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.31f, 0.76f, 0.98f, 1.0f));
             ImGui::Text("%s", title);
             ImGui::PopStyleColor();
             ImGui::SetCursorPosX((winW - ImGui::CalcTextSize("Mini-carte").x) * 0.5f);
             ImGui::TextDisabled("Mini-carte");
+            if (g_appIconTexture) ImGui::EndGroup();
         }
 
         ImGui::Spacing();
@@ -1243,17 +1271,17 @@ static void RenderMiniMap() {
             float statusPulse = 0.5f + 0.5f * std::sin(g_animTime * 2.5f);
             if (g_injected) {
                 float a = 0.7f + statusPulse * 0.3f;
-                ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.9f, 0.3f, a));
+                ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.30f, 0.80f, 0.35f, a));
                 ImGui::TextUnformatted("  ● DLL injectee");
                 ImGui::PopStyleColor();
             } else if (g_player.valid) {
                 float a = 0.7f + statusPulse * 0.3f;
-                ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.9f, 0.3f, a));
+                ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.30f, 0.80f, 0.35f, a));
                 ImGui::TextUnformatted("  ● Connecte");
                 ImGui::PopStyleColor();
             } else {
                 float a = 0.5f + statusPulse * 0.5f;
-                ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.9f, 0.5f, 0.2f, a));
+                ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(1.0f, 0.55f, 0.0f, a));
                 ImGui::TextUnformatted("  ○ Deconnecte");
                 ImGui::PopStyleColor();
             }
@@ -1377,8 +1405,8 @@ static void RenderMiniMap() {
                 if (i > 0) ImGui::SameLine();
                 bool selected = (g_mapQuality == i);
                 if (selected) {
-                    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.30f, 0.26f, 0.12f, 1.0f));
-                    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.35f, 0.30f, 0.14f, 1.0f));
+                    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.13f, 0.55f, 0.95f, 1.0f));
+                    ImGui::PushStyleColor(ImGuiCol_ButtonHovered, ImVec4(0.20f, 0.65f, 1.0f, 1.0f));
                 }
                 if (ImGui::Button(qLabels[i], ImVec2(bw2, 0))) {
                     g_mapQuality = i;
@@ -1552,7 +1580,7 @@ static void RenderMiniMap() {
                 }
                 bool selected = (g_selectedPalName == name);
                 if (selected) {
-                    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.30f, 0.26f, 0.12f, 1.0f));
+                    ImGui::PushStyleColor(ImGuiCol_Button, ImVec4(0.13f, 0.55f, 0.95f, 1.0f));
                 }
                 if (ImGui::SmallButton(name.c_str())) {
                     if (selected) g_selectedPalName.clear();
@@ -1808,7 +1836,7 @@ static void RenderMiniMap() {
     // --- Ligne injection DLL ---
     {
         if (g_injected) {
-            ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.3f, 0.9f, 0.3f, 1.0f));
+            ImGui::PushStyleColor(ImGuiCol_Text, ImVec4(0.30f, 0.80f, 0.35f, 1.0f));
             ImGui::Text("DLL injectée");
             ImGui::PopStyleColor();
         } else if (g_attachInProgress) {
@@ -1880,6 +1908,7 @@ static void RenderMiniMap() {
     ImVec2 avail = ImGui::GetContentRegionAvail();
     float side = std::min(std::max(std::min(avail.x, avail.y), 64.0f), 1024.0f);
     mapDisplaySize = ImVec2(side, side);
+    } // end else (Overlay mode)
 
     if (g_mapTexture || g_mapTreeTexture) {
         if (g_appMode == AppMode::Overlay) {
@@ -2469,7 +2498,6 @@ static void RenderMiniMap() {
         }
     }
     }
-    } // end else (Overlay mode)
 
     // Popup pour ajouter un favori (commun aux deux modes)
     if (g_showAddFavoritePopup) {
