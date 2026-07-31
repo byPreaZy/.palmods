@@ -13,7 +13,7 @@
 *.log
 tmp_engine_classes.hpp
 
-# Release directories
+# Release / build directories
 releases/
 release/
 build/
@@ -38,8 +38,9 @@ minimap_prefs.json
 paltrainer_log.txt
 favorites.json
 
-# UE4SS binary bundle (local, distributed in releases only)
-UE4SS/
+# UE4SS binary bundle — distributed in releases
+# (uncomment to exclude from repo if too large)
+# UE4SS/
 
 # IDE / OS
 .DS_Store

@@ -59,7 +59,7 @@ Web (server.py) ←── HTTP ──→ Browser (index.html)
 - `offset_scanner.cpp` — Scanner d'offsets AOB (GWorld, GObjects, FName, ProcessEvent)
 
 ### scripts/ — Scripts utilitaires
-- `package.sh` — Packaging dist/ + archive zip (inclut mods/ et UE4SS/ depuis le dépôt parent)
+- `package.sh` — Packaging dist/ + archive zip (inclut mods/ et UE4SS/ depuis la racine du projet)
 - `download_assets.sh` — Téléchargement des gros fichiers (.rgba, .webp) depuis GitHub Releases
 - `convert_pois.py` — Conversion des données POI vers mapObjects.json
 - `convert_textures.py` — Conversion des textures .webp → .rgba

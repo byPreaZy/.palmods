@@ -12,6 +12,7 @@ LDFLAGS_OVERLAY = -static -static-libgcc -static-libstdc++ -lwinpthread -ld3d11 
 TRAINER_SRC = src/trainer
 OVERLAY_SRC = src/overlay
 TOOLS_SRC = src/tools
+BUILD_DIR = build
 
 IMGUI_SRC = $(OVERLAY_SRC)/imgui/imgui.cpp $(OVERLAY_SRC)/imgui/imgui_draw.cpp $(OVERLAY_SRC)/imgui/imgui_widgets.cpp $(OVERLAY_SRC)/imgui/imgui_tables.cpp $(OVERLAY_SRC)/imgui/backends/imgui_impl_win32.cpp $(OVERLAY_SRC)/imgui/backends/imgui_impl_dx11.cpp
 
@@ -26,39 +27,43 @@ PalOffsetScanner.exe: $(TOOLS_SRC)/offset_scanner.cpp
 	$(CXX) $(CXXFLAGS) $(LDFLAGS_SCANNER) -o $@ $(TOOLS_SRC)/offset_scanner.cpp
 
 # --- Unified App (PalTrainerUltra.exe) ---
-overlay.res: $(OVERLAY_SRC)/overlay.rc $(OVERLAY_SRC)/overlay.manifest $(OVERLAY_SRC)/palmods.ico
+IMGUI_OBJS = $(BUILD_DIR)/imgui.o $(BUILD_DIR)/imgui_draw.o $(BUILD_DIR)/imgui_widgets.o $(BUILD_DIR)/imgui_tables.o $(BUILD_DIR)/imgui_impl_win32.o $(BUILD_DIR)/imgui_impl_dx11.o
+
+$(BUILD_DIR):
+	cmd /c "if not exist build mkdir build"
+
+$(BUILD_DIR)/overlay.res: $(OVERLAY_SRC)/overlay.rc $(OVERLAY_SRC)/overlay.manifest $(OVERLAY_SRC)/palmods.ico | $(BUILD_DIR)
 	$(WINDRES) -O coff -I$(OVERLAY_SRC) -i $(OVERLAY_SRC)/overlay.rc -o $@
 
-IMGUI_OBJS = imgui.o imgui_draw.o imgui_widgets.o imgui_tables.o imgui_impl_win32.o imgui_impl_dx11.o
-
-%.o: %.cpp
+$(BUILD_DIR)/%.o: $(OVERLAY_SRC)/imgui/%.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS_OVERLAY) -c -o $@ $<
 
-imgui.o: $(OVERLAY_SRC)/imgui/imgui.cpp
+$(BUILD_DIR)/imgui.o: $(OVERLAY_SRC)/imgui/imgui.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS_OVERLAY) -c -o $@ $<
 
-imgui_draw.o: $(OVERLAY_SRC)/imgui/imgui_draw.cpp
+$(BUILD_DIR)/imgui_draw.o: $(OVERLAY_SRC)/imgui/imgui_draw.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS_OVERLAY) -c -o $@ $<
 
-imgui_widgets.o: $(OVERLAY_SRC)/imgui/imgui_widgets.cpp
+$(BUILD_DIR)/imgui_widgets.o: $(OVERLAY_SRC)/imgui/imgui_widgets.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS_OVERLAY) -c -o $@ $<
 
-imgui_tables.o: $(OVERLAY_SRC)/imgui/imgui_tables.cpp
+$(BUILD_DIR)/imgui_tables.o: $(OVERLAY_SRC)/imgui/imgui_tables.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS_OVERLAY) -c -o $@ $<
 
-imgui_impl_win32.o: $(OVERLAY_SRC)/imgui/backends/imgui_impl_win32.cpp
+$(BUILD_DIR)/imgui_impl_win32.o: $(OVERLAY_SRC)/imgui/backends/imgui_impl_win32.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS_OVERLAY) -c -o $@ $<
 
-imgui_impl_dx11.o: $(OVERLAY_SRC)/imgui/backends/imgui_impl_dx11.cpp
+$(BUILD_DIR)/imgui_impl_dx11.o: $(OVERLAY_SRC)/imgui/backends/imgui_impl_dx11.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS_OVERLAY) -c -o $@ $<
 
-overlay.o: $(OVERLAY_SRC)/overlay.cpp $(OVERLAY_SRC)/overlay_minimap.inl
+$(BUILD_DIR)/overlay.o: $(OVERLAY_SRC)/overlay.cpp $(OVERLAY_SRC)/overlay_minimap.inl | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS_OVERLAY) -c -o $@ $(OVERLAY_SRC)/overlay.cpp
 
-PalTrainerUltra.exe: overlay.o $(IMGUI_OBJS) overlay.res
-	$(CXX) $(CXXFLAGS_OVERLAY) -o $@ overlay.o $(IMGUI_OBJS) overlay.res $(LDFLAGS_OVERLAY)
+PalTrainerUltra.exe: $(BUILD_DIR)/overlay.o $(IMGUI_OBJS) $(BUILD_DIR)/overlay.res
+	$(CXX) $(CXXFLAGS_OVERLAY) -o $@ $(BUILD_DIR)/overlay.o $(IMGUI_OBJS) $(BUILD_DIR)/overlay.res $(LDFLAGS_OVERLAY)
 
 clean:
-	cmd /c "del /q PalTrainerUltra.exe PalTrainerCore.dll PalOffsetScanner.exe overlay.res *.o 2>nul"
+	cmd /c "del /q PalTrainerUltra.exe PalTrainerCore.dll PalOffsetScanner.exe 2>nul"
+	cmd /c "if exist build rmdir /s /q build"
 
 .PHONY: all clean

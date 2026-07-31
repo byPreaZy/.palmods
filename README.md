@@ -43,10 +43,12 @@ Add-MpPreference -ExclusionPath "C:\PalTrainerUltra"
 | Fichier | Rôle | Comment lancer |
 |---------|------|----------------|
 | **PalTrainerUltra.exe** | Application unifiée — launcher, overlay, minimap (modes runtime) | `Launch.bat` ou double-clic (admin) |
-| **Launch.bat** | Script de lancement rapide | Clic droit → Exécuter en tant qu'admin |
+| **Launch.bat** | Script de lancement rapide (ajoute l'exclusion Defender automatiquement) | Clic droit → Exécuter en tant qu'admin |
 | **PalTrainerCore.dll** | DLL injectée dans Palworld — exécute les cheats en temps réel | Injectée via le launcher |
 | **PalOffsetScanner.exe** | Scanner d'offsets automatique (GWorld, GObjects, ProcessEvent) | Lancer si offsets manquants/obsolètes |
-| **start_map.bat** | Démarre le serveur web de carte interactive | Double-clic, ouvre `http://localhost:8765` |
+| **scripts/start_map.bat** | Démarre le serveur web de carte interactive | Double-clic, ouvre `http://localhost:8765` |
+| **scripts/Lancer-Minimap.bat** | Lance la minimap en mode autonome | Double-clic (admin) |
+| **scripts/Setup-Defender.bat** | Ajoute le dossier aux exclusions Windows Defender | Clic droit → Exécuter en tant qu'admin |
 | **server/server.py** | Serveur web local (carte, POIs, spawns, téléport) | `python server/server.py` |
 | **web/** | Interface web interactive (HTML/JS) | Servie par `server.py` |
 | **data/pal_spawns.json** | Données de spawn des Pals (positions, niveaux, jour/nuit) | Chargé automatiquement |
@@ -149,6 +151,7 @@ Add-MpPreference -ExclusionPath "C:\PalTrainerUltra"
 - **F2/F3** — Zoom +/-
 - **F4** — Toujours au-dessus
 - **F5** — Afficher les Pals
+- **F6** — Activer/désactiver l'ESP
 - **Clic droit** — Téléporter à la position cliquée
 - **Shift+Clic droit** — Téléporter vers un POI/Pal
 
@@ -257,6 +260,10 @@ python scripts/save_editor.py --set-money 999999
 # Backup
 python scripts/save_editor.py --backup
 ```
+
+## Gestion des processus
+
+Fermer n'importe quel module (Launcher, Minimap, Overlay) termine automatiquement les processus enfants qu'il a lancés (autres modules, serveur web, scanner). Aucun processus orphelin ne reste en mémoire.
 
 ## Disclaimer
 
