@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Convert palworld-server-manager 1.0 POI data to PalTrainerUltra unified format."""
+"""Convert palworld-server-manager 1.0 POI data to PalTrainerUltra unified format.
+
+Note: Requires web/mapdata/ directory with fast_travel.json, map_objects.json,
+bosses.json, effigies.json (from palworld-server-manager). Not included in repo.
+"""
 
 import json
 import os

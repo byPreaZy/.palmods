@@ -17,7 +17,7 @@ echo ============================================
 echo.
 
 powershell -Command "Add-MpPreference -ExclusionPath '%~dp0' -ErrorAction SilentlyContinue"
-powershell -Command "Add-MpPreference -ExclusionProcess 'PalTrainerMiniMap.exe' -ErrorAction SilentlyContinue"
+powershell -Command "Add-MpPreference -ExclusionProcess 'PalTrainerUltra.exe' -ErrorAction SilentlyContinue"
 
 if %errorlevel% neq 0 (
     echo ERREUR : Impossible d'ajouter les exclusions.

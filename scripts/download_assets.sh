@@ -6,7 +6,7 @@ set -e
 ROOT="$(cd "$(dirname "$0")/.." && pwd)
 
 # Configuration: remplacer OWNER/REPO par le dépôt GitHub réel
-GITHUB_REPO="${GITHUB_REPO:-byPreaZy/.palmods}"
+GITHUB_REPO="${GITHUB_REPO:-byPreaZy/PalTrainerUltra}"
 ASSETS_DIR="$ROOT/assets/maps"
 WEB_MAP_DIR="$ROOT/web/assets/map"
 

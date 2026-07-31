@@ -1,10 +1,16 @@
 # Build artifacts
 *.o
 *.res
-*.dll
-*.exe
 *.zip
 *.tar.gz
+
+# Project DLLs (build artifacts) — but keep UE4SS bundle DLLs
+*.dll
+!UE4SS/**/*.dll
+
+# Project executables (build artifacts)
+*.exe
+!UE4SS/**/*.exe
 
 # Backups / temp
 *.bak

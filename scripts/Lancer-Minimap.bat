@@ -1,6 +1,6 @@
 @echo off
 REM Lancer-Minimap.bat — Lance la minimap Palworld
-cd /d "%~dp0"
+cd /d "%~dp0\.."
 
 if not exist "PalTrainerUltra.exe" (
     echo ERREUR : PalTrainerUltra.exe introuvable !
