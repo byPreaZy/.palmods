@@ -58,6 +58,37 @@ Web (server.py) ←── HTTP ──→ Browser (index.html)
 ### src/tools/ — Outils
 - `offset_scanner.cpp` — Scanner d'offsets AOB (GWorld, GObjects, FName, ProcessEvent)
 
+### mods/ — Mods UE4SS Lua (20 mods)
+
+Mods existants (v1.0) :
+- `PalCheatMenu/` — Menu de triches complet (35+ cheats, ImGui, F1)
+- `PalMiniMap/Prototype/` — Minimap ImGui avec carte, POIs, Pals (NumPad0)
+- `PalAutoLoot/` — Ramassage auto (CAPS_LOCK)
+- `PalWeight/` — Poids infini (SCROLL_LOCK)
+- `PalInstantBreed/` — Reproduction instantanée (END)
+- `PalInstantFish/` — Pêche instantanée (PAGE_UP)
+- `PalInstantHatch/` — Éclosion instantanée (PAGE_DOWN)
+- `PalInspectPal/` — Inspection de Pals (HOME)
+- `PalCaptureCounter/` — Compteur de captures (PRINT_SCREEN)
+- `PalQuickDrop/` — Drop rapide (PRINT)
+- `PalQuickStack/` — Stack rapide (EXECUTE)
+- `PalModManager/` — Gestionnaire de mods (HELP)
+
+Nouveaux mods (v1.0.2) :
+- `PalSpawner/` — Spawn de Pals avec stats/passives custom (F2)
+  - `Scripts/pal_list.lua` — 129 Pals avec noms internels
+  - `Scripts/passives.lua` — 115 compétences passives
+- `PalNoBuildingRestrictions/` — Construction sans restrictions (NumPad4)
+- `PalInfiniteDurability/` — Durabilité infinie (NumPad5)
+- `PalInfiniteAmmo/` — Munitions infinies (NumPad6)
+- `PalExpBoost/` — Multiplicateur d'XP (NumPad7)
+- `PalNoStaminaFly/` — Vol sans stamina (NumPad8)
+- `PalCaptureRate/` — Taux de capture 100% (F10)
+- `PalBaseExpansion/` — Expansion de base (NumPad9)
+- `PalFastTravelAnywhere/` — Fast travel partout (F12)
+
+Voir [MODS.md](MODS.md) pour la documentation complète.
+
 ### scripts/ — Scripts utilitaires
 - `package.sh` — Packaging dist/ + archive zip (inclut mods/ et UE4SS/ depuis la racine du projet)
 - `download_assets.sh` — Téléchargement des gros fichiers (.rgba, .webp) depuis GitHub Releases

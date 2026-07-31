@@ -139,31 +139,33 @@ Add-MpPreference -ExclusionPath "C:\PalTrainerUltra"
 | Mod | Description | Touche |
 |-----|-------------|--------|
 | **PalCheatMenu** | Menu de triches complet (35+ cheats, presets, spawn d'items) | F1 |
-| **PalMiniMap** | Minimap ImGui avec carte, POIs, Pals, ESP | INS |
+| **PalMiniMap** | Minimap ImGui avec carte, POIs, Pals, ESP | NumPad0 |
 | **PalAutoLoot** | Ramassage automatique des objets au sol | CAPS_LOCK |
 | **PalWeight** | Poids d'inventaire illimité | SCROLL_LOCK |
 | **PalInstantBreed** | Reproduction instantanée à la ferme | END |
 | **PalInstantFish** | Pêche instantanée / automatique | PAGE_UP |
 | **PalInstantHatch** | Éclosion instantanée des œufs | PAGE_DOWN |
-| **PalCaptureCounter** | Compteur de captures en temps réel | — |
+| **PalCaptureCounter** | Compteur de captures en temps réel | PRINT_SCREEN |
 | **PalInspectPal** | Inspection des stats d'un Pal visé | HOME |
-| **PalQuickDrop** | Drop rapide d'items | — |
-| **PalQuickStack** | Stack rapide d'items | — |
-| **PalModManager** | Gestionnaire de mods in-game | — |
+| **PalQuickDrop** | Drop rapide d'items | PRINT |
+| **PalQuickStack** | Stack rapide d'items | EXECUTE |
+| **PalModManager** | Gestionnaire de mods in-game | HELP |
 
 ### Nouveaux mods (v1.0.2)
 
 | Mod | Description | Touche |
 |-----|-------------|--------|
 | **PalSpawner** | Menu complet de spawn de Pals : liste de tous les Pals, niveau, stats, 4 passives, ajout à la Palbox | F2 |
-| **PalNoBuildingRestrictions** | Construire n'importe où (eau, airs, angles extrêmes) | F5 |
-| **PalInfiniteDurability** | Durabilité infinie des armes et outils | F6 |
-| **PalInfiniteAmmo** | Munitions infinies pour toutes les armes | F7 |
-| **PalExpBoost** | Multiplicateur d'XP configurable (joueur + Pals) | F8 |
-| **PalNoStaminaFly** | Vol sans consommation de stamina | F9 |
+| **PalNoBuildingRestrictions** | Construire n'importe où (eau, airs, angles extrêmes) | NumPad4 |
+| **PalInfiniteDurability** | Durabilité infinie des armes et outils | NumPad5 |
+| **PalInfiniteAmmo** | Munitions infinies pour toutes les armes | NumPad6 |
+| **PalExpBoost** | Multiplicateur d'XP configurable (joueur + Pals) | NumPad7 |
+| **PalNoStaminaFly** | Vol sans consommation de stamina | NumPad8 |
 | **PalCaptureRate** | Taux de capture 100% / configurable | F10 |
-| **PalBaseExpansion** | Agrandit le rayon de construction de la Palbox | F11 |
+| **PalBaseExpansion** | Agrandit le rayon de construction de la Palbox | NumPad9 |
 | **PalFastTravelAnywhere** | Fast travel depuis n'importe où + déblocage de tous les points | F12 |
+
+Voir [docs/MODS.md](docs/MODS.md) pour la documentation complète des mods.
 
 ## Minimap
 
@@ -239,7 +241,7 @@ web/                Interface web interactive
 server/             Serveur web local
 data/               Données de jeu (pal_spawns.json, pal_database.json)
 assets/             Icônes BMP + textures de carte (.rgba)
-docs/               Documentation (ARCHITECTURE.md, CHEATS.md, MINIMAP.md)
+docs/               Documentation (ARCHITECTURE.md, CHEATS.md, MODS.md, MINIMAP.md)
 mods/               Mods Lua UE4SS (inclus dans dist/ par package.sh)
 UE4SS/              Bundle UE4SS offline (inclus dans dist/ par package.sh)
 ```
@@ -248,6 +250,7 @@ UE4SS/              Bundle UE4SS offline (inclus dans dist/ par package.sh)
 
 - [Architecture](docs/ARCHITECTURE.md) — Flux de données, structure du code
 - [Cheats](docs/CHEATS.md) — Liste complète des cheats et hotkeys
+- [Mods](docs/MODS.md) — Documentation complète des mods UE4SS Lua
 - [Minimap](docs/MINIMAP.md) — Hotkeys, téléport, spawns, pals, filtres, ESP
 
 ## CI/CD

@@ -1,6 +1,6 @@
 local config = {}
 config.modName = "PalNoStaminaFly"
 config.enabled = true
-config.keybind = "F9"
+config.keybind = "NumPadEight"
 config.debug = false
 return config

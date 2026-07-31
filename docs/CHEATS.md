@@ -57,14 +57,16 @@
 | Mod | Effet | Touche |
 |-----|-------|--------|
 | PalSpawner | Spawn de Pals : liste complète, niveau, stats, 4 passives, ajout Palbox | F2 |
-| PalNoBuildingRestrictions | Construire n'importe où (eau, airs, angles extrêmes) | F5 |
-| PalInfiniteDurability | Durabilité infinie des armes et outils | F6 |
-| PalInfiniteAmmo | Munitions infinies pour toutes les armes | F7 |
-| PalExpBoost | Multiplicateur d'XP configurable (joueur + Pals) | F8 |
-| PalNoStaminaFly | Vol sans consommation de stamina | F9 |
+| PalNoBuildingRestrictions | Construire n'importe où (eau, airs, angles extrêmes) | NumPad4 |
+| PalInfiniteDurability | Durabilité infinie des armes et outils | NumPad5 |
+| PalInfiniteAmmo | Munitions infinies pour toutes les armes | NumPad6 |
+| PalExpBoost | Multiplicateur d'XP configurable (joueur + Pals) | NumPad7 |
+| PalNoStaminaFly | Vol sans consommation de stamina | NumPad8 |
 | PalCaptureRate | Taux de capture 100% / configurable | F10 |
-| PalBaseExpansion | Agrandit le rayon de construction de la Palbox | F11 |
+| PalBaseExpansion | Agrandit le rayon de construction de la Palbox | NumPad9 |
 | PalFastTravelAnywhere | Fast travel depuis n'importe où + déblocage total | F12 |
+
+Voir [MODS.md](MODS.md) pour la documentation complète des mods.
 
 ## Offsets
 
