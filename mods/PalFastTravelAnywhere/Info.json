@@ -1,0 +1,10 @@
+{
+  "ModName": "PalFastTravelAnywhere",
+  "PackageName": "PalFastTravelAnywhere",
+  "Version": "1.0.0",
+  "Author": "Cascade",
+  "Description": "Permet d'utiliser le fast travel depuis n'importe ou sur la carte.",
+  "Dependencies": ["UE4SS"],
+  "Tags": ["UE4SS", "Cheat", "FastTravel"],
+  "InstallRule": [{"Type": "Lua", "Targets": ["./Scripts"]}]
+}

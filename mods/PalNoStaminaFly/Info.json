@@ -1,0 +1,10 @@
+{
+  "ModName": "PalNoStaminaFly",
+  "PackageName": "PalNoStaminaFly",
+  "Version": "1.0.0",
+  "Author": "Cascade",
+  "Description": "Supprime le cout de stamina pour le vol sur Pal montable.",
+  "Dependencies": ["UE4SS"],
+  "Tags": ["UE4SS", "Cheat", "Stamina", "Fly"],
+  "InstallRule": [{"Type": "Lua", "Targets": ["./Scripts"]}]
+}

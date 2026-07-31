@@ -1,0 +1,10 @@
+{
+  "ModName": "PalInfiniteDurability",
+  "PackageName": "PalInfiniteDurability",
+  "Version": "1.0.0",
+  "Author": "Cascade",
+  "Description": "Durabilite infinie pour les armes et outils.",
+  "Dependencies": ["UE4SS"],
+  "Tags": ["UE4SS", "Cheat", "Durability"],
+  "InstallRule": [{"Type": "Lua", "Targets": ["./Scripts"]}]
+}

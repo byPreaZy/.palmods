@@ -1,0 +1,10 @@
+{
+  "ModName": "PalExpBoost",
+  "PackageName": "PalExpBoost",
+  "Version": "1.0.0",
+  "Author": "Cascade",
+  "Description": "Multiplicateur d'experience configurable pour le joueur et les Pals.",
+  "Dependencies": ["UE4SS"],
+  "Tags": ["UE4SS", "Cheat", "EXP"],
+  "InstallRule": [{"Type": "Lua", "Targets": ["./Scripts"]}]
+}

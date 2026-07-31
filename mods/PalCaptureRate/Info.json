@@ -1,0 +1,10 @@
+{
+  "ModName": "PalCaptureRate",
+  "PackageName": "PalCaptureRate",
+  "Version": "1.0.0",
+  "Author": "Cascade",
+  "Description": "Taux de capture 100% ou configurable pour les Pal Spheres.",
+  "Dependencies": ["UE4SS"],
+  "Tags": ["UE4SS", "Cheat", "Capture"],
+  "InstallRule": [{"Type": "Lua", "Targets": ["./Scripts"]}]
+}

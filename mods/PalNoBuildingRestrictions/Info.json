@@ -1,0 +1,10 @@
+{
+  "ModName": "PalNoBuildingRestrictions",
+  "PackageName": "PalNoBuildingRestrictions",
+  "Version": "1.0.0",
+  "Author": "Cascade",
+  "Description": "Supprime les restrictions de construction : build dans les airs, sur l'eau, chevauchements, angles extremes.",
+  "Dependencies": ["UE4SS"],
+  "Tags": ["UE4SS", "Build", "Cheat"],
+  "InstallRule": [{"Type": "Lua", "Targets": ["./Scripts"]}]
+}

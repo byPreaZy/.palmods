@@ -3,7 +3,7 @@
 
 #include <cstdint>
 
-// RVAs statiques trouvés dans Palworld-Win64-Shipping.exe 1.0.1
+// RVAs statiques trouvés dans Palworld-Win64-Shipping.exe 1.0.2
 namespace PalTrainerOffsets {
     constexpr uintptr_t GWorldRva      = 0x965b1e0;
     constexpr uintptr_t GObjectRva     = 0x94ec890;

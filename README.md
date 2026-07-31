@@ -132,6 +132,39 @@ Add-MpPreference -ExclusionPath "C:\PalTrainerUltra"
 - **Déverrouiller voyages rapides** — Active tous les fast travel
 - **Dégager la météo** — Nettoie la météo
 
+## Mods UE4SS (v1.0.2)
+
+### Mods existants
+
+| Mod | Description | Touche |
+|-----|-------------|--------|
+| **PalCheatMenu** | Menu de triches complet (35+ cheats, presets, spawn d'items) | F1 |
+| **PalMiniMap** | Minimap ImGui avec carte, POIs, Pals, ESP | INS |
+| **PalAutoLoot** | Ramassage automatique des objets au sol | CAPS_LOCK |
+| **PalWeight** | Poids d'inventaire illimité | SCROLL_LOCK |
+| **PalInstantBreed** | Reproduction instantanée à la ferme | END |
+| **PalInstantFish** | Pêche instantanée / automatique | PAGE_UP |
+| **PalInstantHatch** | Éclosion instantanée des œufs | PAGE_DOWN |
+| **PalCaptureCounter** | Compteur de captures en temps réel | — |
+| **PalInspectPal** | Inspection des stats d'un Pal visé | HOME |
+| **PalQuickDrop** | Drop rapide d'items | — |
+| **PalQuickStack** | Stack rapide d'items | — |
+| **PalModManager** | Gestionnaire de mods in-game | — |
+
+### Nouveaux mods (v1.0.2)
+
+| Mod | Description | Touche |
+|-----|-------------|--------|
+| **PalSpawner** | Menu complet de spawn de Pals : liste de tous les Pals, niveau, stats, 4 passives, ajout à la Palbox | F2 |
+| **PalNoBuildingRestrictions** | Construire n'importe où (eau, airs, angles extrêmes) | F5 |
+| **PalInfiniteDurability** | Durabilité infinie des armes et outils | F6 |
+| **PalInfiniteAmmo** | Munitions infinies pour toutes les armes | F7 |
+| **PalExpBoost** | Multiplicateur d'XP configurable (joueur + Pals) | F8 |
+| **PalNoStaminaFly** | Vol sans consommation de stamina | F9 |
+| **PalCaptureRate** | Taux de capture 100% / configurable | F10 |
+| **PalBaseExpansion** | Agrandit le rayon de construction de la Palbox | F11 |
+| **PalFastTravelAnywhere** | Fast travel depuis n'importe où + déblocage de tous les points | F12 |
+
 ## Minimap
 
 ### Fonctionnalités

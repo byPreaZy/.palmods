@@ -1,0 +1,25 @@
+{
+  "ModName": "PalSpawner",
+  "PackageName": "PalSpawner",
+  "Version": "1.0.0",
+  "Author": "Cascade",
+  "Description": "Menu complet de spawn de Pals pour Palworld v1.0.2 : liste de tous les Pals, selection du niveau, stats, competences passives, ajout a la Palbox ou spawn pres du joueur.",
+  "Dependencies": [
+    "UE4SS"
+  ],
+  "Tags": [
+    "UE4SS",
+    "Cheat",
+    "Spawn",
+    "Pal",
+    "Menu"
+  ],
+  "InstallRule": [
+    {
+      "Type": "Lua",
+      "Targets": [
+        "./Scripts"
+      ]
+    }
+  ]
+}

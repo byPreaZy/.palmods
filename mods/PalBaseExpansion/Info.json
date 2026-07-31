@@ -1,0 +1,10 @@
+{
+  "ModName": "PalBaseExpansion",
+  "PackageName": "PalBaseExpansion",
+  "Version": "1.0.0",
+  "Author": "Cascade",
+  "Description": "Agrandit le rayon de construction de la Palbox (base camp).",
+  "Dependencies": ["UE4SS"],
+  "Tags": ["UE4SS", "Base", "Build"],
+  "InstallRule": [{"Type": "Lua", "Targets": ["./Scripts"]}]
+}

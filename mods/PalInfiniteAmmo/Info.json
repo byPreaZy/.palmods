@@ -1,0 +1,10 @@
+{
+  "ModName": "PalInfiniteAmmo",
+  "PackageName": "PalInfiniteAmmo",
+  "Version": "1.0.0",
+  "Author": "Cascade",
+  "Description": "Munitions infinies pour toutes les armes a feu.",
+  "Dependencies": ["UE4SS"],
+  "Tags": ["UE4SS", "Cheat", "Ammo"],
+  "InstallRule": [{"Type": "Lua", "Targets": ["./Scripts"]}]
+}

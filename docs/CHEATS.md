@@ -52,10 +52,24 @@
 | Débloquer Awakening | Débloque le donjon Awakening | Toggle |
 | Débloquer tours (boss) | Débloque tous les rematchs de boss de tour | Toggle |
 
+## Mods UE4SS Lua (v1.0.2)
+
+| Mod | Effet | Touche |
+|-----|-------|--------|
+| PalSpawner | Spawn de Pals : liste complète, niveau, stats, 4 passives, ajout Palbox | F2 |
+| PalNoBuildingRestrictions | Construire n'importe où (eau, airs, angles extrêmes) | F5 |
+| PalInfiniteDurability | Durabilité infinie des armes et outils | F6 |
+| PalInfiniteAmmo | Munitions infinies pour toutes les armes | F7 |
+| PalExpBoost | Multiplicateur d'XP configurable (joueur + Pals) | F8 |
+| PalNoStaminaFly | Vol sans consommation de stamina | F9 |
+| PalCaptureRate | Taux de capture 100% / configurable | F10 |
+| PalBaseExpansion | Agrandit le rayon de construction de la Palbox | F11 |
+| PalFastTravelAnywhere | Fast travel depuis n'importe où + déblocage total | F12 |
+
 ## Offsets
 
 Les offsets statiques sont définis dans `src/trainer/offsets.h` et proviennent de:
-- Un scan RVA local de `Palworld-Win64-Shipping.exe` 1.0.1
+- Un scan RVA local de `Palworld-Win64-Shipping.exe` 1.0.2
 - `CXXHeaderDump/Pal.hpp` public de `DrRak72/Palworld-Modding-Reference`
 
 Principaux RVAs statiques:
